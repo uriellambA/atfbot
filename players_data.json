@@ -1,0 +1,2913 @@
+{
+    "players": {
+        "1133864612060741754": {
+            "team": "Kunts FC",
+            "gw": 7,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1033701659437715486": {
+            "team": "Kunts FC",
+            "gw": 6,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Manager"
+        },
+        "794445819583529001": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "566629240456609792": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "780098171069136977": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1351330365519822888": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "876543665483423775": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "803105926659047475": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "722444878478442527": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1463486227939328118": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "381896787545423873": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1192887174442528849": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1460668021734375535": {
+            "team": "Galindos",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1384191921794187346": {
+            "team": "Vanguards FC",
+            "gw": 6,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "549413377202716672": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1392560749876088863": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "883381698635653161": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "626495621938937862": {
+            "team": "Bloxyneta FC",
+            "gw": 7,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1397752107850797076": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇦",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1265119087235698773": {
+            "team": "Zinrack FC",
+            "gw": 7,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1406367888230842571": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1360667444900790312": {
+            "team": "Zinrack FC",
+            "gw": 0,
+            "country": "🇷🇸",
+            "division": "A",
+            "role": "Manager"
+        },
+        "338445513433153545": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "539514489905872920": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "808325492347371550": {
+            "team": "Zinrack FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1324471885165232251": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "936385533742022686": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "837137435141603360": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1272767680465731687": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1137344905400827904": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1144091331178811532": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "505801370528382988": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇷🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "715439534380285992": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1354055352534171679": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "888603703010025543": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1411176224952160399": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇵🇹",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "830538933703671808": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "715655100420587611": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1013281447521562626": {
+            "team": "Black Mans FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1391747073732378726": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1339957691753168962": {
+            "team": "Club Deportivo Hospital",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "866830901483667487": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "924345891186425878": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇺🇾",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "237282004054441986": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇻🇳",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "517967818680041480": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "703375776267108372": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "815593940606255104": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "794316505768001546": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇨🇺",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1429846031624835214": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1373788357930389576": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Manager"
+        },
+        "1339259441001795614": {
+            "team": "SiuFC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1290027203223879743": {
+            "team": "Coopsol FC",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "694183690393223289": {
+            "team": "Coopsol FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1329157011606077556": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1338228275469615187": {
+            "team": "Universidad De Chile",
+            "gw": 7,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1337252397415923804": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1363435519605866550": {
+            "team": "SiuFC",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1243720799559487625": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "814125474866528316": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1150131404974329987": {
+            "team": "Birdcam CF",
+            "gw": 7,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "753428769368440862": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "714240027323793458": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "845065998918615053": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "A",
+            "role": "Manager"
+        },
+        "1248658201130307645": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1001431506293620766": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇪🇬",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1087189275298238575": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1265111093450117271": {
+            "team": "Universidad De Chile",
+            "gw": 4,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "722874399442600078": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "732002305507065867": {
+            "team": "CF Ineri",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "975889182041997324": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1095162019436580907": {
+            "team": "CF Ineri",
+            "gw": 0,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "811735849179283476": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1413708583723470958": {
+            "team": "CF Ineri",
+            "gw": 0,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1432484567343824938": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1325380057732087851": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "405822942858182658": {
+            "team": "Stroganoff CF",
+            "gw": 4,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Manager"
+        },
+        "728785398930604172": {
+            "team": "Stroganoff CF",
+            "gw": 4,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "865565706753015818": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1405508098629832716": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "900170175133917204": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "958139803315077141": {
+            "team": "Stroganoff CF",
+            "gw": 7,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1185441089470087218": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1327456280423436401": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "745730720185450518": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "811072946163941386": {
+            "team": "Stroganoff CF",
+            "gw": 0,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1251989595403452432": {
+            "team": "Orlando Pirates",
+            "gw": 7,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1086468706399436830": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1174158985620881541": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "618010186099064832": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇹🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1091362759729487872": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1386858425295568967": {
+            "team": "Red Bull FC",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1337491358830563398": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1343769930503557162": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1251931077790924884": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1177916322122833933": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1392659474841341992": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "765242170999046195": {
+            "team": "Bellay Sporting Club",
+            "gw": 7,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1315695249397649449": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "835333978273349632": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1444749539369025667": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇶🇦",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "978878002584752139": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1346116161133215806": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇵🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1308194043108261999": {
+            "team": "Brazukinos Sport Club",
+            "gw": 7,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1457056957918613740": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1453621707159113883": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1155315886085902397": {
+            "team": "Brazukinos Sport Club",
+            "gw": 0,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "624333194744823808": {
+            "team": "Bolivia FC",
+            "gw": 7,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1056349413867540520": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "797335270512787466": {
+            "team": "SiuFC",
+            "gw": 4,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1357746093521371267": {
+            "team": "Coopsol FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Manager"
+        },
+        "907727162562461726": {
+            "team": "Zinrack FC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1124005175670083584": {
+            "team": "Coopsol FC",
+            "gw": 0,
+            "country": "🇫🇰",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1294875847328796763": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "755201840986980475": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇦",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1319382142119055485": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1417038751565348926": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇳🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1310561901075234836": {
+            "team": "Birdcam CF",
+            "gw": 3,
+            "country": "🇨🇱",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1393631796180029623": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇦🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1319719143766884415": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1086430777639706627": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1336082482952671232": {
+            "team": "Lightkings FC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "899743723435487282": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "737666784039010404": {
+            "team": "Lightkings FC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1424131877035442317": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "839479880990457907": {
+            "team": "CJA",
+            "gw": 7,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "602242677215592449": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇷🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1155096788697612358": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1352714864048607242": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1150841367157821521": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1329569497035706451": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1461848581559292070": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1307106399687413834": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1461848583245660375": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "720498495693520986": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "809377399438704680": {
+            "team": "Zinrack FC",
+            "gw": 0,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1353098474291462187": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1266879445986447496": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "901667467053662259": {
+            "team": "Lightkings FC",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1379972188358316072": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇱🇹",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1246272187325747213": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "973272495337652274": {
+            "team": "Bolivia FC",
+            "gw": 5,
+            "country": "🇵🇷",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1074556340170670130": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "886881091988901919": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1474140063599431680": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1327409209691869216": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1311019567539163231": {
+            "team": "Academia Polaris",
+            "gw": 7,
+            "country": "🇫🇷",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1021523637343375391": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1281230197361737760": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇮🇳",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1400030724652007486": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇮🇳",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1380847866574143521": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1309714317821743125": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "730503441151033345": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1221642681474748521": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1163167993606443080": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1439601043993395280": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1390312259523182735": {
+            "team": "Bolivia FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1249492979865882666": {
+            "team": "Bolivia FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "752899890979274863": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1418782129999052861": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1320039453296820234": {
+            "team": "Bolivia FC",
+            "gw": 0,
+            "country": "🇳🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "927379544732754000": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1046604850772836472": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "728714746357874799": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1328773615231041536": {
+            "team": "Academia Polaris",
+            "gw": 1,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1179761729907982370": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1336309680561197067": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1253665467353272347": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇸🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "916400995418927225": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1056895578044371015": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "697126787477405786": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "663352788369276938": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1186832421023387688": {
+            "team": "SiuFC",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1154188161413550180": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇮🇹",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1318317368841211964": {
+            "team": "Red Bull FC",
+            "gw": 5,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1403743893425618984": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇧🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "954495271662927923": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇨🇼",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1213877010347196460": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "754421514358489229": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1384144716676731010": {
+            "team": "Red Bull FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1348963017202597888": {
+            "team": "SiuFC",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "775923899043938314": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1368013502345904188": {
+            "team": "SiuFC",
+            "gw": 6,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1406354246428917782": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Manager"
+        },
+        "997272075360284683": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1452851797717815309": {
+            "team": "Academia Polaris",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "995929364963270688": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1213262530353434636": {
+            "team": "Red Waffles FC",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1217569112381718558": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1116805391033045112": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "622865964081348630": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1064626285357318195": {
+            "team": "Red Waffles FC",
+            "gw": 3,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "559136784307716138": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1368007162328256684": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇭🇳",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1346124652388548720": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1059489095174328350": {
+            "team": "Lightkings FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1187545343697621012": {
+            "team": "Zinrack FC",
+            "gw": 1,
+            "country": "🇳🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1393124301816729692": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1436760432252682350": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇨🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1088261395704975360": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "935856943787048980": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1446708092543832139": {
+            "team": "Red Bull FC",
+            "gw": 6,
+            "country": "🇵🇪/🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1466082259303006444": {
+            "team": "Cojos FC",
+            "gw": 7,
+            "country": "🇸🇦",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1027244057145114674": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇧🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1264012137370488899": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1303026253795950732": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1464908855648718920": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1361714864661201068": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇫🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1034045839728975882": {
+            "team": "Birdcam CF",
+            "gw": 4,
+            "country": "🇨🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1471569502742511699": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "838946438218121216": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1278778027517677769": {
+            "team": "Lightkings FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1173789167294099582": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1214280038682337331": {
+            "team": "Lightkings FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1287508501484011586": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "858103295208849449": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "963085148021211236": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "660133874873139200": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1363783717289459753": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1361721520350691449": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1385750654823436358": {
+            "team": "CF Ineri",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1175870977884819559": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1429261746434080901": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇩🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1098263507339845725": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇮🇶",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1405952445950984202": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1325252504971120691": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "746850573558743042": {
+            "team": "Red Bull FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "915075762804101161": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1287948381309767733": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "631808202937335808": {
+            "team": "Galindos",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1302031657292795954": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "999729638005817405": {
+            "team": "Vanguards FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1221961086417244290": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1287456599560028214": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇳🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1284515784810565766": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1197177918225395807": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇦",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "662739547829960765": {
+            "team": "SiuFC",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "912453855076315156": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "743480639281692712": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1373046883446165515": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1179483411228930118": {
+            "team": "Black Mans FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1222381881287508099": {
+            "team": "Deportes Concepcion",
+            "gw": 7,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "420813620696449027": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇧🇬",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1253471589836783626": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1407004285300117524": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇹🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1180569204273983580": {
+            "team": "Birdcam CF",
+            "gw": 1,
+            "country": "🇧🇧",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1275904027258912905": {
+            "team": "Vanguards FC",
+            "gw": 6,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "736284210867732500": {
+            "team": "Vanguards FC",
+            "gw": 6,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1438613695923228772": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇬🇹",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1422335967087296572": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1260346077190820013": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1061892396054482944": {
+            "team": "Zinrack FC",
+            "gw": 6,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        }
+    },
+    "teams": {},
+    "squadsheet_messages": {
+        "CF Ineri": {
+            "message_id": "1474983167210553396",
+            "channel_id": "1471249782147121286"
+        },
+        "CJA": {
+            "message_id": "1474943172475092993",
+            "channel_id": "1417998600205500579"
+        },
+        "Kunts FC": {
+            "message_id": "1474944949878259733",
+            "channel_id": "1417998600205500579"
+        },
+        "Galindos": {
+            "message_id": "1474947621729861642",
+            "channel_id": "1471249740095029309"
+        },
+        "Lightkings FC": {
+            "message_id": "1474948329761931464",
+            "channel_id": "1417998600205500579"
+        },
+        "Academia Polaris": {
+            "message_id": "1474949830575915240",
+            "channel_id": "1417998600205500579"
+        },
+        "Vanguards FC": {
+            "message_id": "1474950059711008942",
+            "channel_id": "1471249740095029309"
+        },
+        "Bloxyneta FC": {
+            "message_id": "1474951380946129063",
+            "channel_id": "1471249740095029309"
+        },
+        "Zinrack FC": {
+            "message_id": "1474951780235219068",
+            "channel_id": "1417998600205500579"
+        },
+        "Black Mans FC": {
+            "message_id": "1474952570274320646",
+            "channel_id": "1471249740095029309"
+        },
+        "Club Deportivo Hospital": {
+            "message_id": "1474953877315911914",
+            "channel_id": "1417998600205500579"
+        },
+        "Cojos FC": {
+            "message_id": "1474953949474717696",
+            "channel_id": "1471249740095029309"
+        },
+        "SiuFC": {
+            "message_id": "1474954690004258839",
+            "channel_id": "1417998600205500579"
+        },
+        "Coopsol FC": {
+            "message_id": "1474954995567689759",
+            "channel_id": "1471249740095029309"
+        },
+        "Universidad De Chile": {
+            "message_id": "1474956324369338641",
+            "channel_id": "1471249740095029309"
+        },
+        "Birdcam CF": {
+            "message_id": "1474957070225637396",
+            "channel_id": "1417998600205500579"
+        },
+        "Stroganoff CF": {
+            "message_id": "1474989876444139713",
+            "channel_id": "1471249782147121286"
+        },
+        "Red Waffles FC": {
+            "message_id": "1474997344217862265",
+            "channel_id": "1471249782147121286"
+        },
+        "Orlando Pirates": {
+            "message_id": "1475000103839338648",
+            "channel_id": "1471249782147121286"
+        },
+        "Red Bull FC": {
+            "message_id": "1475003002501861386",
+            "channel_id": "1471249782147121286"
+        },
+        "Bellay Sporting Club": {
+            "message_id": "1475004632311795925",
+            "channel_id": "1471249782147121286"
+        },
+        "Deportes Concepcion": {
+            "message_id": "1475007523542011968",
+            "channel_id": "1471249782147121286"
+        },
+        "Brazukinos Sport Club": {
+            "message_id": "1475014761409413171",
+            "channel_id": "1471249782147121286"
+        },
+        "Bolivia FC": {
+            "message_id": "1475041824681889873",
+            "channel_id": "1471249740095029309"
+        }
+    },
+    "sanctions": {
+        "sanction_1771092744204_1": {
+            "id": "sanction_1771092744204_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "Permanente",
+            "razon": "Filtrar información privada de un miembro de ATF",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1472294422002794567",
+            "timestamp": 1771092744204
+        },
+        "sanction_1771092843665_1": {
+            "id": "sanction_1771092843665_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "Permanente",
+            "razon": "GIF NSFW",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1472294839138783430",
+            "timestamp": 1771092843665
+        },
+        "sanction_1771092854023_2": {
+            "id": "sanction_1771092854023_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Alting",
+            "precio": 600,
+            "duracion": "2 GW",
+            "gw": 2,
+            "estado": "Revoked",
+            "messageId": "1472294882654556231",
+            "timestamp": 1771092854023
+        },
+        "sanction_1771092936151_3": {
+            "id": "sanction_1771092936151_3",
+            "numero": 3,
+            "userId": "1275946444427100311",
+            "tipo": "7 GW",
+            "razon": "Disband",
+            "precio": 1050,
+            "duracion": "5 GW",
+            "gw": 5,
+            "estado": "Revoked",
+            "messageId": "1472295227204042843",
+            "timestamp": 1771092936151
+        },
+        "sanction_1771093563184_1": {
+            "id": "sanction_1771093563184_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1472297857171062885",
+            "timestamp": 1771093563184
+        },
+        "sanction_1771093604431_1": {
+            "id": "sanction_1771093604431_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "Permanente",
+            "razon": "Ser cómplice de actividades sancionables",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1472298030190297240",
+            "timestamp": 1771093604431
+        },
+        "sanction_1771093613847_2": {
+            "id": "sanction_1771093613847_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Intento de raid",
+            "precio": 150,
+            "duracion": "1 GW",
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1472298069315031041",
+            "timestamp": 1771093613847
+        },
+        "sanction_1771093666603_1": {
+            "id": "sanction_1771093666603_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tener 3 sanciones activas",
+            "precio": 150,
+            "duracion": "1 GW",
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1472298290950176779",
+            "timestamp": 1771093666603
+        },
+        "sanction_1771093678692_1": {
+            "id": "sanction_1771093678692_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Pasar por 6 equipos en una temporada",
+            "precio": 600,
+            "duracion": "4 GW",
+            "gw": 4,
+            "estado": "Revoked",
+            "messageId": "1472298341185618105",
+            "timestamp": 1771093678692
+        },
+        "sanction_1771094686699_1": {
+            "id": "sanction_1771094686699_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Tener 3 sanciones activas",
+            "precio": 600,
+            "duracion": "2 GW",
+            "gw": 2,
+            "duracion_restante": 4,
+            "estado": "Revoked",
+            "messageId": "1472302569480126524",
+            "timestamp": 1771094686699
+        },
+        "sanction_1771094758926_1": {
+            "id": "sanction_1771094758926_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Disband",
+            "precio": 600,
+            "duracion": "4 GW",
+            "gw": 4,
+            "duracion_restante": 4,
+            "estado": "Revoked",
+            "messageId": "1472302871994433558",
+            "timestamp": 1771094758926
+        },
+        "sanction_1771095312362_1": {
+            "id": "sanction_1771095312362_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "Permanente",
+            "razon": "Corrupción siendo moderador",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "gw": null,
+            "duracion_restante": null,
+            "estado": "Revocada",
+            "messageId": "1472305193445101680",
+            "timestamp": 1771095312362
+        },
+        "sanction_1771095353387_1": {
+            "id": "sanction_1771095353387_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "5 GW",
+            "razon": "Alting",
+            "precio": 750,
+            "duracion": "4 GW",
+            "gw": 4,
+            "duracion_restante": 5,
+            "estado": "Revocada",
+            "messageId": "1472305365537263789",
+            "timestamp": 1771095353387
+        },
+        "sanction_1771095355679_2": {
+            "id": "sanction_1771095355679_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "7 GW",
+            "razon": "Tarjeta roja",
+            "precio": 1050,
+            "duracion": "6 GW",
+            "gw": 6,
+            "duracion_restante": 7,
+            "estado": "Revocada",
+            "messageId": "1472305375138025685",
+            "timestamp": 1771095355679
+        },
+        "sanction_1771095487826_10": {
+            "id": "sanction_1771095487826_10",
+            "numero": 10,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "gw": 1,
+            "duracion_restante": 1,
+            "estado": "Revocada",
+            "messageId": "1472305929620816033",
+            "timestamp": 1771095487826
+        },
+        "sanction_1771096877958_2": {
+            "id": "sanction_1771096877958_2",
+            "numero": 2,
+            "userId": "732002305507065867",
+            "tipo": "4 GW",
+            "razon": "Filtrar información privada de un miembro de ATF",
+            "precio": 600,
+            "duracion": "3 GW",
+            "gw": 1,
+            "duracion_restante": 4,
+            "estado": "Revocada",
+            "messageId": "1472311760022405242",
+            "timestamp": 1771096877958
+        },
+        "sanction_1771182777997_1": {
+            "id": "sanction_1771182777997_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "7 GW",
+            "razon": "Tarjeta roja",
+            "precio": 1050,
+            "duracion": "7 GW",
+            "duracion_restante": 7,
+            "gw": 6,
+            "estado": "Revocada",
+            "messageId": "1472672051142590687",
+            "timestamp": 1771182777997
+        },
+        "sanction_1771182897242_1": {
+            "id": "sanction_1771182897242_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "3 GW",
+            "razon": "Tarjeta roja",
+            "precio": 450,
+            "duracion": "3 GW",
+            "duracion_restante": 3,
+            "gw": 1,
+            "estado": "Revocada",
+            "messageId": "1472672551174930503",
+            "timestamp": 1771182897242
+        },
+        "sanction_1771182918055_2": {
+            "id": "sanction_1771182918055_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "Permanente",
+            "razon": "Alting",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "duracion_restante": "Permanente",
+            "gw": null,
+            "estado": "Revocada",
+            "messageId": "1472672638592749831",
+            "timestamp": 1771182918055
+        },
+        "sanction_1771183136173_1": {
+            "id": "sanction_1771183136173_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Tarjeta roja",
+            "precio": 600,
+            "duracion": "4 GW",
+            "duracion_restante": 4,
+            "gw": 3,
+            "estado": "Revocada",
+            "messageId": "1472673553227710647",
+            "timestamp": 1771183136173
+        },
+        "sanction_1771183145188_2": {
+            "id": "sanction_1771183145188_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "5 GW",
+            "razon": "Tarjeta roja",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 4,
+            "estado": "Revocada",
+            "messageId": "1472673590796095723",
+            "timestamp": 1771183145188
+        },
+        "sanction_1771184120374_3": {
+            "id": "sanction_1771184120374_3",
+            "numero": 3,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revocada",
+            "messageId": "1472677681240740096",
+            "timestamp": 1771184120374
+        },
+        "sanction_1771184353601_1": {
+            "id": "sanction_1771184353601_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "3 GW",
+            "razon": "Pasar por 3 equipos en una temporada",
+            "precio": 450,
+            "duracion": "3 GW",
+            "duracion_restante": 3,
+            "gw": 3,
+            "estado": "Revocada",
+            "messageId": "1472678659331719403",
+            "timestamp": 1771184353601
+        },
+        "sanction_1771184371895_1": {
+            "id": "sanction_1771184371895_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "3 GW",
+            "razon": "Pasar por 3 equipos en una temporada",
+            "precio": 450,
+            "duracion": "3 GW",
+            "duracion_restante": 3,
+            "gw": 3,
+            "estado": "Revocada",
+            "messageId": "1472678736498397380",
+            "timestamp": 1771184371895
+        },
+        "sanction_1771184388525_2": {
+            "id": "sanction_1771184388525_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "2 GW",
+            "razon": "Intento de raid",
+            "precio": 300,
+            "duracion": "2 GW",
+            "duracion_restante": 2,
+            "gw": 2,
+            "estado": "Revocada",
+            "messageId": "1472678806216249476",
+            "timestamp": 1771184388525
+        },
+        "sanction_1771184710091_1": {
+            "id": "sanction_1771184710091_1",
+            "numero": 1,
+            "userId": "839479880990457907",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revocada",
+            "messageId": "1472680154986971228",
+            "timestamp": 1771184710091
+        },
+        "sanction_1771184988960_1": {
+            "id": "sanction_1771184988960_1",
+            "numero": 1,
+            "userId": "1471577297898311680",
+            "tipo": "1 GW",
+            "razon": "Alting",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revocada",
+            "messageId": "1472681324723835083",
+            "timestamp": 1771184988960
+        },
+        "sanction_1771185172867_1": {
+            "id": "sanction_1771185172867_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Disband",
+            "precio": 600,
+            "duracion": "4 GW",
+            "duracion_restante": 4,
+            "gw": 4,
+            "estado": "Revocada",
+            "messageId": "1472682095787642952",
+            "timestamp": 1771185172868
+        },
+        "sanction_1771185182372_2": {
+            "id": "sanction_1771185182372_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "6 GW",
+            "razon": "Alting",
+            "precio": 900,
+            "duracion": "6 GW",
+            "duracion_restante": 6,
+            "gw": 6,
+            "estado": "Revocada",
+            "messageId": "1472682135826731028",
+            "timestamp": 1771185182372
+        },
+        "sanction_1771185689518_2": {
+            "id": "sanction_1771185689518_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "7 GW",
+            "razon": "Filtrar la cara de un usuario sin consentimiento",
+            "precio": 1050,
+            "duracion": "7 GW",
+            "duracion_restante": 7,
+            "gw": 7,
+            "estado": "Revocada",
+            "messageId": "1472684263034978316",
+            "timestamp": 1771185689518
+        },
+        "sanction_1771186076292_1": {
+            "id": "sanction_1771186076292_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "4 GW",
+            "razon": "Pasar por 3 equipos en una temporada",
+            "precio": 600,
+            "duracion": "4 GW",
+            "duracion_restante": 4,
+            "gw": 4,
+            "estado": "Revocada",
+            "messageId": "1472685885245096069",
+            "timestamp": 1771186076292
+        },
+        "sanction_1771186187041_1": {
+            "id": "sanction_1771186187041_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1472686349378130081",
+            "timestamp": 1771186187041
+        },
+        "sanction_1771186204182_2": {
+            "id": "sanction_1771186204182_2",
+            "numero": 2,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1472686421461569576",
+            "timestamp": 1771186204182
+        },
+        "sanction_1771187311980_1": {
+            "id": "sanction_1771187311980_1",
+            "numero": 1,
+            "userId": "732002305507065867",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1472691068129640599",
+            "timestamp": 1771187311980
+        },
+        "sanction_1771187328774_2": {
+            "id": "sanction_1771187328774_2",
+            "numero": 2,
+            "userId": "732002305507065867",
+            "tipo": "6 GW",
+            "razon": "Alting",
+            "precio": 900,
+            "duracion": "6 GW",
+            "duracion_restante": 6,
+            "gw": 6,
+            "estado": "Revoked",
+            "messageId": "1472691130096418858",
+            "timestamp": 1771187328774
+        },
+        "sanction_1771732045721_1": {
+            "id": "sanction_1771732045721_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1474975846908559381",
+            "timestamp": 1771732045721
+        },
+        "sanction_1771732624768_1": {
+            "id": "sanction_1771732624768_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1474978275208990781",
+            "timestamp": 1771732624768
+        },
+        "sanction_1771733016508_1": {
+            "id": "sanction_1771733016508_1",
+            "numero": 1,
+            "userId": "1275946444427100311",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1474979918696681745",
+            "timestamp": 1771733016508
+        },
+        "sanction_1771736163062_1": {
+            "id": "sanction_1771736163062_1",
+            "numero": 1,
+            "userId": "1323112135718604830",
+            "tipo": "1 Season",
+            "razon": "Filtrar la cara de un usuario sin consentimiento",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1474993115294335109",
+            "timestamp": 1771736163062
+        },
+        "sanction_1771798635909_2": {
+            "id": "sanction_1771798635909_2",
+            "numero": 2,
+            "userId": "732002305507065867",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1475255146454716457",
+            "timestamp": 1771798635909
+        },
+        "sanction_1771802848616_1": {
+            "id": "sanction_1771802848616_1",
+            "numero": 1,
+            "userId": "1325380057732087851",
+            "tipo": "1 GW",
+            "razon": "Doble amarilla = Roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1475272815564554422",
+            "timestamp": 1771802848616
+        },
+        "sanction_1771871058909_1": {
+            "id": "sanction_1771871058909_1",
+            "numero": 1,
+            "userId": "470011128173559839",
+            "tipo": "Permanente",
+            "razon": "Gore",
+            "precio": 4500,
+            "duracion": "Permanente",
+            "duracion_restante": "Permanente",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1475558910588096535",
+            "timestamp": 1771871058909
+        },
+        "sanction_1771909451920_1": {
+            "id": "sanction_1771909451920_1",
+            "numero": 1,
+            "userId": "1234283310004572300",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1475719941943459983",
+            "timestamp": 1771909451920
+        },
+        "sanction_1771909485475_1": {
+            "id": "sanction_1771909485475_1",
+            "numero": 1,
+            "userId": "792539081967927337",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1475720083228590203",
+            "timestamp": 1771909485475
+        },
+        "sanction_1771909617469_1": {
+            "id": "sanction_1771909617469_1",
+            "numero": 1,
+            "userId": "1080858078628565093",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1475720636377731104",
+            "timestamp": 1771909617469
+        },
+        "sanction_1771951010939_1": {
+            "id": "sanction_1771951010939_1",
+            "numero": 1,
+            "userId": "839479880990457907",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1475894253061148795",
+            "timestamp": 1771951010939
+        },
+        "sanction_1771951063711_1": {
+            "id": "sanction_1771951063711_1",
+            "numero": 1,
+            "userId": "839479880990457907",
+            "tipo": "1 Season",
+            "razon": "Disband",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1475894473841180692",
+            "timestamp": 1771951063711
+        },
+        "sanction_1772209377507_1": {
+            "id": "sanction_1772209377507_1",
+            "numero": 1,
+            "userId": "1299822573395378177",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1476977920713949296",
+            "timestamp": 1772209377507
+        },
+        "sanction_1772327376668_1": {
+            "id": "sanction_1772327376668_1",
+            "numero": 1,
+            "userId": "809518678949363722",
+            "tipo": "5 GW",
+            "razon": "Intento de raid",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Activa",
+            "messageId": "1477472845549277314",
+            "timestamp": 1772327376668
+        },
+        "sanction_1772328246827_1": {
+            "id": "sanction_1772328246827_1",
+            "numero": 1,
+            "userId": "1392160858804715671",
+            "tipo": "5 GW",
+            "razon": "Intento de raid",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Activa",
+            "messageId": "1477476494639894785",
+            "timestamp": 1772328246827
+        },
+        "sanction_1772391566403_1": {
+            "id": "sanction_1772391566403_1",
+            "numero": 1,
+            "userId": "1311019567539163231",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1477742076610478180",
+            "timestamp": 1772391566403
+        },
+        "sanction_1772399707869_1": {
+            "id": "sanction_1772399707869_1",
+            "numero": 1,
+            "userId": "1440869107254820909",
+            "tipo": "5 GW",
+            "razon": "Intento de raid",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Activa",
+            "messageId": "1477776224209207507",
+            "timestamp": 1772399707869
+        },
+        "sanction_1772404610386_1": {
+            "id": "sanction_1772404610386_1",
+            "numero": 1,
+            "userId": "1457473683508428907",
+            "tipo": "5 GW",
+            "razon": "Material +18",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Revoked",
+            "messageId": "1477796786767794277",
+            "timestamp": 1772404610386
+        },
+        "sanction_1772404661426_1": {
+            "id": "sanction_1772404661426_1",
+            "numero": 1,
+            "userId": "1384696646968803440",
+            "tipo": "5 GW",
+            "razon": "Material +18",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Activa",
+            "messageId": "1477797000790413464",
+            "timestamp": 1772404661426
+        },
+        "sanction_1772405363375_1": {
+            "id": "sanction_1772405363375_1",
+            "numero": 1,
+            "userId": "1241802115324575936",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Activa",
+            "messageId": "1477799945473102128",
+            "timestamp": 1772405363375
+        },
+        "sanction_1772405364301_1": {
+            "id": "sanction_1772405364301_1",
+            "numero": 1,
+            "userId": "1080858078628565093",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Activa",
+            "messageId": "1477799948991856691",
+            "timestamp": 1772405364301
+        },
+        "sanction_1772408865593_1": {
+            "id": "sanction_1772408865593_1",
+            "numero": 1,
+            "userId": "1325380057732087851",
+            "tipo": "1 GW",
+            "razon": "Tarjeta roja",
+            "precio": 150,
+            "duracion": "1 GW",
+            "duracion_restante": 1,
+            "gw": 1,
+            "estado": "Revoked",
+            "messageId": "1477814634944794856",
+            "timestamp": 1772408865593
+        },
+        "sanction_1772410073594_1": {
+            "id": "sanction_1772410073594_1",
+            "numero": 1,
+            "userId": "1384191921794187346",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1477819702066807026",
+            "timestamp": 1772410073594
+        },
+        "sanction_1772410139425_1": {
+            "id": "sanction_1772410139425_1",
+            "numero": 1,
+            "userId": "624333194744823808",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1477819977947152394",
+            "timestamp": 1772410139425
+        },
+        "sanction_1772465073335_1": {
+            "id": "sanction_1772465073335_1",
+            "numero": 1,
+            "userId": "765242170999046195",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1478050387389841562",
+            "timestamp": 1772465073335
+        },
+        "sanction_1772465193606_1": {
+            "id": "sanction_1772465193606_1",
+            "numero": 1,
+            "userId": "1308194043108261999",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1478050892086513926",
+            "timestamp": 1772465193606
+        },
+        "sanction_1772501616340_1": {
+            "id": "sanction_1772501616340_1",
+            "numero": 1,
+            "userId": "1311019567539163231",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1478203660025729086",
+            "timestamp": 1772501616340
+        },
+        "sanction_1772509794411_1": {
+            "id": "sanction_1772509794411_1",
+            "numero": 1,
+            "userId": "1280224313403768896",
+            "tipo": "1 Season",
+            "razon": "GIF NSFW",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1478237961249099929",
+            "timestamp": 1772509794411
+        },
+        "sanction_1772925203305_1": {
+            "id": "sanction_1772925203305_1",
+            "numero": 1,
+            "userId": "1222381881287508099",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Revoked",
+            "messageId": "1479980312631971880",
+            "timestamp": 1772925203305
+        }
+    },
+    "sanctionCounter": 10,
+    "teamSanctions": {
+        "tsanction_1771733121298_1": {
+            "id": "tsanction_1771733121298_1",
+            "numero": 1,
+            "team": "CF Ineri",
+            "razon": "por ser buenos broski",
+            "estado": "Activa",
+            "messageId": "1474980357899292785",
+            "timestamp": 1771733121298
+        },
+        "tsanction_1771806159302_2": {
+            "id": "tsanction_1771806159302_2",
+            "numero": 2,
+            "team": "Brazukinos Sport Club",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1475286701399343196",
+            "timestamp": 1771806159302
+        },
+        "tsanction_1771806174558_3": {
+            "id": "tsanction_1771806174558_3",
+            "numero": 3,
+            "team": "Vanguards FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1475286765517668362",
+            "timestamp": 1771806174558
+        },
+        "tsanction_1771806189167_4": {
+            "id": "tsanction_1771806189167_4",
+            "numero": 4,
+            "team": "Bolivia FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1475286827022680074",
+            "timestamp": 1771806189167
+        },
+        "tsanction_1772056495779_5": {
+            "id": "tsanction_1772056495779_5",
+            "numero": 5,
+            "team": "Academia Polaris",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1476336688396632236",
+            "timestamp": 1772056495779
+        },
+        "tsanction_1772313927959_6": {
+            "id": "tsanction_1772313927959_6",
+            "numero": 6,
+            "team": "Cojos FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477416436837253154",
+            "timestamp": 1772313927959
+        },
+        "tsanction_1772391565141_7": {
+            "id": "tsanction_1772391565141_7",
+            "numero": 7,
+            "team": "Academia Polaris",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477742071052894229",
+            "timestamp": 1772391565141
+        },
+        "tsanction_1772410073027_8": {
+            "id": "tsanction_1772410073027_8",
+            "numero": 8,
+            "team": "Vanguards FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477819699407622174",
+            "timestamp": 1772410073027
+        },
+        "tsanction_1772410138856_9": {
+            "id": "tsanction_1772410138856_9",
+            "numero": 9,
+            "team": "Bolivia FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477819975719850247",
+            "timestamp": 1772410138856
+        },
+        "tsanction_1772410728281_10": {
+            "id": "tsanction_1772410728281_10",
+            "numero": 10,
+            "team": "Cojos FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477822447767257172",
+            "timestamp": 1772410728281
+        },
+        "tsanction_1772428951553_11": {
+            "id": "tsanction_1772428951553_11",
+            "numero": 11,
+            "team": "Bellay Sporting Club",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1477898881923547179",
+            "timestamp": 1772428951553
+        },
+        "tsanction_1772465072542_12": {
+            "id": "tsanction_1772465072542_12",
+            "numero": 12,
+            "team": "Bellay Sporting Club",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1478050384340582440",
+            "timestamp": 1772465072542
+        },
+        "tsanction_1772465192868_13": {
+            "id": "tsanction_1772465192868_13",
+            "numero": 13,
+            "team": "Brazukinos Sport Club",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1478050888877605016",
+            "timestamp": 1772465192868
+        },
+        "tsanction_1772500570947_14": {
+            "id": "tsanction_1772500570947_14",
+            "numero": 14,
+            "team": "Deportes Concepcion",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1478199275467964457",
+            "timestamp": 1772500570947
+        },
+        "tsanction_1772501615717_15": {
+            "id": "tsanction_1772501615717_15",
+            "numero": 15,
+            "team": "Academia Polaris",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1478203657337049330",
+            "timestamp": 1772501615717
+        },
+        "tsanction_1772925202522_16": {
+            "id": "tsanction_1772925202522_16",
+            "numero": 16,
+            "team": "Deportes Concepcion",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1479980309385707770",
+            "timestamp": 1772925202522
+        }
+    },
+    "teamSanctionCounter": 16,
+    "boosts": {
+        "753428769368440862": 1,
+        "1344449311336829008": 1,
+        "1418287851056926813": 1
+    },
+    "forces": {
+        "1336082482952671232": 2,
+        "1344449311336829008": 1,
+        "1163167993606443080": 2,
+        "1457473683508428907": 1,
+        "1325252504971120691": 1,
+        "1325380057732087851": 1,
+        "1368733449665515640": 1,
+        "1241802115324575936": 1,
+        "1251989595403452432": 1
+    }
+}

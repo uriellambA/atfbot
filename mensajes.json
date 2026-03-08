@@ -1,0 +1,14 @@
+{
+    "config": {
+        "channelId": "1414386380196417671",
+        "cooldownMs": 3600000
+    },
+    "messages": [
+        "**ATF** tiene **{players_actuales}** jugadores activos en este momento!",
+        "**ATF** tiene **{miembros}** miembros en el servidor!",
+        "Recuerda leer https://discord.com/channels/1414386377889546289/1414425086211133591 !",
+        "Para jugar en ATF, necesitas estar verificado con DoubleAuth!",
+        "**¿Buscas equipo?** Pon tus estadisticas en https://discord.com/channels/1414386377889546289/1414386380196417669 !",
+        "Recuerda que para jugar, necesitas estar verificado con https://discord.com/channels/1414386377889546289/1459219899674132755 !"
+    ]
+}

@@ -1,0 +1,2337 @@
+{
+    "partidos": [
+        {
+            "id": "partido_1772405362876",
+            "timestamp": 1772405362876,
+            "competicion": "División A",
+            "serie": "Fecha 2",
+            "equipoLocal": "CJA",
+            "equipoVisitante": "SiuFC",
+            "estadio": null,
+            "marcador": {
+                "local": 4,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1368013502345904188",
+                    "asistenciaId": null,
+                    "minuto": "6",
+                    "equipo": "CJA",
+                    "tipo": "golencontra",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1266879445986447496",
+                    "asistenciaId": "1155096788697612358",
+                    "minuto": "75",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "83",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1266879445986447496",
+                    "asistenciaId": null,
+                    "minuto": "90+2",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1163167993606443080",
+                    "equipo": "SiuFC",
+                    "tarjeta": "amarilla",
+                    "razon": "invasion"
+                },
+                {
+                    "jugadorId": "1457473683508428907",
+                    "equipo": "SiuFC",
+                    "tarjeta": "amarilla",
+                    "razon": "invasion"
+                },
+                {
+                    "jugadorId": "1337966708207386705",
+                    "equipo": "SiuFC",
+                    "tarjeta": "roja",
+                    "razon": "salierse antes de que acabe el partido provocando fft (decidido por el vice)"
+                },
+                {
+                    "jugadorId": "1241802115324575936",
+                    "equipo": "SiuFC",
+                    "tarjeta": "roja",
+                    "razon": "salierse antes de que acabe el partido provocando fft"
+                },
+                {
+                    "jugadorId": "1080858078628565093",
+                    "equipo": "SiuFC",
+                    "tarjeta": "roja",
+                    "razon": "salirse antes de que acabe el partido provocando fft"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1266879445986447496",
+                "equipo": "CJA"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1155096788697612358",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "720498495693520986",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "1241802115324575936",
+                    "equipo": "CJA"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772407912571",
+            "timestamp": 1772407912571,
+            "competicion": "División A",
+            "serie": "Fecha 2",
+            "equipoLocal": "Zinrack FC",
+            "equipoVisitante": "Kunts FC",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "715655100420587611",
+                    "asistenciaId": null,
+                    "minuto": "72",
+                    "equipo": "Zinrack FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1422335967087296572",
+                    "asistenciaId": null,
+                    "minuto": "16",
+                    "equipo": "Kunts FC",
+                    "tipo": "normal",
+                    "marcador": "1-1"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1422335967087296572",
+                "equipo": "Kunts FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1354055352534171679",
+                    "equipo": "Zinrack FC"
+                },
+                {
+                    "jugadorId": "715655100420587611",
+                    "equipo": "Zinrack FC"
+                },
+                {
+                    "jugadorId": "1046604850772836472",
+                    "equipo": "Kunts FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772408865301",
+            "timestamp": 1772408865301,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Deportes Concepcion",
+            "equipoVisitante": "CF Ineri",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1473107910295949392",
+                    "asistenciaId": "1376136521245134848",
+                    "minuto": "22",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1376136521245134848",
+                    "asistenciaId": null,
+                    "minuto": "54",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "732002305507065867",
+                    "asistenciaId": null,
+                    "minuto": "90+2",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "golencontra",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1438613695923228772",
+                    "asistenciaId": null,
+                    "minuto": "79",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "3-1"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1325380057732087851",
+                    "equipo": "CF Ineri",
+                    "tarjeta": "roja",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1473107910295949392",
+                "equipo": "Deportes Concepcion"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1376136521245134848",
+                    "equipo": "Deportes Concepcion"
+                },
+                {
+                    "jugadorId": "1438613695923228772",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "842404732299771944",
+                    "equipo": "Deportes Concepcion"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772409140810",
+            "timestamp": 1772409140810,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Red Bull FC",
+            "equipoVisitante": "Orlando Pirates",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1337491358830563398",
+                    "asistenciaId": "1343769930503557162",
+                    "minuto": "43",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1386858425295568967",
+                    "asistenciaId": null,
+                    "minuto": "37",
+                    "equipo": "Orlando Pirates",
+                    "tipo": "golencontra",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "1091362759729487872",
+                    "asistenciaId": null,
+                    "minuto": "78",
+                    "equipo": "Orlando Pirates",
+                    "tipo": "normal",
+                    "marcador": "1-2"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "618010186099064832",
+                "equipo": "Orlando Pirates"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1251989595403452432",
+                    "equipo": "Orlando Pirates"
+                },
+                {
+                    "jugadorId": "1337491358830563398",
+                    "equipo": "Red Bull FC"
+                },
+                {
+                    "jugadorId": "1091362759729487872",
+                    "equipo": "Orlando Pirates"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772410072807",
+            "timestamp": 1772410072807,
+            "competicion": "División B",
+            "serie": "Fecha 1",
+            "equipoLocal": "Vanguards FC",
+            "equipoVisitante": "Black Mans FC",
+            "estadio": "Camp Black 🇵🇾",
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Vanguards FC",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772410138607",
+            "timestamp": 1772410138607,
+            "competicion": "División B",
+            "serie": "Fecha 1",
+            "equipoLocal": "Bolivia FC",
+            "equipoVisitante": "Coopsol FC",
+            "estadio": "Estadio La Paz 🇧🇴",
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Bolivia FC",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772410434821",
+            "timestamp": 1772410434821,
+            "competicion": "División B",
+            "serie": "Fecha 1",
+            "equipoLocal": "Cojos FC",
+            "equipoVisitante": "Universidad De Chile",
+            "estadio": "Estadio Deportivo Chusito 🇵🇪",
+            "marcador": {
+                "local": 0,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "714240027323793458",
+                    "asistenciaId": null,
+                    "minuto": "40",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "0-1"
+                },
+                {
+                    "jugadorId": "714240027323793458",
+                    "asistenciaId": "1373046883446165515",
+                    "minuto": "69",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "0-2"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "714240027323793458",
+                    "equipo": "Universidad De Chile",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "714240027323793458",
+                "equipo": "Universidad De Chile"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1373046883446165515",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "743480639281692712",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "1336309680561197067",
+                    "equipo": "Cojos FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772410673644",
+            "timestamp": 1772410673644,
+            "competicion": "División B",
+            "serie": "Fecha 1",
+            "equipoLocal": "Bloxyneta FC",
+            "equipoVisitante": "Galindos",
+            "estadio": "Estadio Cataluña 🇪🇸",
+            "marcador": {
+                "local": 1,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1137344905400827904",
+                    "asistenciaId": "936385533742022686",
+                    "minuto": "90+11",
+                    "equipo": "Bloxyneta FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "876543665483423775",
+                    "equipo": "Galindos",
+                    "tarjeta": "amarilla",
+                    "razon": "INSULTOS AL REF"
+                },
+                {
+                    "jugadorId": "936385533742022686",
+                    "equipo": "Bloxyneta FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1137344905400827904",
+                "equipo": "Bloxyneta FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "936385533742022686",
+                    "equipo": "Bloxyneta FC"
+                },
+                {
+                    "jugadorId": "1463486227939328118",
+                    "equipo": "Galindos"
+                },
+                {
+                    "jugadorId": "1406367888230842571",
+                    "equipo": "Bloxyneta FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772410728139",
+            "timestamp": 1772410728139,
+            "competicion": "División B",
+            "serie": "Fecha 2",
+            "equipoLocal": "Cojos FC",
+            "equipoVisitante": "Bloxyneta FC",
+            "estadio": "Estadio Deportivo Chusito 🇵🇪",
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Cojos FC",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772411095503",
+            "timestamp": 1772411095503,
+            "competicion": "División B",
+            "serie": "Fecha 2",
+            "equipoLocal": "Bolivia FC",
+            "equipoVisitante": "Vanguards FC",
+            "estadio": "Estadio La Paz 🇧🇴",
+            "marcador": {
+                "local": 2,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "973272495337652274",
+                    "asistenciaId": null,
+                    "minuto": "3",
+                    "equipo": "Bolivia FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1461848581559292070",
+                    "asistenciaId": null,
+                    "minuto": "73",
+                    "equipo": "Bolivia FC",
+                    "tipo": "golencontra",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1384144716676731010",
+                    "asistenciaId": null,
+                    "minuto": "29",
+                    "equipo": "Vanguards FC",
+                    "tipo": "normal",
+                    "marcador": "2-1"
+                },
+                {
+                    "jugadorId": "1320039453296820234",
+                    "asistenciaId": null,
+                    "minuto": "79",
+                    "equipo": "Vanguards FC",
+                    "tipo": "golencontra",
+                    "marcador": "2-2"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1281230197361737760",
+                    "equipo": "Bolivia FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "1380847866574143521",
+                    "equipo": "Vanguards FC",
+                    "tarjeta": "amarilla",
+                    "razon": "INVASION AL CAMPO"
+                },
+                {
+                    "jugadorId": "1392560749876088863",
+                    "equipo": "Vanguards FC",
+                    "tarjeta": "amarilla",
+                    "razon": "INVASION EN UN PENAL"
+                },
+                {
+                    "jugadorId": "549413377202716672",
+                    "equipo": "Vanguards FC",
+                    "tarjeta": "amarilla",
+                    "razon": "AFK"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1384144716676731010",
+                "equipo": "Vanguards FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "973272495337652274",
+                    "equipo": "Bolivia FC"
+                },
+                {
+                    "jugadorId": "1249492979865882666",
+                    "equipo": "Bolivia FC"
+                },
+                {
+                    "jugadorId": "1418782129999052861",
+                    "equipo": "Bolivia FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772411448608",
+            "timestamp": 1772411448608,
+            "competicion": "División B",
+            "serie": "Fecha 2",
+            "equipoLocal": "Black Mans FC",
+            "equipoVisitante": "Universidad De Chile",
+            "estadio": "Estadio Pisco 🇵🇪",
+            "marcador": {
+                "local": 2,
+                "visitante": 3
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1013281447521562626",
+                    "asistenciaId": null,
+                    "minuto": "5",
+                    "equipo": "Black Mans FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "754421514358489229",
+                    "asistenciaId": null,
+                    "minuto": "66",
+                    "equipo": "Black Mans FC",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1248658201130307645",
+                    "asistenciaId": "1338228275469615187",
+                    "minuto": "45+2",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "2-1"
+                },
+                {
+                    "jugadorId": "888603703010025543",
+                    "asistenciaId": null,
+                    "minuto": "49",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "golencontra",
+                    "marcador": "2-2"
+                },
+                {
+                    "jugadorId": "1248658201130307645",
+                    "asistenciaId": null,
+                    "minuto": "77",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "2-3"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1248658201130307645",
+                "equipo": "Universidad De Chile"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "743480639281692712",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "1338228275469615187",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "1391747073732378726",
+                    "equipo": "Black Mans FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772411930218",
+            "timestamp": 1772411930218,
+            "competicion": "División B",
+            "serie": "Fecha 2",
+            "equipoLocal": "Coopsol FC",
+            "equipoVisitante": "Galindos",
+            "estadio": "Coopsol STADIUM 🇪🇸",
+            "marcador": {
+                "local": 1,
+                "visitante": 5
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1124005175670083584",
+                    "asistenciaId": null,
+                    "minuto": "44",
+                    "equipo": "Coopsol FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1290027203223879743",
+                    "asistenciaId": null,
+                    "minuto": "29",
+                    "equipo": "Galindos",
+                    "tipo": "golencontra",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "1124005175670083584",
+                    "asistenciaId": null,
+                    "minuto": "39",
+                    "equipo": "Galindos",
+                    "tipo": "golencontra",
+                    "marcador": "1-2"
+                },
+                {
+                    "jugadorId": "566629240456609792",
+                    "asistenciaId": "1351330365519822888",
+                    "minuto": "45+2",
+                    "equipo": "Galindos",
+                    "tipo": "normal",
+                    "marcador": "1-3"
+                },
+                {
+                    "jugadorId": "1351330365519822888",
+                    "asistenciaId": null,
+                    "minuto": "63",
+                    "equipo": "Galindos",
+                    "tipo": "normal",
+                    "marcador": "1-4"
+                },
+                {
+                    "jugadorId": "1351330365519822888",
+                    "asistenciaId": "566629240456609792",
+                    "minuto": "87",
+                    "equipo": "Galindos",
+                    "tipo": "normal",
+                    "marcador": "1-5"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "694183690393223289",
+                    "equipo": "Coopsol FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "381896787545423873",
+                    "equipo": "Galindos",
+                    "tarjeta": "amarilla",
+                    "razon": "NO RESPETAR SAQUE"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1351330365519822888",
+                "equipo": "Galindos"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "566629240456609792",
+                    "equipo": "Galindos"
+                },
+                {
+                    "jugadorId": "381896787545423873",
+                    "equipo": "Galindos"
+                },
+                {
+                    "jugadorId": "1124005175670083584",
+                    "equipo": "Coopsol FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772428862931",
+            "timestamp": 1772428862931,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Red Waffles FC",
+            "equipoVisitante": "Stroganoff CF",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 3
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1440427357490905220",
+                    "asistenciaId": null,
+                    "minuto": "49",
+                    "equipo": "Red Waffles FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1285248201372471408",
+                    "asistenciaId": null,
+                    "minuto": "39",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "golencontra",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "745730720185450518",
+                    "asistenciaId": "811072946163941386",
+                    "minuto": "45+3",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-2"
+                },
+                {
+                    "jugadorId": "811072946163941386",
+                    "asistenciaId": "958139803315077141",
+                    "minuto": "64",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-3"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "958139803315077141",
+                    "equipo": "Stroganoff CF",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "1124151302159618178",
+                    "equipo": "Red Waffles FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "728785398930604172",
+                    "equipo": "Stroganoff CF",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "1285248201372471408",
+                    "equipo": "Red Waffles FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "811072946163941386",
+                "equipo": "Stroganoff"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "745730720185450518",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "1440427357490905220",
+                    "equipo": "Red Waffles FC"
+                },
+                {
+                    "jugadorId": "958139803315077141",
+                    "equipo": "Stroganoff CF"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772428951389",
+            "timestamp": 1772428951389,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Brazukinos Sport Club",
+            "equipoVisitante": "Bellay Sporting Club",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": true,
+            "equipoFFT": "Bellay Sporting Club",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772429192804",
+            "timestamp": 1772429192804,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Deportes Concepcion",
+            "equipoVisitante": "Brazukinos Sport Club",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1057725728881389700",
+                    "asistenciaId": null,
+                    "minuto": "68",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1155315886085902397",
+                    "asistenciaId": null,
+                    "minuto": "74",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "golencontra",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1473107910295949392",
+                    "asistenciaId": "1264012137370488899",
+                    "minuto": "90+2",
+                    "equipo": "Deportes Concepcion",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1318317368841211964",
+                    "equipo": "Deportes Concepcion",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1264012137370488899",
+                "equipo": "Deportes Concepcion"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1308194043108261999",
+                    "equipo": "Brazukinos Sport Club"
+                },
+                {
+                    "jugadorId": "1057725728881389700",
+                    "equipo": "Deportes Concepcion"
+                },
+                {
+                    "jugadorId": "755201840986980475",
+                    "equipo": "Brazukinos Sport Club"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772429492387",
+            "timestamp": 1772429492387,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Red Bull FC",
+            "equipoVisitante": "CF Ineri",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1337491358830563398",
+                    "asistenciaId": "1343769930503557162",
+                    "minuto": "25",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "997272075360284683",
+                    "asistenciaId": null,
+                    "minuto": "90+1",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1337491358830563398",
+                    "asistenciaId": "1177916322122833933",
+                    "minuto": "90+5",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1413708583723470958",
+                    "asistenciaId": "1438613695923228772",
+                    "minuto": "36",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "3-1"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1337491358830563398",
+                "equipo": "Red Bull FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1432484567343824938",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "1343769930503557162",
+                    "equipo": "Red Bull FC"
+                },
+                {
+                    "jugadorId": "1325380057732087851",
+                    "equipo": "CF Ineri"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772429651273",
+            "timestamp": 1772429651273,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Stroganoff CF",
+            "equipoVisitante": "Bellay Sporting Club",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1185441089470087218",
+                    "asistenciaId": "745730720185450518",
+                    "minuto": "50",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "765242170999046195",
+                "equipo": "Bellay Sporting Club"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1185441089470087218",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "745730720185450518",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "900170175133917204",
+                    "equipo": "Stroganoff CF"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772429892042",
+            "timestamp": 1772429892042,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Orlando Pirates",
+            "equipoVisitante": "Red Waffles FC",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 3
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "379445059482812418",
+                    "asistenciaId": null,
+                    "minuto": "10",
+                    "equipo": "Orlando Pirates",
+                    "tipo": "penal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1440427357490905220",
+                    "asistenciaId": "1393124301816729692",
+                    "minuto": "43",
+                    "equipo": "Red Waffles FC",
+                    "tipo": "normal",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "1086468706399436830",
+                    "asistenciaId": null,
+                    "minuto": "77",
+                    "equipo": "Red Waffles FC",
+                    "tipo": "golencontra",
+                    "marcador": "1-2"
+                },
+                {
+                    "jugadorId": "1393124301816729692",
+                    "asistenciaId": "1285248201372471408",
+                    "minuto": "90+4",
+                    "equipo": "Red Waffles FC",
+                    "tipo": "normal",
+                    "marcador": "1-3"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1202084056213233696",
+                    "equipo": "Red Waffles FC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1440427357490905220",
+                "equipo": "Red Waffles FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1393124301816729692",
+                    "equipo": "Red Waffles FC"
+                },
+                {
+                    "jugadorId": "1474997344217862265",
+                    "equipo": "Red Waffles FC"
+                },
+                {
+                    "jugadorId": "379445059482812418",
+                    "equipo": "Orlando Pirates"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772430165731",
+            "timestamp": 1772430165731,
+            "competicion": "División C",
+            "serie": "Fecha 2",
+            "equipoLocal": "Orlando Pirates",
+            "equipoVisitante": "Bellay Sporting Club",
+            "estadio": null,
+            "marcador": {
+                "local": 2,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "765242170999046195",
+                    "asistenciaId": null,
+                    "minuto": "71",
+                    "equipo": "Orlando Pirates",
+                    "tipo": "golencontra",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "618010186099064832",
+                    "asistenciaId": null,
+                    "minuto": "90+4",
+                    "equipo": "Orlando Pirates",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1349866078989320304",
+                    "asistenciaId": "1315695249397649449",
+                    "minuto": "62",
+                    "equipo": "Bellay Sporting Club",
+                    "tipo": "normal",
+                    "marcador": "2-1"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1315695249397649449",
+                "equipo": "Bellay Sporting Club"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "618010186099064832",
+                    "equipo": "Orlando Pirates"
+                },
+                {
+                    "jugadorId": "1349866078989320304",
+                    "equipo": "Bellay Sporting Club"
+                },
+                {
+                    "jugadorId": "1280224313403768896",
+                    "equipo": "Orlando Pirates"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772430671196",
+            "timestamp": 1772430671196,
+            "competicion": "División C",
+            "serie": "Fecha 2",
+            "equipoLocal": "CF Ineri",
+            "equipoVisitante": "Brazukinos Sport Club",
+            "estadio": null,
+            "marcador": {
+                "local": 5,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1413708583723470958",
+                    "asistenciaId": "811735849179283476",
+                    "minuto": "10",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1432484567343824938",
+                    "asistenciaId": null,
+                    "minuto": "12",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1432484567343824938",
+                    "asistenciaId": "811735849179283476",
+                    "minuto": "23",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1432484567343824938",
+                    "asistenciaId": "811735849179283476",
+                    "minuto": "43",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                },
+                {
+                    "jugadorId": "811735849179283476",
+                    "asistenciaId": null,
+                    "minuto": "64",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "5-0"
+                },
+                {
+                    "jugadorId": "1155315886085902397",
+                    "asistenciaId": "1474140063599431680",
+                    "minuto": "65",
+                    "equipo": "Brazukinos Sport Club",
+                    "tipo": "normal",
+                    "marcador": "5-1"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1432484567343824938",
+                    "equipo": "CF Ineri",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                },
+                {
+                    "jugadorId": "1353098474291462187",
+                    "equipo": "CF Ineri",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "811735849179283476",
+                "equipo": "CF Ineri"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1432484567343824938",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "1413708583723470958",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "975889182041997324",
+                    "equipo": "CF Ineri"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772430961156",
+            "timestamp": 1772430961156,
+            "competicion": "División C",
+            "serie": "Fecha 2",
+            "equipoLocal": "Red Bull FC",
+            "equipoVisitante": "Red Waffles FC",
+            "estadio": null,
+            "marcador": {
+                "local": 4,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1343769930503557162",
+                    "asistenciaId": "1221642681474748521",
+                    "minuto": "12",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1221642681474748521",
+                    "asistenciaId": "1343769930503557162",
+                    "minuto": "50",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1117923534535143626",
+                    "asistenciaId": null,
+                    "minuto": "54",
+                    "equipo": "Red Bull FC",
+                    "tipo": "golencontra",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1221642681474748521",
+                    "asistenciaId": null,
+                    "minuto": "65",
+                    "equipo": "Red Bull FC",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                },
+                {
+                    "jugadorId": "1177916322122833933",
+                    "asistenciaId": null,
+                    "minuto": "3",
+                    "equipo": "Red Waffles FC",
+                    "tipo": "golencontra",
+                    "marcador": "4-1"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1343769930503557162",
+                "equipo": "Red Bull FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1221642681474748521",
+                    "equipo": "Red Bull FC"
+                },
+                {
+                    "jugadorId": "1337491358830563398",
+                    "equipo": "Red Bull FC"
+                },
+                {
+                    "jugadorId": "1163167993606443080",
+                    "equipo": "Red Waffles FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772431213482",
+            "timestamp": 1772431213482,
+            "competicion": "División C",
+            "serie": "Fecha 2",
+            "equipoLocal": "Stroganoff CF",
+            "equipoVisitante": "Deportes Concepcion",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1264012137370488899",
+                    "asistenciaId": null,
+                    "minuto": "16",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "811072946163941386",
+                    "asistenciaId": null,
+                    "minuto": "79",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "900170175133917204",
+                    "asistenciaId": null,
+                    "minuto": "87",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "penal",
+                    "marcador": "3-0"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "745730720185450518",
+                "equipo": "Stroganoff CF"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "811072946163941386",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "900170175133917204",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "1057725728881389700",
+                    "equipo": "Deportes Concepcion"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772431666213",
+            "timestamp": 1772431666213,
+            "competicion": "División A",
+            "serie": "Fecha 2",
+            "equipoLocal": "Birdcam CF",
+            "equipoVisitante": "Lightkings FC",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "765051054546878528",
+                    "asistenciaId": "662739547829960765",
+                    "minuto": "28",
+                    "equipo": "Lightkings FC",
+                    "tipo": "normal",
+                    "marcador": "0-1"
+                },
+                {
+                    "jugadorId": "957774141434495067",
+                    "asistenciaId": "765051054546878528",
+                    "minuto": "56",
+                    "equipo": "Lightkings FC",
+                    "tipo": "normal",
+                    "marcador": "0-2"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1405952445950984202",
+                    "equipo": "Lightkings FC",
+                    "tarjeta": "amarilla",
+                    "razon": "No respetar saque"
+                },
+                {
+                    "jugadorId": "957774141434495067",
+                    "equipo": "Lightkings FC",
+                    "tarjeta": "amarilla",
+                    "razon": "No respetar saque"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "957774141434495067",
+                "equipo": "Lightkings FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "765051054546878528",
+                    "equipo": "Lightkings FC"
+                },
+                {
+                    "jugadorId": "662739547829960765",
+                    "equipo": "Lightkings FC"
+                },
+                {
+                    "jugadorId": "1405952445950984202",
+                    "equipo": "Lightkings FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772465072334",
+            "timestamp": 1772465072334,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Brazukinos Sport Club",
+            "equipoVisitante": "Bellay Sporting Club",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": true,
+            "equipoFFT": "Bellay Sporting Club",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772465192626",
+            "timestamp": 1772465192626,
+            "competicion": "División C",
+            "serie": "Fecha 1",
+            "equipoLocal": "Brazukinos Sport Club",
+            "equipoVisitante": "Bellay Sporting Club",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Brazukinos Sport Club",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772500203873",
+            "timestamp": 1772500203873,
+            "competicion": "División A",
+            "serie": "Fecha 1",
+            "equipoLocal": "Lightkings FC",
+            "equipoVisitante": "CJA",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "927379544732754000",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "43",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-1"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "64",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-2"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1155096788697612358",
+                "equipo": "CJA"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "720498495693520986",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "927379544732754000",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "839479880990457907",
+                    "equipo": "CJA"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772500570727",
+            "timestamp": 1772500570727,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - vuelta",
+            "equipoLocal": "Brazukinos Sport Club",
+            "equipoVisitante": "Deportes Concepcion",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": true,
+            "equipoFFT": "Deportes Concepcion",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772500778860",
+            "timestamp": 1772500778860,
+            "competicion": "División A",
+            "serie": "Fecha 1",
+            "equipoLocal": "SiuFC",
+            "equipoVisitante": "Zinrack FC",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "797335270512787466",
+                    "asistenciaId": "1163167993606443080",
+                    "minuto": "8",
+                    "equipo": "SiuFC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "901667467053662259",
+                    "asistenciaId": null,
+                    "minuto": "14",
+                    "equipo": "Zinrack FC",
+                    "tipo": "golencontra",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "1221961086417244290",
+                    "asistenciaId": null,
+                    "minuto": "61",
+                    "equipo": "Zinrack FC",
+                    "tipo": "golencontra",
+                    "marcador": "1-2"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "505801370528382988",
+                "equipo": "Zinrack FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "797335270512787466",
+                    "equipo": "SiuFC"
+                },
+                {
+                    "jugadorId": "1265119087235698773",
+                    "equipo": "Zinrack FC"
+                },
+                {
+                    "jugadorId": "1260346077190820013",
+                    "equipo": "Zinrack FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772500907864",
+            "timestamp": 1772500907864,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - vuelta",
+            "equipoLocal": "Bellay Sporting Club",
+            "equipoVisitante": "Stroganoff CF",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 4
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1287948381309767733",
+                    "asistenciaId": "1349866078989320304",
+                    "minuto": "72",
+                    "equipo": "Bellay Sporting Club",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1185441089470087218",
+                    "asistenciaId": null,
+                    "minuto": "4",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-1"
+                },
+                {
+                    "jugadorId": "1221642681474748521",
+                    "asistenciaId": "1185441089470087218",
+                    "minuto": "21",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-2"
+                },
+                {
+                    "jugadorId": "1327456280423436401",
+                    "asistenciaId": null,
+                    "minuto": "60",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-3"
+                },
+                {
+                    "jugadorId": "811072946163941386",
+                    "asistenciaId": "1221642681474748521",
+                    "minuto": "90+5",
+                    "equipo": "Stroganoff CF",
+                    "tipo": "normal",
+                    "marcador": "1-4"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1185441089470087218",
+                    "equipo": "Bellay Sporting Club",
+                    "tarjeta": "amarilla",
+                    "razon": "Lag"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1185441089470087218",
+                "equipo": "Bellay Sporting Club"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "811072946163941386",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "1221642681474748521",
+                    "equipo": "Stroganoff CF"
+                },
+                {
+                    "jugadorId": "835333978273349632",
+                    "equipo": "Bellay Sporting Club"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772501480437",
+            "timestamp": 1772501480437,
+            "competicion": "División A",
+            "serie": "Fecha 1",
+            "equipoLocal": "Birdcam CF",
+            "equipoVisitante": "Club Deportivo Hospital",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 6
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1087189275298238575",
+                    "asistenciaId": null,
+                    "minuto": "15",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "golencontra",
+                    "marcador": "0-1"
+                },
+                {
+                    "jugadorId": "703375776267108372",
+                    "asistenciaId": "1241802115324575936",
+                    "minuto": "30",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "normal",
+                    "marcador": "0-2"
+                },
+                {
+                    "jugadorId": "1080858078628565093",
+                    "asistenciaId": "1429846031624835214",
+                    "minuto": "58",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "normal",
+                    "marcador": "0-3"
+                },
+                {
+                    "jugadorId": "1080858078628565093",
+                    "asistenciaId": "1241802115324575936",
+                    "minuto": "63",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "normal",
+                    "marcador": "0-4"
+                },
+                {
+                    "jugadorId": "1241802115324575936",
+                    "asistenciaId": "663352788369276938",
+                    "minuto": "68",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "normal",
+                    "marcador": "0-5"
+                },
+                {
+                    "jugadorId": "237282004054441986",
+                    "asistenciaId": null,
+                    "minuto": "77",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "penal",
+                    "marcador": "0-6"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1087189275298238575",
+                    "equipo": "Birdcam CF",
+                    "tarjeta": "amarilla",
+                    "razon": "Lag en el área"
+                },
+                {
+                    "jugadorId": "517967818680041480",
+                    "equipo": "Club Deportivo Hospital",
+                    "tarjeta": "amarilla",
+                    "razon": "Intervenir en un penal"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1241802115324575936",
+                "equipo": "Club Deportivo Hospital"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1080858078628565093",
+                    "equipo": "Club Deportivo Hospital"
+                },
+                {
+                    "jugadorId": "703375776267108372",
+                    "equipo": "Club Deportivo Hospital"
+                },
+                {
+                    "jugadorId": "1339957691753168962",
+                    "equipo": "Club Deportivo Hospital"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772501615491",
+            "timestamp": 1772501615491,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Zinrack FC",
+            "equipoVisitante": "Academia Polaris",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": true,
+            "equipoFFT": "Academia Polaris",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1772501953096",
+            "timestamp": 1772501953096,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Club Deportivo Hospital",
+            "equipoVisitante": "Lightkings FC",
+            "estadio": null,
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "957774141434495067",
+                    "asistenciaId": null,
+                    "minuto": "20",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "golencontra",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "957774141434495067",
+                    "asistenciaId": null,
+                    "minuto": "57",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "golencontra",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "746850573558743042",
+                    "asistenciaId": null,
+                    "minuto": "90+3",
+                    "equipo": "Club Deportivo Hospital",
+                    "tipo": "golencontra",
+                    "marcador": "3-0"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1241802115324575936",
+                "equipo": "Club Deportivo Hospital"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "663352788369276938",
+                    "equipo": "Club Deportivo Hospital"
+                },
+                {
+                    "jugadorId": "703375776267108372",
+                    "equipo": "Club Deportivo Hospital"
+                },
+                {
+                    "jugadorId": "1455399896411672672",
+                    "equipo": "Lightkings FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772502337826",
+            "timestamp": 1772502337826,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "Kunts FC",
+            "equipoVisitante": "SiuFC",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1163167993606443080",
+                    "asistenciaId": null,
+                    "minuto": "80",
+                    "equipo": "SiuFC",
+                    "tipo": "normal",
+                    "marcador": "0-1"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1411339344622522468",
+                "equipo": "Kunts FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1173789167294099582",
+                    "equipo": "Kunts FC"
+                },
+                {
+                    "jugadorId": "1373788357930389576",
+                    "equipo": "SiuFC"
+                },
+                {
+                    "jugadorId": "1422335967087296572",
+                    "equipo": "Kunts FC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772504478811",
+            "timestamp": 1772504478811,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - ida",
+            "equipoLocal": "CJA",
+            "equipoVisitante": "Birdcam CF",
+            "estadio": null,
+            "marcador": {
+                "local": 5,
+                "visitante": 2
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "20",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "720498495693520986",
+                    "asistenciaId": "1155096788697612358",
+                    "minuto": "35",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "1377653982712955042",
+                    "minuto": "55",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "1377653982712955042",
+                    "minuto": "77",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": null,
+                    "minuto": "90+4",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "5-0"
+                },
+                {
+                    "jugadorId": "845065998918615053",
+                    "asistenciaId": null,
+                    "minuto": "9",
+                    "equipo": "Birdcam CF",
+                    "tipo": "normal",
+                    "marcador": "5-1"
+                },
+                {
+                    "jugadorId": "1231494958381269003",
+                    "asistenciaId": null,
+                    "minuto": "90+4",
+                    "equipo": "Birdcam CF",
+                    "tipo": "normal",
+                    "marcador": "5-2"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1155096788697612358",
+                "equipo": "CJA"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "720498495693520986",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "845065998918615053",
+                    "equipo": "Birdcam CF"
+                },
+                {
+                    "jugadorId": "1377653982712955042",
+                    "equipo": "CJA"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772506870500",
+            "timestamp": 1772506870500,
+            "competicion": "Bull Cup",
+            "serie": "Cuartos de final - vuelta",
+            "equipoLocal": "CF Ineri",
+            "equipoVisitante": "Red Bull FC",
+            "estadio": null,
+            "marcador": {
+                "local": 4,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "975889182041997324",
+                    "asistenciaId": null,
+                    "minuto": "1",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "975889182041997324",
+                    "asistenciaId": "754421514358489229",
+                    "minuto": "90+5",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "975889182041997324",
+                    "asistenciaId": "1353098474291462187",
+                    "minuto": "102",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "811735849179283476",
+                    "asistenciaId": null,
+                    "minuto": "105",
+                    "equipo": "CF Ineri",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "858103295208849449",
+                    "equipo": "Red Bull FC",
+                    "tarjeta": "amarilla",
+                    "razon": "Lag"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "975889182041997324",
+                "equipo": "CF Ineri"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "811735849179283476",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "754421514358489229",
+                    "equipo": "CF Ineri"
+                },
+                {
+                    "jugadorId": "1353098474291462187",
+                    "equipo": "CF Ineri"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772733545102",
+            "timestamp": 1772733545102,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - vuelta",
+            "equipoLocal": "Birdcam CF",
+            "equipoVisitante": "CJA",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 6
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": null,
+                    "minuto": "21",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-1"
+                },
+                {
+                    "jugadorId": "1379972188358316072",
+                    "asistenciaId": null,
+                    "minuto": "28",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-2"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "42",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-3"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "1266879445986447496",
+                    "minuto": "59",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-4"
+                },
+                {
+                    "jugadorId": "720498495693520986",
+                    "asistenciaId": "602242677215592449",
+                    "minuto": "70",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-5"
+                },
+                {
+                    "jugadorId": "1155096788697612358",
+                    "asistenciaId": "720498495693520986",
+                    "minuto": "90",
+                    "equipo": "CJA",
+                    "tipo": "normal",
+                    "marcador": "0-6"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1155096788697612358",
+                "equipo": "CJA"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "720498495693520986",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "1379972188358316072",
+                    "equipo": "CJA"
+                },
+                {
+                    "jugadorId": "1266879445986447496",
+                    "equipo": "CJA"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772762184102",
+            "timestamp": 1772762184102,
+            "competicion": "Elite Division Cup",
+            "serie": "Cuartos de final - vuelta",
+            "equipoLocal": "SiuFC",
+            "equipoVisitante": "Kunts FC",
+            "estadio": null,
+            "marcador": {
+                "local": 1,
+                "visitante": 1
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1339259441001795614",
+                    "asistenciaId": null,
+                    "minuto": "90",
+                    "equipo": "SiuFC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "916400995418927225",
+                    "asistenciaId": null,
+                    "minuto": "6",
+                    "equipo": "Kunts FC",
+                    "tipo": "normal",
+                    "marcador": "1-1"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1348963017202597888",
+                    "equipo": "SiuFC",
+                    "tarjeta": "amarilla",
+                    "razon": "LAG"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "916400995418927225",
+                "equipo": "Kunts FC"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1339259441001795614",
+                    "equipo": "SiuFC"
+                },
+                {
+                    "jugadorId": "1411339344622522468",
+                    "equipo": "Kunts FC"
+                },
+                {
+                    "jugadorId": "1457473683508428907",
+                    "equipo": "SiuFC"
+                }
+            ]
+        },
+        {
+            "id": "partido_1772925202347",
+            "timestamp": 1772925202347,
+            "competicion": "División C",
+            "serie": "Fecha 3",
+            "equipoLocal": "Deportes Concepcion",
+            "equipoVisitante": "Red Bull FC",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Deportes Concepcion",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
+        },
+        {
+            "id": "partido_1773006264914",
+            "timestamp": 1773006264914,
+            "competicion": "División A",
+            "serie": "Fecha 3",
+            "equipoLocal": "SiuFC",
+            "equipoVisitante": "Birdcam CF",
+            "estadio": null,
+            "marcador": {
+                "local": 2,
+                "visitante": 3
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1348963017202597888",
+                    "asistenciaId": null,
+                    "minuto": "24",
+                    "equipo": "SiuFC",
+                    "tipo": "normal",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1368013502345904188",
+                    "asistenciaId": null,
+                    "minuto": "31",
+                    "equipo": "SiuFC",
+                    "tipo": "normal",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "1154188161413550180",
+                    "asistenciaId": null,
+                    "minuto": "24",
+                    "equipo": "Birdcam CF",
+                    "tipo": "normal",
+                    "marcador": "2-1"
+                },
+                {
+                    "jugadorId": "1310561901075234836",
+                    "asistenciaId": null,
+                    "minuto": "80",
+                    "equipo": "Birdcam CF",
+                    "tipo": "normal",
+                    "marcador": "2-2"
+                },
+                {
+                    "jugadorId": "842404732299771944",
+                    "asistenciaId": null,
+                    "minuto": "90+3",
+                    "equipo": "Birdcam CF",
+                    "tipo": "golencontra",
+                    "marcador": "2-3"
+                }
+            ],
+            "sanciones": [
+                {
+                    "jugadorId": "1373788357930389576",
+                    "equipo": "SiuFC",
+                    "tarjeta": "amarilla",
+                    "razon": "Invasión de cancha"
+                }
+            ],
+            "mvp": {
+                "jugadorId": "1310561901075234836",
+                "equipo": "Birdcam CF"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "1368013502345904188",
+                    "equipo": "SiuFC"
+                },
+                {
+                    "jugadorId": "1163167993606443080",
+                    "equipo": "SiuFC"
+                },
+                {
+                    "jugadorId": "1373788357930389576",
+                    "equipo": "SiuFC"
+                }
+            ]
+        }
+    ]
+}
