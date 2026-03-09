@@ -4656,4 +4656,5 @@ global._verifyBot = { processVerification };
 // Limpiar códigos expirados cada 5 minutos
 setInterval(cleanExpiredCodes, 5 * 60 * 1000);
 
+console.log('[BOT] Iniciando login con token:', token ? 'Token encontrado' : 'Token NO encontrado');
 client.login(token);
