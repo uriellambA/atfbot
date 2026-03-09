@@ -13,13 +13,6 @@ const client = new Client({
     ]
 });
 
-const http = require('http');
-const server = http.createServer((req, res) => {
-  res.writeHead(200);
-  res.end('Bot activo');
-});
-server.listen(process.env.PORT || 3001);
-
 // Archivo de base de datos
 const DATABASE_FILE = 'players_data.json';
 const DB_FILE = path.join(__dirname, 'sanciones.json');
