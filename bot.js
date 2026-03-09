@@ -4656,12 +4656,10 @@ global._verifyBot = { processVerification };
 // Limpiar códigos expirados cada 5 minutos
 setInterval(cleanExpiredCodes, 5 * 60 * 1000);
 
-client.on('ready', () => {
-    console.log(`[BOT] ✅ Bot conectado como: ${client.user.tag}`);
+console.log('[BOT] Token length:', token ? token.length : 0);
+console.log('[BOT] Llamando client.login...');
+client.login(token).then(() => {
+    console.log('[BOT] Login exitoso');
+}).catch((err) => {
+    console.error('[BOT] Login fallido:', err.message);
 });
-
-client.on('error', (error) => {
-    console.error('[BOT] ❌ Error de Discord:', error);
-});
-
-client.login(token);
