@@ -4664,7 +4664,5 @@ client.on('error', (error) => {
     console.error('[BOT] ❌ Error de Discord:', error);
 });
 
-client.login(token);
-
 console.log('[BOT] Iniciando login con token:', token ? 'Token encontrado' : 'Token NO encontrado');
 client.login(token);
