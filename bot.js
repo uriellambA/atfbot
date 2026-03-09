@@ -744,7 +744,10 @@ function generateResultMessage(data) {
 // EVENTO READY
 // ─────────────────────────────────────────────────────────────────────────────
 client.once('ready', async (c) => {
-    console.log(`Bot conectado como ${c.user.tag}`);
+    console.log(`[BOT] Bot conectado como ${c.user.tag}`);
+client.once('error', (error) => {
+    console.error('[BOT] ❌ Error de Discord:', error);
+});
 
     const firstGuild = c.guilds.cache.first();
     if (firstGuild) startConfigMessagesInterval(firstGuild);
@@ -4655,14 +4658,6 @@ global._verifyBot = { processVerification };
 
 // Limpiar códigos expirados cada 5 minutos
 setInterval(cleanExpiredCodes, 5 * 60 * 1000);
-
-client.on('ready', () => {
-    console.log(`[BOT] ✅ Bot conectado como: ${client.user.tag}`);
-});
-
-client.on('error', (error) => {
-    console.error('[BOT] ❌ Error de Discord:', error);
-});
 
 console.log('[BOT] Iniciando login con token:', token ? 'Token encontrado' : 'Token NO encontrado');
 client.login(token);
