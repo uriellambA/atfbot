@@ -1,8 +1,8 @@
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, MessageFlags } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-require('./verify-api.js');
 require('dotenv').config();
+require('./verify-api.js');
 
 // Configuración del bot
 const client = new Client({
