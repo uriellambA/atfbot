@@ -4,16 +4,6 @@ const path = require('path');
 require('dotenv').config();
 require('./verify-api.js');
 
-console.log('[DEBUG] Iniciando bot...');
-setTimeout(() => {
-    console.log('[DEBUG] Intentando login...');
-    client.login(token).then(() => {
-        console.log('[DEBUG] Login OK:', client.user.tag);
-    }).catch((err) => {
-        console.error('[DEBUG] Login FAIL:', err.message, err.code);
-    });
-}, 3000);
-
 // Configuración del bot
 const client = new Client({
     intents: [
@@ -4666,12 +4656,4 @@ global._verifyBot = { processVerification };
 // Limpiar códigos expirados cada 5 minutos
 setInterval(cleanExpiredCodes, 5 * 60 * 1000);
 
-console.log('[BOT] Token length:', token ? token.length : 0);
-console.log('[BOT] Llamando client.login...');
-client.login(token).then(() => {
-    console.log('[BOT] Login exitoso');
-}).catch((err) => {
-    console.error('[BOT] Login fallido:', err.message);
-});
-
-// client.login(token)
+client.login(token)
