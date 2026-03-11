@@ -988,7 +988,7 @@ client.once('ready', async (c) => {
             ))
             .addChannelOption(option => option.setName('canal').setDescription('Canal donde se enviará el anuncio').setRequired(true))
             .addStringOption(option => option.setName('stream').setDescription('Link del stream').setRequired(true))
-            .addAttachmentOption(option => option.setName('miniatura').setDescription('Imagen miniatura del partido').setRequired(true))
+            .addAttachmentOption(option => option.setName('miniatura').setDescription('Imagen miniatura del partido (opcional)').setRequired(false))
             .addStringOption(option => option.setName('link_juego').setDescription('Link del juego (opcional)').setRequired(false)),
 
         new SlashCommandBuilder()
@@ -1034,6 +1034,19 @@ client.once('ready', async (c) => {
             ))
             .addIntegerOption(option => option.setName('enfrentamientos').setDescription('Cantidad de enfrentamientos (1-8)').setRequired(true).setMinValue(1).setMaxValue(8))
             .addChannelOption(option => option.setName('canal').setDescription('Canal donde publicar las predicciones').setRequired(true)),
+
+        new SlashCommandBuilder()
+            .setName('revoke-team')
+            .setDescription('Revocar una sanción activa de un equipo')
+            .addStringOption(option => option.setName('equipo').setDescription('Equipo').setRequired(true).addChoices(...Object.keys(TEAM_ROLES).map(team => ({ name: team, value: team }))))
+            .addStringOption(option => option.setName('razon').setDescription('Razón de la revocación').setRequired(true)),
+
+        new SlashCommandBuilder()
+            .setName('man-verify')
+            .setDescription('Verificar manualmente a un usuario de Discord con su cuenta de Roblox')
+            .addUserOption(option => option.setName('usuario').setDescription('Usuario de Discord a verificar').setRequired(true))
+            .addStringOption(option => option.setName('roblox_user').setDescription('Nombre de usuario de Roblox').setRequired(true))
+            .addStringOption(option => option.setName('roblox_id').setDescription('ID de usuario de Roblox').setRequired(true)),
 
         new SlashCommandBuilder()
             .setName('predicciones-result')
@@ -1234,6 +1247,8 @@ client.on('interactionCreate', async interaction => {
             else if (commandName === 'predicciones') await handlePredicciones(interaction);
             else if (commandName === 'predicciones-result') await handlePrediccionesResult(interaction);
             else if (commandName === 'search-username') await handleSearchUsername(interaction);  // 👈 AÑADIR AQUÍ
+            else if (commandName === 'revoke-team') await handleRevokeTeam(interaction);
+            else if (commandName === 'man-verify') await handleManVerify(interaction);
         } catch (error) {
             console.error(`Error en comando ${commandName}:`, error);
             const errorMsg = ':x: Ocurrió un error al ejecutar el comando.';
@@ -2783,6 +2798,161 @@ async function handleSancionTeam(interaction) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /revoke-team
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleRevokeTeam(interaction) {
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    try {
+        if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
+            return interaction.editReply(':x: Solo los moderadores pueden usar este comando.');
+        }
+
+        const equipo = interaction.options.getString('equipo');
+        const razon = interaction.options.getString('razon');
+
+        const activeSanctions = getTeamSanctions(equipo);
+
+        if (activeSanctions.length === 0) {
+            return interaction.editReply(`:x: **${equipo}** no tiene sanciones activas.`);
+        }
+
+        const emojiSancion = SANCTION_EMOJIS.sancion;
+        const teamRole = TEAM_ROLES[equipo];
+        const sanctionChannel = interaction.guild.channels.cache.get(SANCTION_CHANNEL);
+        const logsChannel = interaction.guild.channels.cache.get(SANCTION_LOGS_CHANNEL);
+
+        const sanction = activeSanctions[0]; // revocar la más antigua
+
+        // Actualizar estado en DB
+        const db = loadDatabase();
+        if (db.teamSanctions && db.teamSanctions[sanction.id]) {
+            db.teamSanctions[sanction.id].estado = 'Revoked';
+            saveDatabase(db);
+        }
+
+        // Editar mensaje original en canal de sanciones
+        if (sanctionChannel && sanction.messageId) {
+            try {
+                const msg = await sanctionChannel.messages.fetch(sanction.messageId);
+                await msg.edit(
+                    `## ${emojiSancion} AVISO ${sanction.numero}/2 ${emojiSancion}\n` +
+                    `- **Equipo: ${teamRole ? `<@&${teamRole}>` : equipo}**\n` +
+                    `- **Razón: ${sanction.razon}**\n` +
+                    `- **Estado: Revoked**`
+                );
+                await sanctionChannel.send(
+                    `## ${emojiSancion} AVISO ${sanction.numero}/2 REVOKED ${emojiSancion}\n` +
+                    `- **Equipo: ${teamRole ? `<@&${teamRole}>` : equipo}**\n` +
+                    `- **Razón de revocación: ${razon}**`
+                );
+            } catch (err) {
+                console.error('[REVOKE-TEAM] Error al actualizar mensaje:', err);
+            }
+        }
+
+        if (logsChannel) {
+            await logsChannel.send(`**[REVOKE-TEAM] ID:** \`${sanction.id}\` **| EQUIPO:** ${teamRole ? `<@&${teamRole}>` : equipo} **| RAZÓN:** ${razon}`);
+        }
+
+        const remaining = getTeamSanctions(equipo).length;
+        await interaction.editReply(
+            `:white_check_mark: Sanción revocada para **${equipo}**.\n**Razón:** ${razon}\n**Sanciones activas restantes:** ${remaining}`
+        );
+
+    } catch (error) {
+        console.error('[REVOKE-TEAM] Error:', error);
+        await interaction.editReply(':x: Error al revocar la sanción.').catch(() => {});
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /man-verify
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleManVerify(interaction) {
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    if (!await isAdminOnly(interaction.guild, interaction.user.id)) {
+        return interaction.editReply(':x: Solo los administradores pueden usar este comando.');
+    }
+
+    const targetUser = interaction.options.getUser('usuario');
+    const roblox_user = interaction.options.getString('roblox_user').trim();
+    const roblox_id = interaction.options.getString('roblox_id').trim();
+
+    const data = loadVerify();
+
+    // Guardar vinculación directamente (mismo formato que processVerification)
+    data.links[targetUser.id] = {
+        roblox_user,
+        roblox_id,
+        verified_at: Date.now()
+    };
+    saveVerify(data);
+
+    // Aplicar en Discord: nickname y rol
+    try {
+        const member = await interaction.guild.members.fetch(targetUser.id).catch(() => null);
+        if (!member) return interaction.editReply(':x: No se encontró al usuario en el servidor.');
+
+        // Cambiar nickname (mismo formato que verify-api.js)
+        try {
+            let displayName = roblox_user;
+            try {
+                const res = await fetch(`https://users.roblox.com/v1/users/${roblox_id}`);
+                const json = await res.json();
+                if (json.displayName) displayName = json.displayName;
+            } catch (e) {
+                console.warn('[MAN-VERIFY] No se pudo obtener displayName de Roblox:', e.message);
+            }
+            await member.setNickname(`${displayName} (@${roblox_user})`);
+        } catch (e) {
+            console.warn(`[MAN-VERIFY] No se pudo cambiar nickname de ${targetUser.id}:`, e.message);
+        }
+
+        // Asignar rol verificado
+        const roleId = data.config?.roleId;
+        if (roleId) {
+            try {
+                await member.roles.add(roleId);
+            } catch (e) {
+                console.warn(`[MAN-VERIFY] No se pudo asignar rol a ${targetUser.id}:`, e.message);
+            }
+        }
+
+        // DM al usuario
+        try {
+            await member.user.send(
+                `✅ **¡Verificación completada!**\n` +
+                `Tu cuenta de Roblox **${roblox_user}** ha sido vinculada a tu Discord.\n` +
+                `Se te asignó el nickname y el rol correspondiente.`
+            );
+        } catch (e) {
+            // DMs cerrados, no crítico
+        }
+
+        console.log(`[MAN-VERIFY] ✅ ${targetUser.id} verificado manualmente como Roblox: ${roblox_user} (${roblox_id})`);
+
+        const embed = new EmbedBuilder()
+            .setColor(0x00c851)
+            .setTitle('✅ Verificación Manual Completada')
+            .addFields(
+                { name: 'Usuario de Discord', value: `<@${targetUser.id}>`, inline: true },
+                { name: 'Usuario de Roblox', value: `**${roblox_user}**`, inline: true },
+                { name: 'ID de Roblox', value: `\`${roblox_id}\``, inline: true }
+            )
+            .setFooter({ text: `Verificado manualmente por ${interaction.user.tag}` })
+            .setTimestamp();
+
+        await interaction.editReply({ embeds: [embed] });
+
+    } catch (error) {
+        console.error('[MAN-VERIFY] Error:', error);
+        await interaction.editReply(':x: Error al verificar manualmente al usuario.').catch(() => {});
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // BOOSTS
 // ─────────────────────────────────────────────────────────────────────────────
 function getBoosts() {
@@ -3783,7 +3953,7 @@ async function handleAtfTv(interaction) {
     const fecha = interaction.options.getString('fecha');
     const canal = interaction.options.getChannel('canal');
     const stream = interaction.options.getString('stream');
-    const miniatura = interaction.options.getAttachment('miniatura');
+    const miniatura = interaction.options.getAttachment('miniatura') || null;
     const linkJuego = interaction.options.getString('link_juego') || null;
 
     const sessionId = `atftv_${interaction.user.id}_${Date.now()}`;
@@ -3795,7 +3965,7 @@ async function handleAtfTv(interaction) {
         fecha,
         canalId: canal.id,
         stream,
-        miniaturaUrl: miniatura.url,
+        miniaturaUrl: miniatura ? miniatura.url : null,
         linkJuego,
         userId: interaction.user.id
     });
@@ -3814,8 +3984,9 @@ async function handleAtfTv(interaction) {
         .setColor('#e74c3c')
         .setTitle('📺 Preview ATF TV')
         .setDescription('**Revisa el anuncio antes de publicar:**\n\n' + previewLines)
-        .setImage(miniatura.url)
         .setFooter({ text: `Se publicará en: #${canal.name}` });
+
+    if (miniatura) embed.setImage(miniatura.url);
 
     const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
@@ -3849,7 +4020,9 @@ async function publicarAtfTv(interaction, sessionId) {
     ].filter(Boolean).join('\n');
 
     try {
-        await canal.send({ content: lines, files: [session.miniaturaUrl] });
+        const sendPayload = { content: lines };
+        if (session.miniaturaUrl) sendPayload.files = [session.miniaturaUrl];
+        await canal.send(sendPayload);
         await updateOrFollowUp(interaction, { content: `:white_check_mark: ¡Anuncio ATF TV publicado en ${canal}!`, embeds: [], components: [] });
         atfTvSessions.delete(sessionId);
     } catch (error) {
