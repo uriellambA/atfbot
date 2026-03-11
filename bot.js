@@ -4,6 +4,16 @@ const path = require('path');
 require('dotenv').config();
 require('./verify-api.js');
 
+console.log('[DEBUG] Iniciando bot...');
+setTimeout(() => {
+    console.log('[DEBUG] Intentando login...');
+    client.login(token).then(() => {
+        console.log('[DEBUG] Login OK:', client.user.tag);
+    }).catch((err) => {
+        console.error('[DEBUG] Login FAIL:', err.message, err.code);
+    });
+}, 3000);
+
 // Configuración del bot
 const client = new Client({
     intents: [
@@ -4663,3 +4673,5 @@ client.login(token).then(() => {
 }).catch((err) => {
     console.error('[BOT] Login fallido:', err.message);
 });
+
+// client.login(token)
