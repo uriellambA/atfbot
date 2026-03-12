@@ -2495,7 +2495,6 @@ async function handleSancion(interaction) {
         const sanctionMessage =
             `## ${emojiSancion} SANCIÓN #${numero} ${emojiSancion}\n` +
             `- **Usuario: ${usuario}**\n` +
-            `- **Tipo: ${reasonData.tipo}**\n` +
             `- **Razón: ${razon}**\n` +
             `- **Duración: ${reasonData.duration}**\n` +
             `- **Duración Restante: ${duracionRestante}**\n` +
