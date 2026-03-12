@@ -454,14 +454,44 @@ function getPlayerInfo(userId) {
 
 function setPlayerInfo(userId, team, gw, country, division, role = "Jugador") {
     const db = loadDatabase();
-    db.players[userId.toString()] = { team, gw, country, division, role };
+    const existing = db.players[userId.toString()];
+    // Recuperar historial: primero del jugador activo, si no del registro persistente
+    const prevHistory = existing?.teamHistory || db.teamHistories?.[userId.toString()] || [];
+    db.players[userId.toString()] = { team, gw, country, division, role, teamHistory: prevHistory };
     saveDatabase(db);
+}
+
+function addTeamToHistory(userId, teamName) {
+    const db = loadDatabase();
+    const player = db.players[userId.toString()];
+    if (!player) return;
+    if (!player.teamHistory) player.teamHistory = [];
+    // Solo añadir si el último equipo es diferente
+    if (player.teamHistory[player.teamHistory.length - 1] !== teamName) {
+        player.teamHistory.push(teamName);
+    }
+    // Sincronizar también en teamHistories
+    if (!db.teamHistories) db.teamHistories = {};
+    db.teamHistories[userId.toString()] = player.teamHistory;
+    saveDatabase(db);
+}
+
+function getTeamHistory(userId) {
+    const db = loadDatabase();
+    const player = db.players[userId.toString()];
+    // Si está activo, usar su historial; si no, usar el persistente
+    return player?.teamHistory || db.teamHistories?.[userId.toString()] || [];
 }
 
 function removePlayerInfo(userId) {
     const db = loadDatabase();
     if (db.players[userId.toString()]) {
+        // Preservar historial de equipos al liberar al jugador
+        const teamHistory = db.players[userId.toString()].teamHistory || [];
         delete db.players[userId.toString()];
+        // Guardar historial en un registro separado para que persista entre fichajes
+        if (!db.teamHistories) db.teamHistories = {};
+        db.teamHistories[userId.toString()] = teamHistory;
         saveDatabase(db);
     }
 }
@@ -1083,6 +1113,15 @@ client.once('ready', async (c) => {
             .addUserOption(option => option.setName('usuario').setDescription('Usuario a mutear').setRequired(true))
             .addStringOption(option => option.setName('razon').setDescription('Razón del mute').setRequired(true))
             .addStringOption(option => option.setName('duracion').setDescription('Duración (ej: 10s, 5m, 2h, 3d, 1w — max 4w)').setRequired(true)),
+
+        new SlashCommandBuilder()
+            .setName('historial-fichajes')
+            .setDescription('Ver el historial de equipos de un jugador')
+            .addUserOption(option => option.setName('usuario').setDescription('Jugador a consultar').setRequired(true)),
+
+        new SlashCommandBuilder()
+            .setName('estado')
+            .setDescription('[SOLO MOD] Ver el estado del bot y sistemas'),
     ];
 
     const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
@@ -1266,6 +1305,8 @@ client.on('interactionCreate', async interaction => {
             else if (commandName === 'revoke-team') await handleRevokeTeam(interaction);
             else if (commandName === 'man-verify') await handleManVerify(interaction);
             else if (commandName === 'mute') await handleMute(interaction);
+            else if (commandName === 'historial-fichajes') await handleHistorialFichajes(interaction);
+            else if (commandName === 'estado') await handleEstado(interaction);
         } catch (error) {
             console.error(`Error en comando ${commandName}:`, error);
             const errorMsg = ':x: Ocurrió un error al ejecutar el comando.';
@@ -1497,6 +1538,18 @@ async function handleButton(interaction) {
     const customId = interaction.customId;
 
     try {
+        if (customId.startsWith('historial_page_')) {
+            return await handleHistorialPage(interaction);
+        }
+
+        if (customId.startsWith('appeals_accept_')) {
+            return await handleAppealsAccept(interaction);
+        }
+
+        if (customId.startsWith('appeals_reject_')) {
+            return await handleAppealsReject(interaction);
+        }
+
         if (customId.startsWith('partido_ida_')) {
             const sessionId = customId.slice('partido_ida_'.length);
             const session = resultadoSessions.get(sessionId);
@@ -1842,6 +1895,9 @@ async function handleModal(interaction) {
         }
         if (customId.startsWith('pred_enfrentamiento_submit_')) {
             return handlePrediccionEnfrentamientoModal(interaction);
+        }
+        if (customId.startsWith('appeals_reject_reason_')) {
+            return handleAppealsRejectReason(interaction);
         }
     } catch (error) {
         console.error('[MODAL] Error:', error);
@@ -2296,6 +2352,7 @@ async function handleFichaje(interaction) {
 
     const divisionLetter = division.split(' ')[1];
     setPlayerInfo(usuario.id, equipo, gw, pais, divisionLetter);
+    addTeamToHistory(usuario.id, equipo);
 
     await member.roles.add([TEAM_ROLES[equipo], DIVISION_ROLES[division]]);
     if (member.roles.cache.has(MISC_ROLES["Agente Libre"])) await member.roles.remove(MISC_ROLES["Agente Libre"]);
@@ -2307,6 +2364,22 @@ async function handleFichaje(interaction) {
         const teamEmoji = getTeamEmoji(equipo);
         const divisionEmoji = getDivisionEmoji(`División ${divisionLetter}`);
         await mercadoChannel.send(`${teamEmoji} **FICHAJE** ${teamEmoji}\n**User:** ${usuario}\n**Division:** ${divisionEmoji}\n**País:** ${pais}\n**GW:** ${gw}`);
+    }
+
+    // ── Aviso staff si el jugador ya pasó por 3 o más equipos ───────────────
+    const STAFF_ALERT_CHANNEL = "1414386380682821646";
+    const teamHistory = getTeamHistory(usuario.id);
+    if (teamHistory.length >= 3) {
+        const staffChannel = interaction.guild.channels.cache.get(STAFF_ALERT_CHANNEL);
+        if (staffChannel) {
+            await staffChannel.send(
+                `## ⚠️ ALERTA: JUGADOR CON MÚLTIPLES EQUIPOS\n` +
+                `**Usuario:** ${usuario} (<@${usuario.id}>)\n` +
+                `**Equipos esta temporada:** ${teamHistory.length} equipos\n` +
+                `**Historial:** ${teamHistory.map((t, i) => `\`${i + 1}. ${t}\``).join(' → ')}\n` +
+                `-# Fichado actualmente en **${equipo}** por <@${interaction.user.id}>`
+            );
+        }
     }
 
     await updateSquadsheet(interaction.guild, equipo);
@@ -4984,5 +5057,427 @@ global._verifyBot = { processVerification };
 
 // Limpiar códigos expirados cada 5 minutos
 setInterval(cleanExpiredCodes, 5 * 60 * 1000);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AVISO DE SOLICITUD DE ACCESO AL SERVIDOR DE APELACIONES
+// ─────────────────────────────────────────────────────────────────────────────
+const APPEALS_GUILD_ID = process.env.APPEALS_GUILD_ID || "1477484621666189405";
+const STAFF_ALERT_CHANNEL_ID = "1414386380682821646";
+
+// Almacena temporalmente las solicitudes pendientes de revisión
+// Map: messageId -> { memberId, guildId }
+const pendingAppealsRequests = new Map();
+
+client.on('guildMemberAdd', async (member) => {
+    try {
+        if (member.guild.id !== APPEALS_GUILD_ID) return;
+        if (!member.pending) return;
+
+        // Buscar canal staff en cualquier guild del bot
+        let staffChannel = null;
+        for (const guild of client.guilds.cache.values()) {
+            const ch = guild.channels.cache.get(STAFF_ALERT_CHANNEL_ID);
+            if (ch) { staffChannel = ch; break; }
+        }
+        if (!staffChannel) return;
+
+        // Intentar obtener las respuestas del membership screening via audit log
+        let screeningAnswers = null;
+        try {
+            await new Promise(r => setTimeout(r, 2000)); // esperar que el audit log se actualice
+            const logs = await member.guild.fetchAuditLogs({ limit: 10, type: 'MEMBER_UPDATE' }).catch(() => null);
+            if (logs) {
+                const entry = logs.entries.find(e =>
+                    e.target?.id === member.id &&
+                    Date.now() - e.createdTimestamp < 10000
+                );
+                if (entry?.changes) {
+                    const sc = entry.changes.find(c => c.key === 'pending');
+                    if (sc) screeningAnswers = sc;
+                }
+            }
+        } catch (e) { /* silencioso */ }
+
+        // Buscar en los Application Commands del servidor de apelaciones las preguntas
+        let questionsText = '*No se pudieron obtener las preguntas automáticamente.*\nRevísalas directamente en el servidor de apelaciones.';
+        try {
+            const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
+            if (appealsGuild) {
+                const rules = await appealsGuild.fetchMemberVerification().catch(() => null);
+                if (rules && rules.formFields && rules.formFields.length > 0) {
+                    questionsText = rules.formFields.map((field, i) =>
+                        `**${i + 1}. ${field.label}**\n${field.response ? `> ${field.response}` : '*Sin respuesta registrada*'}`
+                    ).join('\n\n');
+                }
+            }
+        } catch (e) { /* silencioso */ }
+
+        const accountAge = Math.floor(member.user.createdTimestamp / 1000);
+        const joinedAt = Math.floor(Date.now() / 1000);
+
+        const embed = new EmbedBuilder()
+            .setColor(0xFEE75C)
+            .setTitle('🔔 Solicitud de Acceso — Servidor de Apelaciones')
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
+            .addFields(
+                { name: '👤 Usuario', value: `<@${member.id}> **${member.user.tag}**`, inline: true },
+                { name: '🪪 ID', value: `\`${member.id}\``, inline: true },
+                { name: '📅 Cuenta creada', value: `<t:${accountAge}:R>`, inline: true },
+                { name: '📥 Solicitó acceso', value: `<t:${joinedAt}:F>`, inline: false },
+                {
+                    name: '📋 Preguntas y Respuestas del Formulario',
+                    value: questionsText.slice(0, 1024)
+                }
+            )
+            .setFooter({ text: 'Revisa las respuestas completas en el servidor de apelaciones si es necesario.' });
+
+        const row = new ActionRowBuilder().addComponents(
+            new ButtonBuilder()
+                .setCustomId(`appeals_accept_${member.id}`)
+                .setLabel('✅ Aceptar')
+                .setStyle(ButtonStyle.Success),
+            new ButtonBuilder()
+                .setCustomId(`appeals_reject_${member.id}`)
+                .setLabel('❌ Rechazar')
+                .setStyle(ButtonStyle.Danger)
+        );
+
+        const msg = await staffChannel.send({ embeds: [embed], components: [row] });
+        pendingAppealsRequests.set(msg.id, { memberId: member.id, guildId: APPEALS_GUILD_ID });
+
+        console.log(`[APELACIONES] Solicitud de ${member.user.tag} (${member.id}) enviada al staff`);
+    } catch (err) {
+        console.error('[APELACIONES] Error al enviar aviso:', err);
+    }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOTONES: Aceptar / Rechazar solicitud de apelaciones
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleAppealsAccept(interaction) {
+    const memberId = interaction.customId.replace('appeals_accept_', '');
+
+    // Deshabilitar botones inmediatamente
+    const disabledRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('_acc').setLabel('✅ Aceptado').setStyle(ButtonStyle.Success).setDisabled(true),
+        new ButtonBuilder().setCustomId('_rej').setLabel('❌ Rechazar').setStyle(ButtonStyle.Danger).setDisabled(true)
+    );
+
+    // Actualizar el embed con quién lo aceptó
+    const originalEmbed = EmbedBuilder.from(interaction.message.embeds[0])
+        .setColor(0x57F287)
+        .setTitle('✅ Solicitud Aceptada — Servidor de Apelaciones')
+        .setFooter({ text: `Aceptado por ${interaction.user.tag} · ${new Date().toLocaleString('es-ES')}` });
+
+    await interaction.update({ embeds: [originalEmbed], components: [disabledRow] });
+
+    // Intentar aceptar al miembro en el servidor de apelaciones (aprobar membership screening)
+    try {
+        const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
+        if (appealsGuild) {
+            const appealsMember = await appealsGuild.members.fetch(memberId).catch(() => null);
+            if (appealsMember && appealsMember.pending) {
+                // No hay API directa para aprobar membership screening desde bot
+                // El staff debe hacerlo manualmente; avisamos por DM al usuario
+            }
+        }
+    } catch (e) { /* silencioso */ }
+
+    // Enviar DM al usuario
+    try {
+        const user = await interaction.client.users.fetch(memberId);
+        await user.send(
+            `## ✅ Solicitud de Apelación Aceptada\n` +
+            `Tu solicitud de acceso al **servidor de apelaciones** fue **aceptada**.\n` +
+            `Un miembro del staff revisará tu caso en breve.\n\n` +
+            `-# Revisado por el staff de ATF`
+        );
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo enviar DM de aceptación:', e.message);
+    }
+
+    console.log(`[APELACIONES] ${interaction.user.tag} aceptó la solicitud de ${memberId}`);
+}
+
+async function handleAppealsReject(interaction) {
+    const memberId = interaction.customId.replace('appeals_reject_', '');
+
+    // Mostrar modal para pedir la razón
+    const modal = new ModalBuilder()
+        .setCustomId(`appeals_reject_reason_${memberId}`)
+        .setTitle('Rechazar Solicitud de Apelación');
+
+    modal.addComponents(
+        new ActionRowBuilder().addComponents(
+            new TextInputBuilder()
+                .setCustomId('razon')
+                .setLabel('Razón del rechazo')
+                .setStyle(TextInputStyle.Paragraph)
+                .setPlaceholder('Ej: No cumple los requisitos para apelar, sanción permanente confirmada...')
+                .setRequired(true)
+                .setMinLength(10)
+                .setMaxLength(500)
+        )
+    );
+
+    await interaction.showModal(modal);
+}
+
+async function handleAppealsRejectReason(interaction) {
+    const memberId = interaction.customId.replace('appeals_reject_reason_', '');
+    const razon = interaction.fields.getTextInputValue('razon');
+
+    // Deshabilitar botones
+    const disabledRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('_acc').setLabel('✅ Aceptar').setStyle(ButtonStyle.Success).setDisabled(true),
+        new ButtonBuilder().setCustomId('_rej2').setLabel('❌ Rechazado').setStyle(ButtonStyle.Danger).setDisabled(true)
+    );
+
+    // Actualizar embed original
+    const originalEmbed = EmbedBuilder.from(interaction.message.embeds[0])
+        .setColor(0xFF4444)
+        .setTitle('❌ Solicitud Rechazada — Servidor de Apelaciones')
+        .addFields({ name: '📝 Razón del rechazo', value: razon })
+        .setFooter({ text: `Rechazado por ${interaction.user.tag} · ${new Date().toLocaleString('es-ES')}` });
+
+    await interaction.update({ embeds: [originalEmbed], components: [disabledRow] });
+
+    // Enviar DM al usuario con la razón
+    try {
+        const user = await interaction.client.users.fetch(memberId);
+        await user.send(
+            `## ❌ Solicitud de Apelación Rechazada\n` +
+            `Tu solicitud de acceso al **servidor de apelaciones de ATF** fue **rechazada**.\n\n` +
+            `**Razón:**\n> ${razon}\n\n` +
+            `-# Si crees que es un error, contacta al staff de ATF directamente.`
+        );
+        console.log(`[APELACIONES] DM de rechazo enviado a ${memberId}`);
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo enviar DM de rechazo:', e.message);
+        // Notificar en el canal que el DM falló
+        try {
+            await interaction.followUp({
+                content: `⚠️ No se pudo enviar el DM a <@${memberId}> (DMs cerrados o bloqueados).`,
+                flags: MessageFlags.Ephemeral
+            });
+        } catch (e2) { /* silencioso */ }
+    }
+
+    // Intentar expulsar al usuario del servidor de apelaciones
+    try {
+        const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
+        if (appealsGuild) {
+            const appealsMember = await appealsGuild.members.fetch(memberId).catch(() => null);
+            if (appealsMember) {
+                await appealsMember.kick(`Solicitud rechazada por ${interaction.user.tag}: ${razon}`);
+                console.log(`[APELACIONES] ${memberId} expulsado del servidor de apelaciones`);
+            }
+        }
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo expulsar al usuario:', e.message);
+    }
+
+    console.log(`[APELACIONES] ${interaction.user.tag} rechazó la solicitud de ${memberId}: ${razon}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /historial-fichajes
+// ─────────────────────────────────────────────────────────────────────────────
+const HISTORIAL_PAGE_SIZE = 5;
+
+function buildHistorialEmbed(targetUser, teamHistory, playerInfo, page, totalPages) {
+    const start = page * HISTORIAL_PAGE_SIZE;
+    const end = Math.min(start + HISTORIAL_PAGE_SIZE, teamHistory.length);
+    const slice = teamHistory.slice(start, end);
+
+    const lines = slice.map((team, i) => {
+        const num = start + i + 1;
+        const emoji = getTeamEmoji(team) || '⚽';
+        const isCurrent = playerInfo && playerInfo.team === team && i === slice.length - 1 && end === teamHistory.length;
+        return `**${num}.** ${emoji} ${team}${isCurrent ? ' *(actual)*' : ''}`;
+    });
+
+    const alertMsg = teamHistory.length >= 3
+        ? `\n⚠️ **Este jugador ha pasado por ${teamHistory.length} equipos esta temporada.**`
+        : '';
+
+    const embed = new EmbedBuilder()
+        .setColor(teamHistory.length >= 3 ? 0xFF4444 : 0x5865F2)
+        .setTitle(`📋 Historial de Fichajes — ${targetUser.username}`)
+        .setThumbnail(targetUser.displayAvatarURL({ dynamic: true }))
+        .setDescription(
+            (lines.length > 0 ? lines.join('\n') : '*Sin historial de equipos.*') + alertMsg
+        )
+        .addFields(
+            { name: 'Total de equipos', value: `**${teamHistory.length}**`, inline: true },
+            { name: 'Equipo actual', value: playerInfo ? `**${playerInfo.team}**` : '*Agente Libre*', inline: true }
+        )
+        .setFooter({ text: `Página ${page + 1} de ${totalPages || 1}` });
+
+    return embed;
+}
+
+function buildHistorialButtons(targetUserId, page, totalPages) {
+    if (totalPages <= 1) return null;
+    const row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+            .setCustomId(`historial_page_${targetUserId}_${page - 1}`)
+            .setLabel('◀ Anterior')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(page === 0),
+        new ButtonBuilder()
+            .setCustomId(`historial_page_${targetUserId}_${page + 1}`)
+            .setLabel('Siguiente ▶')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(page >= totalPages - 1)
+    );
+    return row;
+}
+
+async function handleHistorialFichajes(interaction) {
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const targetUser = interaction.options.getUser('usuario');
+    const teamHistory = getTeamHistory(targetUser.id);
+    const playerInfo = getPlayerInfo(targetUser.id);
+    const totalPages = Math.max(1, Math.ceil(teamHistory.length / HISTORIAL_PAGE_SIZE));
+
+    const embed = buildHistorialEmbed(targetUser, teamHistory, playerInfo, 0, totalPages);
+    const row = buildHistorialButtons(targetUser.id, 0, totalPages);
+
+    const payload = { embeds: [embed], components: row ? [row] : [] };
+    await interaction.editReply(payload);
+}
+
+async function handleHistorialPage(interaction) {
+    const parts = interaction.customId.split('_');
+    // historial_page_{userId}_{page}
+    const targetUserId = parts[2];
+    const page = parseInt(parts[3]);
+
+    const targetUser = await interaction.client.users.fetch(targetUserId).catch(() => null);
+    if (!targetUser) return interaction.update({ content: ':x: Usuario no encontrado.', components: [], embeds: [] });
+
+    const teamHistory = getTeamHistory(targetUserId);
+    const playerInfo = getPlayerInfo(targetUserId);
+    const totalPages = Math.max(1, Math.ceil(teamHistory.length / HISTORIAL_PAGE_SIZE));
+    const safePage = Math.max(0, Math.min(page, totalPages - 1));
+
+    const embed = buildHistorialEmbed(targetUser, teamHistory, playerInfo, safePage, totalPages);
+    const row = buildHistorialButtons(targetUserId, safePage, totalPages);
+
+    await interaction.update({ embeds: [embed], components: row ? [row] : [] });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /estado
+// ─────────────────────────────────────────────────────────────────────────────
+const ESTADO_ALERT_USER = "732002305507065867";
+
+async function handleEstado(interaction) {
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
+        return interaction.editReply(':x: Solo los moderadores pueden usar este comando.');
+    }
+
+    const checks = [];
+    const issues = [];
+
+    // 1. Bot online y latencia
+    const ping = interaction.client.ws.ping;
+    const pingOk = ping < 500;
+    checks.push({ label: 'Bot online', ok: true, detail: `Latencia: **${ping}ms**` });
+    if (!pingOk) issues.push(`⚠️ Latencia alta: ${ping}ms`);
+
+    // 2. Estado del bot (reset o activo)
+    const botStatus = loadStatus().status;
+    const botActive = botStatus === 'Activo';
+    checks.push({ label: 'Modo bot', ok: botActive, detail: botActive ? 'Activo ✅' : '🔴 RESET (comandos bloqueados)' });
+    if (!botActive) issues.push('🔴 El bot está en modo Reset — comandos deshabilitados.');
+
+    // 3. Archivo players_data.json legible
+    let dbOk = false;
+    let dbDetail = '';
+    try {
+        const db = loadDatabase();
+        const playerCount = Object.keys(db.players || {}).length;
+        const sanctionCount = Object.keys(db.sanctions || {}).length;
+        dbOk = true;
+        dbDetail = `${playerCount} jugadores, ${sanctionCount} sanciones`;
+    } catch (e) {
+        dbDetail = `Error: ${e.message}`;
+        issues.push(`❌ Base de datos no legible: ${e.message}`);
+    }
+    checks.push({ label: 'Base de datos (players_data.json)', ok: dbOk, detail: dbDetail });
+
+    // 4. Sistema de verificación configurado
+    let verifyOk = false;
+    let verifyDetail = '';
+    try {
+        const verifyData = loadVerify();
+        if (verifyData.config && verifyData.config.channelId && verifyData.config.roleId) {
+            verifyOk = true;
+            const linkedCount = Object.keys(verifyData.links || {}).length;
+            verifyDetail = `Canal: <#${verifyData.config.channelId}> | ${linkedCount} usuarios verificados`;
+        } else {
+            verifyDetail = 'No configurado (usa /setup-verify)';
+            issues.push('⚠️ El sistema de verificación no está configurado.');
+        }
+    } catch (e) {
+        verifyDetail = `Error: ${e.message}`;
+        issues.push(`❌ Error en sistema de verificación: ${e.message}`);
+    }
+    checks.push({ label: 'Sistema de verificación', ok: verifyOk, detail: verifyDetail });
+
+    // 5. Canal staff alcanzable
+    const staffCh = interaction.guild.channels.cache.get("1414386380682821646");
+    const staffOk = !!staffCh;
+    checks.push({ label: 'Canal staff (alertas)', ok: staffOk, detail: staffOk ? `<#1414386380682821646>` : 'Canal no encontrado' });
+    if (!staffOk) issues.push('❌ Canal de alertas staff no encontrado.');
+
+    // 6. Servidor de apelaciones conocido
+    const appealsGuild = interaction.client.guilds.cache.get("1477484621666189405");
+    const appealsOk = !!appealsGuild;
+    checks.push({ label: 'Servidor de apelaciones', ok: appealsOk, detail: appealsOk ? `**${appealsGuild.name}** (${appealsGuild.memberCount} miembros)` : 'Bot no está en ese servidor' });
+    if (!appealsOk) issues.push('⚠️ El bot no está en el servidor de apelaciones — los avisos de acceso no funcionarán.');
+
+    // 7. Config messages activo
+    const msgData = loadMessages();
+    const msgOk = !!(msgData.config && msgData.messages && msgData.messages.length > 0);
+    checks.push({ label: 'Mensajes automáticos', ok: msgOk, detail: msgOk ? `Canal: <#${msgData.config.channelId}> | ${msgData.messages.length} mensajes | cada ${(msgData.config.cooldownMs / 60000).toFixed(0)} min` : 'No configurado' });
+
+    // Construir embed
+    const allOk = issues.length === 0;
+    const statusLine = checks.map(c => `${c.ok ? '✅' : '❌'} **${c.label}:** ${c.detail}`).join('\n');
+
+    const embed = new EmbedBuilder()
+        .setColor(allOk ? 0x57F287 : (issues.some(i => i.startsWith('❌')) ? 0xFF4444 : 0xFEE75C))
+        .setTitle(`${allOk ? '🟢' : issues.some(i => i.startsWith('❌')) ? '🔴' : '🟡'} Estado del Sistema — ATF Bot`)
+        .setDescription(statusLine)
+        .setTimestamp()
+        .setFooter({ text: `Revisado por ${interaction.user.username}` });
+
+    if (issues.length > 0) {
+        embed.addFields({ name: '⚠️ Problemas detectados', value: issues.join('\n') });
+    }
+
+    await interaction.editReply({ embeds: [embed] });
+
+    // Notificar por DM si hay problemas
+    if (issues.length > 0) {
+        try {
+            const alertUser = await interaction.client.users.fetch(ESTADO_ALERT_USER);
+            await alertUser.send(
+                `## 🚨 Alerta de Estado — ATF Bot\n` +
+                `**Revisado por:** <@${interaction.user.id}> en <t:${Math.floor(Date.now() / 1000)}:F>\n\n` +
+                `**Problemas encontrados:**\n${issues.join('\n')}\n\n` +
+                `-# Servidor: ${interaction.guild.name}`
+            );
+        } catch (e) {
+            console.warn('[ESTADO] No se pudo enviar DM de alerta:', e.message);
+        }
+    }
+}
 
 client.login(token)
