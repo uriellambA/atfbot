@@ -339,29 +339,40 @@ const SANCTION_TYPES = {
     "1 GW": { duration: "1 GW", price: 150, gw: 1 }
 };
 
-const SANCTION_REASONS = [
-    "Tarjeta roja",
-    "GIF NSFW",
-    "Filtrar la cara de un usuario sin consentimiento",
-    "Corrupción siendo moderador",
-    "Falsificación de documentos",
-    "Filtrar información privada de un miembro de ATF",
-    "Alting",
-    "Disband",
-    "Pasar por 3 equipos en una temporada",
-    "Pasar por 6 equipos en una temporada",
-    "Tener 3 sanciones activas",
-    "Intento de raid",
-    "Corrupción siendo owner",
-    "Jugar un partido sin estar fichado",
-    "Poseer hacks que afecten al juego",
-    "Mala administración del club",
-    "Ser cómplice de actividades sancionables",
-    "Evadir un PC CHECK",
-    "Doble amarilla = Roja",
-    "Gore",
-    "Material +18"
+// SANCTION_REASONS combinado: cada razón incluye el tipo de sanción, precio y GWs
+// Formato: { label, tipo, price, gw, duration }
+const SANCTION_REASONS_DATA = [
+    { label: "Tarjeta roja",                               tipo: "Tarjeta Roja",   duration: "1 GW",        price: 125,  gw: 1    },
+    { label: "Doble amarilla = Roja",                       tipo: "Tarjeta Roja",   duration: "1 GW",        price: 125,  gw: 1    },
+    { label: "GIF NSFW",                                    tipo: "Sanción Grave",  duration: "3 GW",        price: 450,  gw: 3    },
+    { label: "Gore",                                        tipo: "Sanción Grave",  duration: "3 GW",        price: 450,  gw: 3    },
+    { label: "Material +18",                                tipo: "Sanción Grave",  duration: "3 GW",        price: 450,  gw: 3    },
+    { label: "Filtrar la cara de un usuario sin consentimiento", tipo: "Sanción Grave", duration: "3 GW",   price: 450,  gw: 3    },
+    { label: "Filtrar información privada de un miembro de ATF", tipo: "Sanción Grave", duration: "3 GW",  price: 450,  gw: 3    },
+    { label: "Jugar un partido sin estar fichado",          tipo: "Sanción Leve",   duration: "2 GW",        price: 350,  gw: 2    },
+    { label: "Pasar por 3 equipos en una temporada",        tipo: "Sanción Leve",   duration: "2 GW",        price: 350,  gw: 2    },
+    { label: "Evadir un PC CHECK",                          tipo: "Sanción Severa",   duration: "1 Season",        price: 2500,  gw: null    },
+    { label: "Ser cómplice de actividades sancionables",    tipo: "Sanción Severa",   duration: "1 Season",        price: 2500,  gw: null    },
+    { label: "Mala administración del club",                tipo: "Sanción Media",  duration: "4 GW",        price: 600,  gw: 4    },
+    { label: "Poseer hacks que afecten al juego",           tipo: "Sanción Severa",  duration: "1 Season",        price: 2500,  gw: null    },
+    { label: "Pasar por 6 equipos en una temporada",        tipo: "Sanción Media",  duration: "4 GW",        price: 600,  gw: 4    },
+    { label: "Tener 3 sanciones activas",                   tipo: "Sanción Media",  duration: "5 GW",        price: 750,  gw: 5    },
+    { label: "Corrupción siendo moderador",                 tipo: "Sanción Severa", duration: "1 Season",    price: 2500, gw: null },
+    { label: "Falsificación de documentos",                 tipo: "Sanción Severa", duration: "1 Season",    price: 2500, gw: null },
+    { label: "Alting",                                      tipo: "Sanción Severa", duration: "1 Season",    price: 2500, gw: null },
+    { label: "ACC Share",                                   tipo: "Sanción Severa", duration: "1 Season",    price: 2500, gw: null },
+    { label: "Intento de raid",                             tipo: "Sanción Severa", duration: "1 Season",    price: 2500, gw: null },
+    { label: "Corrupción siendo owner",                     tipo: "Sanción Permanente", duration: "Permanente",    price: 5000, gw: null },
+    { label: "Jugar 2 partidos en una misma fecha",         tipo: "Sanción Media", duration: "3 GW", price: 450, gw: 3 },
+    { label: "Disband",                                     tipo: "Sanción Permanente", duration: "Permanente", price: 5000, gw: null },
 ];
+
+// Array simple de razones para compatibilidad y choices de Discord
+const SANCTION_REASONS = SANCTION_REASONS_DATA.map(r => r.label);
+
+function getSanctionDataByReason(razon) {
+    return SANCTION_REASONS_DATA.find(r => r.label === razon) || null;
+}
 
 const CHANNELS = {
     "mercado": "1414386379969789990",
@@ -841,8 +852,7 @@ client.once('ready', async (c) => {
             .setDescription('Aplicar una sanción a un usuario')
             .addIntegerOption(option => option.setName('numero').setDescription('Número de sanción (1-10)').setRequired(true).setMinValue(1).setMaxValue(10))
             .addUserOption(option => option.setName('usuario').setDescription('Usuario a sancionar').setRequired(true))
-            .addStringOption(option => option.setName('tipo').setDescription('Tipo de sanción').setRequired(true).addChoices(...Object.keys(SANCTION_TYPES).map(type => ({ name: type, value: type }))))
-            .addStringOption(option => option.setName('razon').setDescription('Razón').setRequired(true).addChoices(...SANCTION_REASONS.map(reason => ({ name: reason, value: reason })))),
+            .addStringOption(option => option.setName('razon').setDescription('Razón').setRequired(true).addChoices(...SANCTION_REASONS_DATA.map(r => ({ name: `${r.label} [${r.tipo} | ${r.duration} | ${r.price}rbx]`, value: r.label })))),
 
         new SlashCommandBuilder()
             .setName('revoke')
@@ -1067,6 +1077,13 @@ client.once('ready', async (c) => {
                         { name: 'Visitante (ganó el equipo visitante)', value: 'visitante' }
                     )
             ),
+
+        new SlashCommandBuilder()
+            .setName('mute')
+            .setDescription('Mutear a un usuario del servidor')
+            .addUserOption(option => option.setName('usuario').setDescription('Usuario a mutear').setRequired(true))
+            .addStringOption(option => option.setName('razon').setDescription('Razón del mute').setRequired(true))
+            .addStringOption(option => option.setName('duracion').setDescription('Duración (ej: 10s, 5m, 2h, 3d, 1w — max 4w)').setRequired(true)),
     ];
 
     const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
@@ -1249,6 +1266,7 @@ client.on('interactionCreate', async interaction => {
             else if (commandName === 'search-username') await handleSearchUsername(interaction);  // 👈 AÑADIR AQUÍ
             else if (commandName === 'revoke-team') await handleRevokeTeam(interaction);
             else if (commandName === 'man-verify') await handleManVerify(interaction);
+            else if (commandName === 'mute') await handleMute(interaction);
         } catch (error) {
             console.error(`Error en comando ${commandName}:`, error);
             const errorMsg = ':x: Ocurrió un error al ejecutar el comando.';
@@ -2451,10 +2469,13 @@ async function handleSancion(interaction) {
 
         const numero = interaction.options.getInteger('numero');
         const usuario = interaction.options.getUser('usuario');
-        const tipo = interaction.options.getString('tipo');
         const razon = interaction.options.getString('razon');
-        const activeSanctions = getUserActiveSanctions(usuario.id);
 
+        // Derivar tipo/precio/gw desde la razón
+        const reasonData = getSanctionDataByReason(razon);
+        if (!reasonData) return interaction.editReply(':x: Razón de sanción no reconocida.');
+
+        const activeSanctions = getUserActiveSanctions(usuario.id);
         const numeroEsperado = activeSanctions.length === 0 ? 1 : Math.max(...activeSanctions.map(s => s.numero)) + 1;
 
         if (numero !== numeroEsperado) {
@@ -2465,30 +2486,81 @@ async function handleSancion(interaction) {
         }
 
         const member = await interaction.guild.members.fetch(usuario.id);
-        const sanctionData = SANCTION_TYPES[tipo];
         const sanctionChannel = interaction.guild.channels.cache.get(SANCTION_CHANNEL);
         if (!sanctionChannel) return interaction.editReply(':x: No se encontró el canal de sanciones.');
 
         const emojiSancion = SANCTION_EMOJIS.sancion;
-        const duracionRestante = sanctionData.gw !== null ? `${sanctionData.gw} GW` : sanctionData.duration;
+        const duracionRestante = reasonData.gw !== null ? `${reasonData.gw} GW` : reasonData.duration;
 
         const sanctionMessage =
             `## ${emojiSancion} SANCIÓN #${numero} ${emojiSancion}\n` +
             `- **Usuario: ${usuario}**\n` +
+            `- **Tipo: ${reasonData.tipo}**\n` +
             `- **Razón: ${razon}**\n` +
-            `- **Duración: ${sanctionData.duration}**\n` +
+            `- **Duración: ${reasonData.duration}**\n` +
             `- **Duración Restante: ${duracionRestante}**\n` +
+            `- **Precio: ${reasonData.price} rbx**\n` +
             `- **Estado: Activa**`;
 
         const sentMessage = await sanctionChannel.send(sanctionMessage);
-        const sanctionId = createSanction(usuario.id, numero, tipo, razon, sentMessage.id);
+
+        // Guardar usando SANCTION_TYPES si existe, sino construir ad-hoc
+        const db = loadDatabase();
+        if (!db.sanctions) db.sanctions = {};
+        if (!db.sanctionCounter) db.sanctionCounter = 0;
+        const sanctionId = `sanction_${Date.now()}_${numero}`;
+        db.sanctions[sanctionId] = {
+            id: sanctionId,
+            numero,
+            userId: usuario.id,
+            tipo: reasonData.tipo,
+            razon,
+            precio: reasonData.price,
+            duracion: reasonData.duration,
+            duracion_restante: reasonData.gw !== null ? reasonData.gw : reasonData.duration,
+            gw: reasonData.gw,
+            estado: "Activa",
+            messageId: sentMessage.id,
+            timestamp: Date.now()
+        };
+        db.sanctionCounter = Math.max(db.sanctionCounter, numero);
+        fs.writeFileSync(DATABASE_FILE, JSON.stringify(db, null, 4), 'utf-8');
 
         const logsChannel = interaction.guild.channels.cache.get(SANCTION_LOGS_CHANNEL);
-        if (logsChannel) await logsChannel.send(`**ID:** \`${sanctionId}\` **| USUARIO:** ${usuario} **| RAZÓN:** ${razon}`);
+        if (logsChannel) await logsChannel.send(`**ID:** \`${sanctionId}\` **| USUARIO:** ${usuario} **| TIPO:** ${reasonData.tipo} **| RAZÓN:** ${razon} **| DURACIÓN:** ${reasonData.duration} **| PRECIO:** ${reasonData.price}rbx`);
 
         if (!member.roles.cache.has(SANCIONADO_ROLE)) await member.roles.add(SANCIONADO_ROLE);
 
-        await interaction.editReply(`:white_check_mark: Sanción #${numero} aplicada a ${usuario}.\n**Tipo:** ${tipo}\n**Razón:** ${razon}`);
+        // DM al sancionado (español + inglés)
+        try {
+            const dmES =
+                `🚨 **Has sido sancionado de ATF.**\n\n` +
+                `**Razón:** ${razon}\n` +
+                `**Tipo:** ${reasonData.tipo}\n` +
+                `**Duración:** ${reasonData.duration}\n` +
+                `**Precio:** ${reasonData.price} rbx\n\n` +
+                `Para apelar, entra al siguiente servidor: https://discord.gg/AGjJSCknc9`;
+
+            const dmEN =
+                `🚨 **You have been sanctioned from ATF.**\n\n` +
+                `**Reason:** ${razon}\n` +
+                `**Type:** ${reasonData.tipo}\n` +
+                `**Duration:** ${reasonData.duration}\n` +
+                `**Price:** ${reasonData.price} rbx\n\n` +
+                `To appeal, join the following server: https://discord.gg/AGjJSCknc9`;
+
+            await usuario.send(`${dmES}\n\n─────────────────────────\n\n${dmEN}`);
+        } catch (e) {
+            console.warn(`[SANCION] No se pudo enviar DM a ${usuario.tag}: DMs cerrados.`);
+        }
+
+        await interaction.editReply(
+            `:white_check_mark: Sanción #${numero} aplicada a ${usuario}.\n` +
+            `**Tipo:** ${reasonData.tipo}\n` +
+            `**Razón:** ${razon}\n` +
+            `**Duración:** ${reasonData.duration}\n` +
+            `**Precio:** ${reasonData.price} rbx`
+        );
 
     } catch (error) {
         console.error('[SANCION] Error:', error);
@@ -2867,17 +2939,103 @@ async function handleRevokeTeam(interaction) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /mute
+// ─────────────────────────────────────────────────────────────────────────────
+function parseDuration(str) {
+    const match = str.trim().match(/^(\d+)(s|m|h|d|w)$/i);
+    if (!match) return null;
+    const value = parseInt(match[1]);
+    const unit = match[2].toLowerCase();
+    const multipliers = { s: 1000, m: 60000, h: 3600000, d: 86400000, w: 604800000 };
+    const ms = value * multipliers[unit];
+    const maxMs = 4 * 7 * 24 * 3600000; // 4 weeks
+    if (ms < 1000 || ms > maxMs) return null;
+    return ms;
+}
+
+function formatDurationLabel(str) {
+    const match = str.trim().match(/^(\d+)(s|m|h|d|w)$/i);
+    if (!match) return str;
+    const value = match[1];
+    const labels = { s: 'segundo(s)', m: 'minuto(s)', h: 'hora(s)', d: 'día(s)', w: 'semana(s)' };
+    const labelsEN = { s: 'second(s)', m: 'minute(s)', h: 'hour(s)', d: 'day(s)', w: 'week(s)' };
+    const unit = match[2].toLowerCase();
+    return { es: `${value} ${labels[unit]}`, en: `${value} ${labelsEN[unit]}` };
+}
+
+async function handleMute(interaction) {
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
+        return interaction.editReply(':x: Solo los moderadores pueden usar este comando.');
+    }
+
+    const usuario = interaction.options.getUser('usuario');
+    const razon = interaction.options.getString('razon');
+    const duracionStr = interaction.options.getString('duracion');
+
+    const duracionMs = parseDuration(duracionStr);
+    if (!duracionMs) {
+        return interaction.editReply(':x: Duración inválida. Usa formato como `10s`, `5m`, `2h`, `3d`, `1w`. El máximo es **4w** (4 semanas).');
+    }
+
+    const durLabel = formatDurationLabel(duracionStr);
+
+    try {
+        const member = await interaction.guild.members.fetch(usuario.id).catch(() => null);
+        if (!member) return interaction.editReply(':x: No se encontró al usuario en el servidor.');
+
+        // Aplicar timeout de Discord
+        await member.timeout(duracionMs, razon);
+
+        // DM al usuario (español + inglés)
+        try {
+            const dmES =
+                `🔇 **Fuiste muteado en ATF.**\n\n` +
+                `**Razón:** ${razon}\n` +
+                `**Duración:** ${durLabel.es}\n\n` +
+                `Para apelar, entra al siguiente servidor: https://discord.gg/AGjJSCknc9`;
+
+            const dmEN =
+                `🔇 **You have been muted in ATF.**\n\n` +
+                `**Reason:** ${razon}\n` +
+                `**Duration:** ${durLabel.en}\n\n` +
+                `To appeal, join the following server: https://discord.gg/AGjJSCknc9`;
+
+            await usuario.send(`${dmES}\n\n─────────────────────────\n\n${dmEN}`);
+        } catch (e) {
+            console.warn(`[MUTE] No se pudo enviar DM a ${usuario.tag}: DMs cerrados.`);
+        }
+
+        // Log en canal de sanciones
+        const logsChannel = interaction.guild.channels.cache.get(SANCTION_LOGS_CHANNEL);
+        if (logsChannel) {
+            await logsChannel.send(
+                `🔇 **[MUTE]** Usuario: ${usuario} | **Razón:** ${razon} | **Duración:** ${durLabel.es} | **Por:** ${interaction.user}`
+            );
+        }
+
+        await interaction.editReply(
+            `:white_check_mark: ${usuario} muteado correctamente.\n` +
+            `**Razón:** ${razon}\n` +
+            `**Duración:** ${durLabel.es}`
+        );
+
+    } catch (error) {
+        console.error('[MUTE] Error:', error);
+        await interaction.editReply(':x: Error al mutear al usuario. ¿Tengo permisos suficientes?').catch(() => {});
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // COMANDO: /man-verify
 // ─────────────────────────────────────────────────────────────────────────────
 async function handleManVerify(interaction) {
     await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
-    if (!await isAdminOnly(interaction.guild, interaction.user.id)) {
-        return interaction.editReply(':x: Solo los administradores pueden usar este comando.');
+    if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
+        return interaction.editReply(':x: Solo los moderadores pueden usar este comando.');
     }
-
-    const targetUser = interaction.options.getUser('usuario');
-    const roblox_user = interaction.options.getString('roblox_user').trim();
     const roblox_id = interaction.options.getString('roblox_id').trim();
 
     const data = loadVerify();
