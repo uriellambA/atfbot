@@ -15,7 +15,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT_API = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const API_SECRET = process.env.VERIFY_API_SECRET;
 const VERIFY_FILE = path.join(__dirname, 'verify.json');
 
