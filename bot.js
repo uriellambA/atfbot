@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 require('./verify-api.js');
+require('./github-sync')
 
 // Configuración del bot
 const client = new Client({
@@ -17,6 +18,94 @@ const client = new Client({
 // Archivo de base de datos
 const DATABASE_FILE = 'players_data.json';
 const DB_FILE = path.join(__dirname, 'sanciones.json');
+
+// GITHUB
+const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
+const GITHUB_REPO   = process.env.GITHUB_REPO;
+const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
+
+const syncQueue = new Map(); // filename -> timeout
+
+function scheduleGitHubSync(filePath, commitMsg) {
+    if (!GITHUB_TOKEN || !GITHUB_REPO) {
+        // No configurado → silencioso (no rompe nada)
+        return;
+    }
+ 
+    const filename = path.basename(filePath);
+ 
+    // Cancelar sync pendiente del mismo archivo
+    if (syncQueue.has(filename)) {
+        clearTimeout(syncQueue.get(filename));
+    }
+ 
+    // Programar sync con debounce de 3 segundos
+    const timer = setTimeout(() => {
+        syncQueue.delete(filename);
+        _pushToGitHub(filePath, commitMsg || `[bot] Update ${filename}`).catch(e => {
+            console.error(`[GITHUB-SYNC] Error sincronizando ${filename}:`, e.message);
+        });
+    }, 3000);
+ 
+    syncQueue.set(filename, timer);
+}
+
+/**
+ * Sube el archivo a GitHub (crea o actualiza el blob).
+ */
+async function _pushToGitHub(filePath, message) {
+    const filename = path.basename(filePath);
+ 
+    if (!fs.existsSync(filePath)) {
+        console.warn(`[GITHUB-SYNC] Archivo no existe: ${filePath}`);
+        return;
+    }
+ 
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const contentB64 = Buffer.from(content, 'utf-8').toString('base64');
+ 
+    const apiBase = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filename}`;
+    const headers = {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+    };
+ 
+    // Obtener SHA del archivo actual (necesario para actualizar)
+    let sha = null;
+    try {
+        const getRes = await fetch(`${apiBase}?ref=${GITHUB_BRANCH}`, { headers });
+        if (getRes.ok) {
+            const getData = await getRes.json();
+            sha = getData.sha;
+        }
+    } catch (e) {
+        // Archivo nuevo, sha = null está bien
+    }
+ 
+    const body = {
+        message,
+        content: contentB64,
+        branch: GITHUB_BRANCH,
+        ...(sha ? { sha } : {})
+    };
+ 
+    const putRes = await fetch(apiBase, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(body)
+    });
+ 
+    if (!putRes.ok) {
+        const errData = await putRes.json().catch(() => ({}));
+        throw new Error(`HTTP ${putRes.status}: ${errData.message || 'Unknown error'}`);
+    }
+ 
+    console.log(`[GITHUB-SYNC] ✅ ${filename} sincronizado con GitHub`);
+}
+ 
+module.exports = { scheduleGitHubSync };
 
 function loadDatabase() {
     if (fs.existsSync(DATABASE_FILE)) {
@@ -49,6 +138,7 @@ function loadDatabase() {
 
 function saveDatabase(data) {
     fs.writeFileSync(DATABASE_FILE, JSON.stringify(data, null, 4), 'utf-8');
+    scheduleGitHubSync(DATABASE_FILE, '[bot] Update players_data.json');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -786,8 +876,11 @@ function generateResultMessage(data) {
 client.once('ready', async (c) => {
     console.log(`Bot conectado como ${c.user.tag}`);
 
-    const firstGuild = c.guilds.cache.first();
-    if (firstGuild) startConfigMessagesInterval(firstGuild);
+    const MAIN_GUILD_ID = process.env.MAIN_GUILD_ID || null;
+    const mainGuild = MAIN_GUILD_ID
+        ? c.guilds.cache.get(MAIN_GUILD_ID)
+        : c.guilds.cache.filter(g => g.id !== (process.env.APPEALS_GUILD_ID || '1477484621666189405')).first();
+    if (mainGuild) startConfigMessagesInterval(mainGuild);
     startFixtureReminderScheduler(c);
     startPrediccionesAutoScheduler(c);
 
@@ -1148,6 +1241,7 @@ function loadMessages() {
 
 function saveMessages(data) {
     fs.writeFileSync(MESSAGES_FILE, JSON.stringify(data, null, 4), 'utf-8');
+    scheduleGitHubSync(MESSAGES_FILE, '[bot] Update mensajes.json');
 }
 
 async function resolveMessageVariables(text, guild) {
@@ -1198,39 +1292,50 @@ async function resolveMessageVariables(text, guild) {
 }
 
 let configMessagesInterval = null;
-
+let configMessagesGuildId  = null;
+ 
 function startConfigMessagesInterval(guild) {
     if (configMessagesInterval) {
         clearInterval(configMessagesInterval);
         configMessagesInterval = null;
     }
+ 
     const data = loadMessages();
     if (!data.config || !data.messages || data.messages.length === 0) return;
-
+ 
     const { channelId, cooldownMs } = data.config;
+ 
+    // Guardar qué guild se está usando para poder re-buscarlo luego
+    configMessagesGuildId = guild.id;
+ 
     let index = 0;
-
     configMessagesInterval = setInterval(async () => {
         try {
-            const channel = guild.channels.cache.get(channelId);
+            // Re-buscar el guild en cada tick (más robusto ante reconexiones)
+            const g = guild.client.guilds.cache.get(configMessagesGuildId);
+            if (!g) return;
+ 
+            const channel = g.channels.cache.get(channelId);
             if (!channel) return;
+ 
             const msgs = loadMessages().messages;
             if (!msgs || msgs.length === 0) return;
+ 
             const raw = msgs[index % msgs.length];
-            const resolved = await resolveMessageVariables(raw, guild);
-
+            const resolved = await resolveMessageVariables(raw, g);
+ 
             const embed = new EmbedBuilder()
                 .setColor(0x1D70B8)
-                .setDescription(resolved)
-
+                .setDescription(resolved);
+ 
             await channel.send({ embeds: [embed] });
             index++;
         } catch (e) {
             console.error('[CONFIG-MESSAGES] Error al enviar mensaje:', e);
         }
     }, cooldownMs);
-
-    console.log(`[CONFIG-MESSAGES] Intervalo iniciado: cada ${cooldownMs / 60000} min en canal ${channelId}`);
+ 
+    console.log(`[CONFIG-MESSAGES] Intervalo iniciado: cada ${cooldownMs / 60000} min en canal ${channelId} (guild: ${guild.name})`);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2357,7 +2462,38 @@ async function handleFichaje(interaction) {
     await member.roles.add([TEAM_ROLES[equipo], DIVISION_ROLES[division]]);
     if (member.roles.cache.has(MISC_ROLES["Agente Libre"])) await member.roles.remove(MISC_ROLES["Agente Libre"]);
 
-    await interaction.editReply(`:white_check_mark: ${usuario} ha sido fichado por ${equipo} con un contrato de ${gw} GW.`);
+    await interaction.editReply(`:white_check_mark: ${usuario} ha sido fichado por **${equipo}** con un contrato de **${gw} GW**.`);
+ 
+    // ── DM de contrato al jugador fichado ────────────────────────────────────
+    try {
+        const teamEmoji = getTeamEmoji(equipo) || '⚽';
+        const divEmoji  = getDivisionEmoji(`División ${divisionLetter}`) || '';
+ 
+        const dmES =
+            `## ${teamEmoji} ¡Has sido fichado!\n\n` +
+            `Un equipo te ha contratado en **ATF**. Aquí están los detalles de tu contrato:\n\n` +
+            `**🏟️ Equipo:** ${teamEmoji} **${equipo}**\n` +
+            `**${divEmoji} División:** División ${divisionLetter}\n` +
+            `**📅 Duración:** ${gw} GW\n` +
+            `**🌍 País:** ${pais}\n\n` +
+            `Si tienes alguna duda sobre tu contrato, contacta al staff de ATF.\n\n` +
+            `-# Fichado por ${interaction.user.username} · ATF`;
+ 
+        const dmEN =
+            `## ${teamEmoji} You've been signed!\n\n` +
+            `A team has contracted you in **ATF**. Here are your contract details:\n\n` +
+            `**🏟️ Team:** ${teamEmoji} **${equipo}**\n` +
+            `**${divEmoji} Division:** División ${divisionLetter}\n` +
+            `**📅 Duration:** ${gw} GW\n` +
+            `**🌍 Country:** ${pais}\n\n` +
+            `If you have any questions about your contract, contact the ATF staff.\n\n` +
+            `-# Signed by ${interaction.user.username} · ATF`;
+ 
+        await usuario.send(`${dmES}\n\n────────────────────────────────\n\n${dmEN}`);
+        console.log(`[FICHAJE] DM de contrato enviado a ${usuario.tag}`);
+    } catch (e) {
+        console.warn(`[FICHAJE] No se pudo enviar DM de contrato a ${usuario.tag}: DMs cerrados.`);
+    }
 
     const mercadoChannel = interaction.guild.channels.cache.get(CHANNELS.mercado);
     if (mercadoChannel) {
@@ -3103,14 +3239,18 @@ async function handleMute(interaction) {
 // ─────────────────────────────────────────────────────────────────────────────
 async function handleManVerify(interaction) {
     await interaction.deferReply({ flags: MessageFlags.Ephemeral });
-
+ 
     if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
         return interaction.editReply(':x: Solo los moderadores pueden usar este comando.');
     }
-    const roblox_id = interaction.options.getString('roblox_id').trim();
-
+ 
+    // ✅ FIX: Definir las variables que faltaban
+    const targetUser  = interaction.options.getUser('usuario');
+    const roblox_user = interaction.options.getString('roblox_user').trim();
+    const roblox_id   = interaction.options.getString('roblox_id').trim();
+ 
     const data = loadVerify();
-
+ 
     // Guardar vinculación directamente (mismo formato que processVerification)
     data.links[targetUser.id] = {
         roblox_user,
@@ -4827,6 +4967,7 @@ function loadVerify() {
 
 function saveVerify(data) {
     fs.writeFileSync(VERIFY_FILE, JSON.stringify(data, null, 4), 'utf-8');
+    scheduleGitHubSync(VERIFY_FILE, '[bot] Update verify.json');
 }
 
 // Genera código único tipo "ABC-123"
@@ -4976,52 +5117,59 @@ async function handleVerifyButton(interaction) {
 // Endpoint interno: el API llama esto cuando Roblox confirma el código
 // El bot exporta una función que el API server puede llamar
 // ─────────────────────────────────────────────────────────────────────────────
-async function processVerification({ code, roblox_user, roblox_id }) {
+async function processVerification({ code, roblox_user, roblox_id, _discordId }) {
     const data = loadVerify();
-
-    // Validar código
-    const entry = data.codes[code];
-    if (!entry) return { success: false, error: 'Código inválido o expirado' };
-    if (entry.expires < Date.now()) {
-        delete data.codes[code];
-        saveVerify(data);
-        return { success: false, error: 'Código expirado' };
+ 
+    let discordId;
+ 
+    if (_discordId) {
+        // Override directo desde verify-api.js (el código ya fue validado allí)
+        discordId = _discordId;
+    } else {
+        // Flujo normal: validar el código
+        const entry = data.codes[code];
+        if (!entry) return { success: false, error: 'Código inválido o expirado' };
+        if (entry.expires < Date.now()) {
+            delete data.codes[code];
+            saveVerify(data);
+            return { success: false, error: 'Código expirado' };
+        }
+        discordId = entry.discord_id;
     }
-
-    const discordId = entry.discord_id;
-
+ 
     // Guardar vinculación
     data.links[discordId] = {
         roblox_user,
         roblox_id,
         verified_at: Date.now()
     };
-    delete data.codes[code];
+    if (code) delete data.codes[code];
     saveVerify(data);
-
+ 
     // Aplicar en Discord
     try {
-        const guild = client.guilds.cache.first(); // Cambia si tienes múltiples servidores
-        if (!guild) return { success: false, error: 'Servidor no encontrado' };
-
+        const guild = client.guilds.cache.get(process.env.MAIN_GUILD_ID)
+            || client.guilds.cache.filter(g => g.id !== (process.env.APPEALS_GUILD_ID || '1477484621666189405')).first();
+        if (!guild) return { success: false, error: 'Servidor principal no encontrado' };
+ 
         const member = await guild.members.fetch(discordId).catch(() => null);
         if (!member) return { success: false, error: 'Usuario no encontrado en el servidor' };
-
+ 
         // Cambiar nickname
         try {
-            let displayName = roblox_user; // fallback al username
-        try {
-            const res = await fetch(`https://users.roblox.com/v1/users/${roblox_id}`);
-            const json = await res.json();
-            if (json.displayName) displayName = json.displayName;
+            let displayName = roblox_user;
+            try {
+                const res = await fetch(`https://users.roblox.com/v1/users/${roblox_id}`);
+                const json = await res.json();
+                if (json.displayName) displayName = json.displayName;
             } catch (e) {
-            console.warn('[VERIFY] No se pudo obtener displayName de Roblox:', e.message);
+                console.warn('[VERIFY] No se pudo obtener displayName de Roblox:', e.message);
             }
-        await member.setNickname(`${displayName} (@${roblox_user})`);
+            await member.setNickname(`${displayName} (@${roblox_user})`);
         } catch (e) {
             console.warn(`[VERIFY] No se pudo cambiar nickname de ${discordId}:`, e.message);
         }
-
+ 
         // Asignar rol
         const roleId = data.config?.roleId;
         if (roleId) {
@@ -5031,7 +5179,7 @@ async function processVerification({ code, roblox_user, roblox_id }) {
                 console.warn(`[VERIFY] No se pudo asignar rol a ${discordId}:`, e.message);
             }
         }
-
+ 
         // Notificar al usuario por DM
         try {
             await member.user.send(
@@ -5042,10 +5190,10 @@ async function processVerification({ code, roblox_user, roblox_id }) {
         } catch (e) {
             // DMs cerrados, no es crítico
         }
-
+ 
         console.log(`[VERIFY] ✅ ${discordId} verificado como Roblox: ${roblox_user} (${roblox_id})`);
         return { success: true, discord_id: discordId, roblox_user, roblox_id };
-
+ 
     } catch (e) {
         console.error('[VERIFY] Error al aplicar verificación:', e);
         return { success: false, error: e.message };

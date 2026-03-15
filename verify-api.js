@@ -131,30 +131,32 @@ const server = http.createServer(async (req, res) => {
 // Notificar al bot via Discord REST API directamente
 // ─────────────────────────────────────────────────────────────────────────────
 async function notifyBot(discordId, roblox_user, roblox_id, config) {
-    const { Client, GatewayIntentBits } = require('discord.js');
-    
-    // Si el bot ya corre en este proceso, usar global
+    // Si el bot corre en el mismo proceso (lo hace porque bot.js hace require('./verify-api.js'))
     if (global._verifyBot) {
-        return global._verifyBot.processVerification({ 
-            code: null, // ya fue validado
-            roblox_user, 
+        // Pasar _discordId para que processVerification omita la validación de código
+        return global._verifyBot.processVerification({
+            code: null,
+            roblox_user,
             roblox_id,
-            _discordId: discordId // override
+            _discordId: discordId
         });
     }
-
-    // Crear cliente temporal solo para aplicar el rol/nickname
+ 
+    // Fallback: cliente temporal (solo si el bot corre en proceso separado)
+    const { Client, GatewayIntentBits } = require('discord.js');
     const tempClient = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
-    
+ 
     await tempClient.login(process.env.DISCORD_TOKEN);
     await new Promise(r => tempClient.once('ready', r));
-
+ 
     try {
-        const guild = tempClient.guilds.cache.first();
+        const APPEALS_GUILD_ID = process.env.APPEALS_GUILD_ID || '1477484621666189405';
+        const guild = tempClient.guilds.cache.filter(g => g.id !== APPEALS_GUILD_ID).first()
+                   || tempClient.guilds.cache.first();
         if (!guild) throw new Error('No guild found');
-
+ 
         const member = await guild.members.fetch(discordId);
-
+ 
         // Nickname
         try {
             let displayName = roblox_user;
@@ -169,7 +171,7 @@ async function notifyBot(discordId, roblox_user, roblox_id, config) {
         } catch (e) {
             console.warn('[API] No se pudo cambiar nickname:', e.message);
         }
-
+ 
         // Rol
         const roleId = config?.roleId;
         if (roleId) {
@@ -177,7 +179,7 @@ async function notifyBot(discordId, roblox_user, roblox_id, config) {
                 console.warn('[API] No se pudo asignar rol:', e.message);
             }
         }
-
+ 
         // DM
         try {
             await member.user.send(
@@ -186,7 +188,7 @@ async function notifyBot(discordId, roblox_user, roblox_id, config) {
                 `Se te asignó el nickname y rol correspondiente.`
             );
         } catch (e) {}
-
+ 
         console.log(`[API] ✅ Discord ${discordId} verificado como ${roblox_user}`);
     } finally {
         tempClient.destroy();
