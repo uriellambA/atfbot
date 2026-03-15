@@ -18,7 +18,6 @@ const client = new Client({
 // Archivo de base de datos
 const DATABASE_FILE = 'players_data.json';
 
-const APPEALS_GUILD_ID      = process.env.APPEALS_GUILD_ID     || '1477484621666189405';
 const STAFF_ALERT_CHANNEL_ID = '1414386380682821646';
 const APPEALS_ROLE_APELANTE  = process.env.APPEALS_ROLE_APELANTE; // rol que ve solo #esperando
 const APPEALS_ROLE_MIEMBRO   = process.env.APPEALS_ROLE_MIEMBRO;  // rol que ve todo
