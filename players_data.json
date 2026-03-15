@@ -98,13 +98,6 @@
             "division": "B",
             "role": "Jugador"
         },
-        "1392560749876088863": {
-            "team": "Vanguards FC",
-            "gw": 2,
-            "country": "🇺🇾",
-            "division": "B",
-            "role": "Assistant Manager"
-        },
         "883381698635653161": {
             "team": "Vanguards FC",
             "gw": 2,
@@ -2916,6 +2909,7 @@
         ],
         "990720630339031140": [
             "Vanguards FC"
-        ]
+        ],
+        "1392560749876088863": []
     }
 }
