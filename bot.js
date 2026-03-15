@@ -20,8 +20,6 @@ const DATABASE_FILE = 'players_data.json';
 
 const APPEALS_ROLE_APELANTE  = process.env.APPEALS_ROLE_APELANTE; // rol que ve solo #esperando
 const APPEALS_ROLE_MIEMBRO   = process.env.APPEALS_ROLE_MIEMBRO;  // rol que ve todo
- 
-const pendingAppealsRequests = new Map();
 
 function loadDatabase() {
     if (fs.existsSync(DATABASE_FILE)) {
