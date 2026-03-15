@@ -1716,6 +1716,16 @@
             "teamHistory": [
                 "Vanguards FC"
             ]
+        },
+        "781929563935735808": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇨🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
         }
     },
     "teams": {},
@@ -2892,6 +2902,9 @@
         "1392560749876088863": [],
         "549413377202716672": [],
         "883381698635653161": [],
-        "1461848581559292070": []
+        "1461848581559292070": [],
+        "781929563935735808": [
+            "Club Deportivo Hospital"
+        ]
     }
 }
