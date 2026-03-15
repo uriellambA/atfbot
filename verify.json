@@ -4,7 +4,12 @@
         "roleId": "1414386378254323795",
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
-    "codes": {},
+    "codes": {
+        "ARJ-412": {
+            "discord_id": "1251885322556674131",
+            "expires": 1773608186279
+        }
+    },
     "links": {
         "792539081967927337": {
             "roblox_user": "0iiKosmic",
