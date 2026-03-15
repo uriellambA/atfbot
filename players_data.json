@@ -1729,6 +1729,16 @@
             "teamHistory": [
                 "Club Deportivo Hospital"
             ]
+        },
+        "1094999560734130237": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
         }
     },
     "teams": {},
@@ -2912,6 +2922,9 @@
         "794316505768001546": [],
         "1198612534412976172": [
             "Club Deportivo Hospital"
+        ],
+        "1094999560734130237": [
+            "Zinrack FC"
         ]
     }
 }
