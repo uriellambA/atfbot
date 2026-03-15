@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, MessageFlags } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const { scheduleGitHubSync } = require('./github-sync');
+const { scheduleGitHubSync, loadFromGitHub } = require('./github-sync');
 require('dotenv').config();
 require('./verify-api.js');
 
@@ -786,6 +786,21 @@ function generateResultMessage(data) {
 // ─────────────────────────────────────────────────────────────────────────────
 client.once('ready', async (c) => {
     console.log(`Bot conectado como ${c.user.tag}`);
+ 
+    // ── Restaurar datos desde GitHub (Railway borra el filesystem en cada deploy) ──
+    console.log('[STARTUP] Restaurando datos desde GitHub...');
+    await Promise.all([
+        loadFromGitHub(path.join(__dirname, 'players_data.json')),
+        loadFromGitHub(path.join(__dirname, 'verify.json')),
+        loadFromGitHub(path.join(__dirname, 'mensajes.json')),
+        loadFromGitHub(path.join(__dirname, 'sanciones.json')),
+        loadFromGitHub(path.join(__dirname, 'fixtures.json')),
+        loadFromGitHub(path.join(__dirname, 'predicciones.json')),
+        loadFromGitHub(path.join(__dirname, 'resultado.json')),
+    ]);
+    console.log('[STARTUP] Datos restaurados.');
+ 
+    // Auto active-reset: siempre arrancar en modo Activo
     saveStatus('Activo');
     console.log('[STATUS] Bot iniciado en modo Activo automáticamente.');
 

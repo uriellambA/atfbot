@@ -1,3 +1,6 @@
+Github sync · JS
+Copiar
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // github-sync.js - Sincronización automática de archivos JSON con GitHub
 //
@@ -103,4 +106,44 @@ async function _pushToGitHub(filePath, message) {
     console.log(`[GITHUB-SYNC] ✅ ${filename} sincronizado con GitHub`);
 }
  
-module.exports = { scheduleGitHubSync };
+// ─────────────────────────────────────────────────────────────────────────────
+// CARGA INICIAL — descarga un JSON desde GitHub al arrancar el bot
+// ─────────────────────────────────────────────────────────────────────────────
+async function loadFromGitHub(filePath) {
+    if (!GITHUB_TOKEN || !GITHUB_REPO) return false;
+ 
+    const filename = path.basename(filePath);
+    const apiUrl   = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filename}?ref=${GITHUB_BRANCH}`;
+ 
+    try {
+        const res = await fetch(apiUrl, {
+            headers: {
+                'Authorization': `Bearer ${GITHUB_TOKEN}`,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        });
+ 
+        if (!res.ok) {
+            if (res.status === 404) {
+                console.log(`[GITHUB-SYNC] ${filename} no existe en GitHub todavía (se creará al primer guardado)`);
+                return false;
+            }
+            console.warn(`[GITHUB-SYNC] Error al descargar ${filename}: HTTP ${res.status}`);
+            return false;
+        }
+ 
+        const data    = await res.json();
+        const content = Buffer.from(data.content, 'base64').toString('utf-8');
+        JSON.parse(content); // validar JSON antes de escribir
+        fs.writeFileSync(filePath, content, 'utf-8');
+        console.log(`[GITHUB-SYNC] ✅ ${filename} restaurado desde GitHub`);
+        return true;
+ 
+    } catch (e) {
+        console.error(`[GITHUB-SYNC] Error cargando ${filename} desde GitHub:`, e.message);
+        return false;
+    }
+}
+ 
+module.exports = { scheduleGitHubSync, loadFromGitHub };
