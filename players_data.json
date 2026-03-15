@@ -98,13 +98,6 @@
             "division": "B",
             "role": "Jugador"
         },
-        "1392560749876088863": {
-            "team": "Vanguards FC",
-            "gw": 2,
-            "country": "🇺🇾",
-            "division": "B",
-            "role": "Assistant Manager"
-        },
         "883381698635653161": {
             "team": "Vanguards FC",
             "gw": 2,
@@ -917,6 +910,13 @@
             "division": "B",
             "role": "Jugador"
         },
+        "1461848583245660375": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
         "720498495693520986": {
             "team": "CJA",
             "gw": 0,
@@ -1083,13 +1083,6 @@
             "gw": 1,
             "country": "🇵🇪",
             "division": "C",
-            "role": "Jugador"
-        },
-        "1418782129999052861": {
-            "team": "Vanguards FC",
-            "gw": 3,
-            "country": "🇧🇷",
-            "division": "B",
             "role": "Jugador"
         },
         "1320039453296820234": {
@@ -2908,6 +2901,7 @@
             "CJA"
         ],
         "1384191921794187346": [],
-        "1461848583245660375": []
+        "1392560749876088863": [],
+        "1418782129999052861": []
     }
 }
