@@ -1,9 +1,9 @@
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, MessageFlags } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
+const { scheduleGitHubSync } = require('./github-sync');
 require('dotenv').config();
 require('./verify-api.js');
-require('./github-sync')
 
 // Configuración del bot
 const client = new Client({
