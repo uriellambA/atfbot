@@ -4893,9 +4893,13 @@ function loadVerify() {
     return { config: null, codes: {}, links: {} };
 }
 
-function saveVerify(data) {
+function saveVerify(data, syncLinks = false) {
     fs.writeFileSync(VERIFY_FILE, JSON.stringify(data, null, 4), 'utf-8');
-    scheduleGitHubSync(VERIFY_FILE, '[bot] Update verify.json');
+    // Solo subir a GitHub cuando se modifica links (verificación completada),
+    // no cuando solo se crea/borra un código temporal
+    if (syncLinks) {
+        scheduleGitHubSync(VERIFY_FILE, '[bot] Update verify.json (new link)');
+    }
 }
 
 // Genera código único tipo "ABC-123"
@@ -5051,39 +5055,41 @@ async function processVerification({ code, roblox_user, roblox_id, _discordId })
     let discordId;
  
     if (_discordId) {
-        // Override directo desde verify-api.js (el código ya fue validado allí)
+        // Override directo desde verify-api.js (código ya validado allí)
         discordId = _discordId;
     } else {
-        // Flujo normal: validar el código
+        // Flujo normal: validar código
         const entry = data.codes[code];
         if (!entry) return { success: false, error: 'Código inválido o expirado' };
         if (entry.expires < Date.now()) {
             delete data.codes[code];
-            saveVerify(data);
+            saveVerify(data, false); // solo borrar código, no sync
             return { success: false, error: 'Código expirado' };
         }
         discordId = entry.discord_id;
     }
  
-    // Guardar vinculación
+    // Guardar vinculación y borrar código
     data.links[discordId] = {
         roblox_user,
         roblox_id,
         verified_at: Date.now()
     };
     if (code) delete data.codes[code];
-    saveVerify(data);
+    saveVerify(data, true); // ← true = sincronizar con GitHub porque se completó una verificación
  
     // Aplicar en Discord
     try {
+        const APPEALS_ID = process.env.APPEALS_GUILD_ID || '1477484621666189405';
         const guild = client.guilds.cache.get(process.env.MAIN_GUILD_ID)
-            || client.guilds.cache.filter(g => g.id !== (process.env.APPEALS_GUILD_ID || '1477484621666189405')).first();
+                   || client.guilds.cache.filter(g => g.id !== APPEALS_ID).first()
+                   || client.guilds.cache.first();
         if (!guild) return { success: false, error: 'Servidor principal no encontrado' };
  
         const member = await guild.members.fetch(discordId).catch(() => null);
         if (!member) return { success: false, error: 'Usuario no encontrado en el servidor' };
  
-        // Cambiar nickname
+        // Cambiar nickname — try/catch correctamente anidado
         try {
             let displayName = roblox_user;
             try {
@@ -5091,7 +5097,7 @@ async function processVerification({ code, roblox_user, roblox_id, _discordId })
                 const json = await res.json();
                 if (json.displayName) displayName = json.displayName;
             } catch (e) {
-                console.warn('[VERIFY] No se pudo obtener displayName de Roblox:', e.message);
+                console.warn('[VERIFY] No se pudo obtener displayName:', e.message);
             }
             await member.setNickname(`${displayName} (@${roblox_user})`);
         } catch (e) {
@@ -5108,16 +5114,14 @@ async function processVerification({ code, roblox_user, roblox_id, _discordId })
             }
         }
  
-        // Notificar al usuario por DM
+        // DM al usuario
         try {
             await member.user.send(
                 `✅ **¡Verificación completada!**\n` +
                 `Tu cuenta de Roblox **${roblox_user}** ha sido vinculada a tu Discord.\n` +
                 `Se te asignó el nickname y el rol correspondiente.`
             );
-        } catch (e) {
-            // DMs cerrados, no es crítico
-        }
+        } catch (e) { /* DMs cerrados, no crítico */ }
  
         console.log(`[VERIFY] ✅ ${discordId} verificado como Roblox: ${roblox_user} (${roblox_id})`);
         return { success: true, discord_id: discordId, roblox_user, roblox_id };
@@ -5148,8 +5152,48 @@ const pendingAppealsRequests = new Map();
 client.on('guildMemberAdd', async (member) => {
     try {
         if (member.guild.id !== APPEALS_GUILD_ID) return;
-        // Solo loguear; el aviso real se manda cuando acepta el screening
-        console.log(`[APELACIONES] ${member.user.tag} entró al servidor (pending: ${member.pending})`);
+
+        // Buscar canal staff
+        let staffChannel = null;
+        for (const guild of client.guilds.cache.values()) {
+            const ch = guild.channels.cache.get(STAFF_ALERT_CHANNEL_ID);
+            if (ch) { staffChannel = ch; break; }
+        }
+        if (!staffChannel) {
+            console.warn('[APELACIONES] No se encontró el canal staff');
+            return;
+        }
+
+        const accountAge = Math.floor(member.user.createdTimestamp / 1000);
+        const joinedAt   = Math.floor(Date.now() / 1000);
+
+        const embed = new EmbedBuilder()
+            .setColor(0xFEE75C)
+            .setTitle('🔔 Solicitud de Acceso — Servidor de Apelaciones')
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
+            .addFields(
+                { name: '👤 Usuario', value: `<@${member.id}> **${member.user.tag}**`, inline: true },
+                { name: '🪪 ID',      value: `\`${member.id}\``,                        inline: true },
+                { name: '📅 Cuenta creada', value: `<t:${accountAge}:R>`,              inline: true },
+                { name: '📥 Entró al servidor', value: `<t:${joinedAt}:F>`,            inline: false }
+            )
+            .setFooter({ text: 'Revisa el servidor de apelaciones para más contexto.' });
+
+        const row = new ActionRowBuilder().addComponents(
+            new ButtonBuilder()
+                .setCustomId(`appeals_accept_${member.id}`)
+                .setLabel('✅ Aceptar')
+                .setStyle(ButtonStyle.Success),
+            new ButtonBuilder()
+                .setCustomId(`appeals_reject_${member.id}`)
+                .setLabel('❌ Rechazar')
+                .setStyle(ButtonStyle.Danger)
+        );
+
+        const msg = await staffChannel.send({ embeds: [embed], components: [row] });
+        pendingAppealsRequests.set(msg.id, { memberId: member.id, guildId: APPEALS_GUILD_ID });
+
+        console.log(`[APELACIONES] Aviso enviado al staff para ${member.user.tag} (${member.id})`);
     } catch (err) {
         console.error('[APELACIONES] Error en guildMemberAdd:', err);
     }
