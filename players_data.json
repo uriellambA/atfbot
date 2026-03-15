@@ -1713,6 +1713,16 @@
             "teamHistory": [
                 "Club Deportivo Hospital"
             ]
+        },
+        "1033751088140132374": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇵🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Academia Polaris"
+            ]
         }
     },
     "teams": {},
@@ -2952,6 +2962,9 @@
             "Club Deportivo Hospital"
         ],
         "1059489095174328350": [],
-        "1278778027517677769": []
+        "1278778027517677769": [],
+        "1033751088140132374": [
+            "Academia Polaris"
+        ]
     }
 }
