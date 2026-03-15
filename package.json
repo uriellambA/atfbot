@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "sync": "node sync-local.js"
   },
   "engines": {
-  "node": ">=18"
+    "node": ">=18"
   },
   "dependencies": {
     "discord.js": "^14.0.0",
