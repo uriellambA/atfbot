@@ -1735,6 +1735,16 @@
             "teamHistory": [
                 "Zinrack FC"
             ]
+        },
+        "732002305507065867": {
+            "team": "CF Ineri",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
         }
     },
     "teams": {},
@@ -2926,6 +2936,8 @@
         "1319500443709210726": [
             "Zinrack FC"
         ],
-        "732002305507065867": []
+        "732002305507065867": [
+            "CF Ineri"
+        ]
     }
 }
