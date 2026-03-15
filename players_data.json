@@ -1393,13 +1393,6 @@
             "division": "A",
             "role": "Jugador"
         },
-        "1214280038682337331": {
-            "team": "Lightkings FC",
-            "gw": 3,
-            "country": "🇧🇷",
-            "division": "A",
-            "role": "Dueño"
-        },
         "1287508501484011586": {
             "team": "Red Waffles FC",
             "gw": 2,
@@ -2747,6 +2740,20 @@
             "estado": "Revoked",
             "messageId": "1482827563490611454",
             "timestamp": 1773604040919
+        },
+        "sanction_1773604217709_1": {
+            "id": "sanction_1773604217709_1",
+            "numero": 1,
+            "userId": "1214280038682337331",
+            "tipo": "Sanción Media",
+            "razon": "Mala administración del club",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Activa",
+            "messageId": "1482828305056010331",
+            "timestamp": 1773604217709
         }
     },
     "sanctionCounter": 10,
@@ -2961,6 +2968,7 @@
         ],
         "732002305507065867": [
             "CF Ineri"
-        ]
+        ],
+        "1214280038682337331": []
     }
 }
