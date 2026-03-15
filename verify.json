@@ -4,7 +4,12 @@
         "roleId": "1414386378254323795",
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
-    "codes": {},
+    "codes": {
+        "ZCW-667": {
+            "discord_id": "858932611224829982",
+            "expires": 1773587654973
+        }
+    },
     "links": {
         "792539081967927337": {
             "roblox_user": "0iiKosmic",
