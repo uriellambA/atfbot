@@ -786,6 +786,8 @@ function generateResultMessage(data) {
 // ─────────────────────────────────────────────────────────────────────────────
 client.once('ready', async (c) => {
     console.log(`Bot conectado como ${c.user.tag}`);
+    saveStatus('Activo');
+    console.log('[STATUS] Bot iniciado en modo Activo automáticamente.');
 
     const MAIN_GUILD_ID = process.env.MAIN_GUILD_ID || null;
     const mainGuild = MAIN_GUILD_ID
@@ -5127,38 +5129,39 @@ const STAFF_ALERT_CHANNEL_ID = "1414386380682821646";
 // Map: messageId -> { memberId, guildId }
 const pendingAppealsRequests = new Map();
 
+// Miembro entra al sv de apelaciones (aún pendiente — solo registrar)
 client.on('guildMemberAdd', async (member) => {
     try {
         if (member.guild.id !== APPEALS_GUILD_ID) return;
-        if (!member.pending) return;
-
+        // Solo loguear; el aviso real se manda cuando acepta el screening
+        console.log(`[APELACIONES] ${member.user.tag} entró al servidor (pending: ${member.pending})`);
+    } catch (err) {
+        console.error('[APELACIONES] Error en guildMemberAdd:', err);
+    }
+});
+ 
+// Cuando el miembro acepta el membership screening (pending: true → false)
+client.on('guildMemberUpdate', async (oldMember, newMember) => {
+    try {
+        if (newMember.guild.id !== APPEALS_GUILD_ID) return;
+        // Solo nos interesa el cambio pending true → false
+        if (!oldMember.pending || newMember.pending) return;
+ 
+        const member = newMember;
+ 
         // Buscar canal staff en cualquier guild del bot
         let staffChannel = null;
         for (const guild of client.guilds.cache.values()) {
             const ch = guild.channels.cache.get(STAFF_ALERT_CHANNEL_ID);
             if (ch) { staffChannel = ch; break; }
         }
-        if (!staffChannel) return;
-
-        // Intentar obtener las respuestas del membership screening via audit log
-        let screeningAnswers = null;
-        try {
-            await new Promise(r => setTimeout(r, 2000)); // esperar que el audit log se actualice
-            const logs = await member.guild.fetchAuditLogs({ limit: 10, type: 'MEMBER_UPDATE' }).catch(() => null);
-            if (logs) {
-                const entry = logs.entries.find(e =>
-                    e.target?.id === member.id &&
-                    Date.now() - e.createdTimestamp < 10000
-                );
-                if (entry?.changes) {
-                    const sc = entry.changes.find(c => c.key === 'pending');
-                    if (sc) screeningAnswers = sc;
-                }
-            }
-        } catch (e) { /* silencioso */ }
-
-        // Buscar en los Application Commands del servidor de apelaciones las preguntas
-        let questionsText = '*No se pudieron obtener las preguntas automáticamente.*\nRevísalas directamente en el servidor de apelaciones.';
+        if (!staffChannel) {
+            console.warn('[APELACIONES] No se encontró el canal staff');
+            return;
+        }
+ 
+        // Intentar obtener respuestas del membership screening via audit log
+        let questionsText = '*No se pudieron obtener las respuestas del formulario.*\nRevísalas directamente en el servidor de apelaciones.';
         try {
             const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
             if (appealsGuild) {
@@ -5170,10 +5173,10 @@ client.on('guildMemberAdd', async (member) => {
                 }
             }
         } catch (e) { /* silencioso */ }
-
+ 
         const accountAge = Math.floor(member.user.createdTimestamp / 1000);
         const joinedAt = Math.floor(Date.now() / 1000);
-
+ 
         const embed = new EmbedBuilder()
             .setColor(0xFEE75C)
             .setTitle('🔔 Solicitud de Acceso — Servidor de Apelaciones')
@@ -5182,14 +5185,11 @@ client.on('guildMemberAdd', async (member) => {
                 { name: '👤 Usuario', value: `<@${member.id}> **${member.user.tag}**`, inline: true },
                 { name: '🪪 ID', value: `\`${member.id}\``, inline: true },
                 { name: '📅 Cuenta creada', value: `<t:${accountAge}:R>`, inline: true },
-                { name: '📥 Solicitó acceso', value: `<t:${joinedAt}:F>`, inline: false },
-                {
-                    name: '📋 Preguntas y Respuestas del Formulario',
-                    value: questionsText.slice(0, 1024)
-                }
+                { name: '📥 Aceptó el screening', value: `<t:${joinedAt}:F>`, inline: false },
+                { name: '📋 Preguntas y Respuestas del Formulario', value: questionsText.slice(0, 1024) }
             )
             .setFooter({ text: 'Revisa las respuestas completas en el servidor de apelaciones si es necesario.' });
-
+ 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
                 .setCustomId(`appeals_accept_${member.id}`)
@@ -5200,13 +5200,13 @@ client.on('guildMemberAdd', async (member) => {
                 .setLabel('❌ Rechazar')
                 .setStyle(ButtonStyle.Danger)
         );
-
+ 
         const msg = await staffChannel.send({ embeds: [embed], components: [row] });
         pendingAppealsRequests.set(msg.id, { memberId: member.id, guildId: APPEALS_GUILD_ID });
-
+ 
         console.log(`[APELACIONES] Solicitud de ${member.user.tag} (${member.id}) enviada al staff`);
     } catch (err) {
-        console.error('[APELACIONES] Error al enviar aviso:', err);
+        console.error('[APELACIONES] Error en guildMemberUpdate:', err);
     }
 });
 

@@ -45,7 +45,7 @@ const server = http.createServer(async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     // Solo POST /verify
-    if (req.method !== 'POST' || req.url !== '/verify') {
+    if (req.method !== 'POST' || req.url !== '/verify/') {
         res.writeHead(404);
         return res.end(JSON.stringify({ error: 'Not found' }));
     }
