@@ -18,6 +18,13 @@ const client = new Client({
 // Archivo de base de datos
 const DATABASE_FILE = 'players_data.json';
 
+const APPEALS_GUILD_ID      = process.env.APPEALS_GUILD_ID     || '1477484621666189405';
+const STAFF_ALERT_CHANNEL_ID = '1414386380682821646';
+const APPEALS_ROLE_APELANTE  = process.env.APPEALS_ROLE_APELANTE; // rol que ve solo #esperando
+const APPEALS_ROLE_MIEMBRO   = process.env.APPEALS_ROLE_MIEMBRO;  // rol que ve todo
+ 
+const pendingAppealsRequests = new Map();
+
 function loadDatabase() {
     if (fs.existsSync(DATABASE_FILE)) {
         try {
@@ -5152,8 +5159,18 @@ const pendingAppealsRequests = new Map();
 client.on('guildMemberAdd', async (member) => {
     try {
         if (member.guild.id !== APPEALS_GUILD_ID) return;
-
-        // Buscar canal staff
+ 
+        // Dar rol Apelante (solo ve #esperando-aprobacion)
+        if (APPEALS_ROLE_APELANTE) {
+            try {
+                await member.roles.add(APPEALS_ROLE_APELANTE);
+                console.log(`[APELACIONES] Rol Apelante dado a ${member.user.tag}`);
+            } catch (e) {
+                console.warn('[APELACIONES] No se pudo dar rol Apelante:', e.message);
+            }
+        }
+ 
+        // Buscar canal staff en el servidor principal
         let staffChannel = null;
         for (const guild of client.guilds.cache.values()) {
             const ch = guild.channels.cache.get(STAFF_ALERT_CHANNEL_ID);
@@ -5163,36 +5180,37 @@ client.on('guildMemberAdd', async (member) => {
             console.warn('[APELACIONES] No se encontró el canal staff');
             return;
         }
-
+ 
         const accountAge = Math.floor(member.user.createdTimestamp / 1000);
         const joinedAt   = Math.floor(Date.now() / 1000);
-
+ 
         const embed = new EmbedBuilder()
             .setColor(0xFEE75C)
-            .setTitle('🔔 Solicitud de Acceso — Servidor de Apelaciones')
+            .setTitle('🔔 Solicitud de Apelación — Nuevo Usuario')
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
             .addFields(
-                { name: '👤 Usuario', value: `<@${member.id}> **${member.user.tag}**`, inline: true },
-                { name: '🪪 ID',      value: `\`${member.id}\``,                        inline: true },
-                { name: '📅 Cuenta creada', value: `<t:${accountAge}:R>`,              inline: true },
-                { name: '📥 Entró al servidor', value: `<t:${joinedAt}:F>`,            inline: false }
+                { name: '👤 Usuario',        value: `<@${member.id}> **${member.user.tag}**`, inline: true },
+                { name: '🪪 ID',             value: `\`${member.id}\``,                        inline: true },
+                { name: '📅 Cuenta creada',  value: `<t:${accountAge}:R>`,                    inline: true },
+                { name: '📥 Entró al servidor', value: `<t:${joinedAt}:F>`,                  inline: false },
+                { name: '📌 Estado',         value: 'Esperando aprobación del staff',         inline: false }
             )
-            .setFooter({ text: 'Revisa el servidor de apelaciones para más contexto.' });
-
+            .setFooter({ text: 'Revisa el servidor de apelaciones para mas contexto.' });
+ 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
                 .setCustomId(`appeals_accept_${member.id}`)
-                .setLabel('✅ Aceptar')
+                .setLabel('✅ Aprobar')
                 .setStyle(ButtonStyle.Success),
             new ButtonBuilder()
                 .setCustomId(`appeals_reject_${member.id}`)
                 .setLabel('❌ Rechazar')
                 .setStyle(ButtonStyle.Danger)
         );
-
+ 
         const msg = await staffChannel.send({ embeds: [embed], components: [row] });
         pendingAppealsRequests.set(msg.id, { memberId: member.id, guildId: APPEALS_GUILD_ID });
-
+ 
         console.log(`[APELACIONES] Aviso enviado al staff para ${member.user.tag} (${member.id})`);
     } catch (err) {
         console.error('[APELACIONES] Error en guildMemberAdd:', err);
@@ -5268,6 +5286,148 @@ client.on('guildMemberUpdate', async (oldMember, newMember) => {
         console.error('[APELACIONES] Error en guildMemberUpdate:', err);
     }
 });
+
+async function handleAppealsAccept(interaction) {
+    const memberId = interaction.customId.replace('appeals_accept_', '');
+ 
+    // Deshabilitar botones inmediatamente
+    const disabledRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('_acc').setLabel('✅ Aprobado').setStyle(ButtonStyle.Success).setDisabled(true),
+        new ButtonBuilder().setCustomId('_rej').setLabel('❌ Rechazar').setStyle(ButtonStyle.Danger).setDisabled(true)
+    );
+ 
+    const originalEmbed = EmbedBuilder.from(interaction.message.embeds[0])
+        .setColor(0x57F287)
+        .setTitle('✅ Solicitud Aprobada — Servidor de Apelaciones')
+        .setFooter({ text: `Aprobado por ${interaction.user.tag} · ${new Date().toLocaleString('es-ES')}` });
+ 
+    await interaction.update({ embeds: [originalEmbed], components: [disabledRow] });
+ 
+    // Dar rol Miembro y quitar rol Apelante en el servidor de apelaciones
+    try {
+        const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
+        if (appealsGuild) {
+            const appealsMember = await appealsGuild.members.fetch(memberId).catch(() => null);
+            if (appealsMember) {
+                if (APPEALS_ROLE_MIEMBRO) {
+                    await appealsMember.roles.add(APPEALS_ROLE_MIEMBRO);
+                    console.log(`[APELACIONES] Rol Miembro dado a ${memberId}`);
+                }
+                if (APPEALS_ROLE_APELANTE) {
+                    await appealsMember.roles.remove(APPEALS_ROLE_APELANTE);
+                }
+            }
+        }
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo dar rol Miembro:', e.message);
+    }
+ 
+    // DM al usuario
+    try {
+        const user = await interaction.client.users.fetch(memberId);
+        await user.send(
+            `## ✅ Solicitud de Apelación Aprobada\n\n` +
+            `Tu solicitud de acceso al **servidor de apelaciones de ATF** fue **aprobada**.\n` +
+            `Ya podés ver todos los canales del servidor y presentar tu apelación.\n\n` +
+            `-# Revisado por el staff de ATF`
+        );
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo enviar DM de aprobación:', e.message);
+    }
+ 
+    console.log(`[APELACIONES] ${interaction.user.tag} aprobó la solicitud de ${memberId}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOTÓN: Rechazar solicitud → mostrar modal para pedir razón
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleAppealsReject(interaction) {
+    const memberId = interaction.customId.replace('appeals_reject_', '');
+ 
+    const modal = new ModalBuilder()
+        .setCustomId(`appeals_reject_reason_${memberId}`)
+        .setTitle('Rechazar Solicitud de Apelación');
+ 
+    modal.addComponents(
+        new ActionRowBuilder().addComponents(
+            new TextInputBuilder()
+                .setCustomId('razon')
+                .setLabel('Razón del rechazo')
+                .setStyle(TextInputStyle.Paragraph)
+                .setPlaceholder('Ej: No cumple los requisitos para apelar, sanción permanente confirmada...')
+                .setRequired(true)
+                .setMinLength(10)
+                .setMaxLength(500)
+        )
+    );
+ 
+    await interaction.showModal(modal);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MODAL: Razón del rechazo → DM al usuario + kick
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleAppealsRejectReason(interaction) {
+    const memberId = interaction.customId.replace('appeals_reject_reason_', '');
+    const razon    = interaction.fields.getTextInputValue('razon');
+ 
+    // Deshabilitar botones
+    const disabledRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('_acc').setLabel('✅ Aprobar').setStyle(ButtonStyle.Success).setDisabled(true),
+        new ButtonBuilder().setCustomId('_rej2').setLabel('❌ Rechazado').setStyle(ButtonStyle.Danger).setDisabled(true)
+    );
+ 
+    const originalEmbed = EmbedBuilder.from(interaction.message.embeds[0])
+        .setColor(0xFF4444)
+        .setTitle('❌ Solicitud Rechazada — Servidor de Apelaciones')
+        .addFields({ name: '📝 Razón del rechazo', value: razon })
+        .setFooter({ text: `Rechazado por ${interaction.user.tag} · ${new Date().toLocaleString('es-ES')}` });
+ 
+    await interaction.update({ embeds: [originalEmbed], components: [disabledRow] });
+ 
+    // DM al usuario ANTES de kickearlo
+    let dmEnviado = false;
+    try {
+        const user = await interaction.client.users.fetch(memberId);
+        await user.send(
+            `## ❌ Solicitud de Apelación Rechazada\n\n` +
+            `Tu solicitud de acceso al **servidor de apelaciones de ATF** fue **rechazada**.\n\n` +
+            `**Razón:**\n> ${razon}\n\n` +
+            `Si crees que es un error, contacta al staff de ATF directamente.\n\n` +
+            `-# Revisado por ${interaction.user.tag} · ATF`
+        );
+        dmEnviado = true;
+        console.log(`[APELACIONES] DM de rechazo enviado a ${memberId}`);
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo enviar DM de rechazo (DMs cerrados):', e.message);
+    }
+ 
+    // Kickear al usuario del servidor de apelaciones
+    try {
+        const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
+        if (appealsGuild) {
+            const appealsMember = await appealsGuild.members.fetch(memberId).catch(() => null);
+            if (appealsMember) {
+                await appealsMember.kick(`Solicitud rechazada por ${interaction.user.tag}: ${razon}`);
+                console.log(`[APELACIONES] ${memberId} kickeado del servidor de apelaciones`);
+            }
+        }
+    } catch (e) {
+        console.warn('[APELACIONES] No se pudo kickear al usuario:', e.message);
+    }
+ 
+    // Avisar en el canal si el DM no se pudo enviar
+    if (!dmEnviado) {
+        try {
+            await interaction.followUp({
+                content: `⚠️ No se pudo enviar el DM a <@${memberId}> (DMs cerrados). El usuario fue kickeado igualmente.`,
+                flags: MessageFlags.Ephemeral
+            });
+        } catch (e) { /* silencioso */ }
+    }
+ 
+    console.log(`[APELACIONES] ${interaction.user.tag} rechazó la solicitud de ${memberId}: ${razon}`);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // BOTONES: Aceptar / Rechazar solicitud de apelaciones
