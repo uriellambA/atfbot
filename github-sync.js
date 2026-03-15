@@ -1,6 +1,3 @@
-Github sync · JS
-Copiar
-
 // ═══════════════════════════════════════════════════════════════════════════════
 // github-sync.js - Sincronización automática de archivos JSON con GitHub
 //
