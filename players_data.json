@@ -2733,6 +2733,20 @@
             "estado": "Revoked",
             "messageId": "1479980312631971880",
             "timestamp": 1772925203305
+        },
+        "sanction_1773604040919_1": {
+            "id": "sanction_1773604040919_1",
+            "numero": 1,
+            "userId": "1214280038682337331",
+            "tipo": "Sanción Media",
+            "razon": "Mala administración del club",
+            "precio": 750,
+            "duracion": "5 GW",
+            "duracion_restante": 5,
+            "gw": 5,
+            "estado": "Revoked",
+            "messageId": "1482827563490611454",
+            "timestamp": 1773604040919
         }
     },
     "sanctionCounter": 10,
@@ -2880,9 +2894,18 @@
             "estado": "Activa",
             "messageId": "1479980309385707770",
             "timestamp": 1772925202522
+        },
+        "tsanction_1773603991475_17": {
+            "id": "tsanction_1773603991475_17",
+            "numero": 17,
+            "team": "Lightkings FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1482827355784347769",
+            "timestamp": 1773603991475
         }
     },
-    "teamSanctionCounter": 16,
+    "teamSanctionCounter": 17,
     "boosts": {
         "753428769368440862": 1,
         "1344449311336829008": 1,
