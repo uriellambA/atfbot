@@ -119,13 +119,6 @@
             "division": "B",
             "role": "Assistant Manager"
         },
-        "1360667444900790312": {
-            "team": "Zinrack FC",
-            "gw": 0,
-            "country": "🇷🇸",
-            "division": "A",
-            "role": "Manager"
-        },
         "338445513433153545": {
             "team": "Bloxyneta FC",
             "gw": 2,
@@ -2925,6 +2918,7 @@
         ],
         "1094999560734130237": [
             "Zinrack FC"
-        ]
+        ],
+        "1360667444900790312": []
     }
 }
