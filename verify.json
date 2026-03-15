@@ -4,7 +4,12 @@
         "roleId": "1414386378254323795",
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
-    "codes": {},
+    "codes": {
+        "AUH-528": {
+            "discord_id": "1482189250349760646",
+            "expires": 1773571203836
+        }
+    },
     "links": {
         "792539081967927337": {
             "roblox_user": "0iiKosmic",
