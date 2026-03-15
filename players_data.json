@@ -994,13 +994,6 @@
             "division": "A",
             "role": "Jugador"
         },
-        "886881091988901919": {
-            "team": "CJA",
-            "gw": 0,
-            "country": "🇪🇸",
-            "division": "A",
-            "role": "Jugador"
-        },
         "1474140063599431680": {
             "team": "Brazukinos Sport Club",
             "gw": 2,
@@ -2913,6 +2906,7 @@
     "teamHistories": {
         "914913480484720790": [
             "Coopsol FC"
-        ]
+        ],
+        "886881091988901919": []
     }
 }
