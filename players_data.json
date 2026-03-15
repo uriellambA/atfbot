@@ -91,6 +91,27 @@
             "division": "B",
             "role": "Dueño"
         },
+        "549413377202716672": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1392560749876088863": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "883381698635653161": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
         "626495621938937862": {
             "team": "Bloxyneta FC",
             "gw": 7,
@@ -882,14 +903,14 @@
             "division": "B",
             "role": "Jugador"
         },
-        "1307106399687413834": {
+        "1461848581559292070": {
             "team": "Vanguards FC",
             "gw": 3,
             "country": "🇧🇷",
             "division": "B",
             "role": "Jugador"
         },
-        "1461848583245660375": {
+        "1307106399687413834": {
             "team": "Vanguards FC",
             "gw": 3,
             "country": "🇧🇷",
@@ -2887,9 +2908,6 @@
             "CJA"
         ],
         "1384191921794187346": [],
-        "1392560749876088863": [],
-        "549413377202716672": [],
-        "883381698635653161": [],
-        "1461848581559292070": []
+        "1461848583245660375": []
     }
 }
