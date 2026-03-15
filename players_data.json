@@ -1756,16 +1756,6 @@
             "country": "🇦🇷",
             "division": "A",
             "role": "Jugador"
-        },
-        "914913480484720790": {
-            "team": "Coopsol FC",
-            "gw": 2,
-            "country": "w",
-            "division": "B",
-            "role": "Jugador",
-            "teamHistory": [
-                "Coopsol FC"
-            ]
         }
     },
     "teams": {},
