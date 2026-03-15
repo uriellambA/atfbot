@@ -4,20 +4,7 @@
         "roleId": "1414386378254323795",
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
-    "codes": {
-        "ARJ-412": {
-            "discord_id": "1251885322556674131",
-            "expires": 1773608242432
-        },
-        "YWG-501": {
-            "discord_id": "1400490796704337930",
-            "expires": 1773608718831
-        },
-        "QDH-716": {
-            "discord_id": "756444988837199900",
-            "expires": 1773608919943
-        }
-    },
+    "codes": {},
     "links": {
         "792539081967927337": {
             "roblox_user": "0iiKosmic",
@@ -488,6 +475,11 @@
             "roblox_user": "dorlan999",
             "roblox_id": "1233171378",
             "verified_at": 1773608495849
+        },
+        "732002305507065867": {
+            "roblox_user": "soyuriel77790",
+            "roblox_id": "2023530768",
+            "verified_at": 1773617008356
         }
     }
 }
