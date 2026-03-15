@@ -5,10 +5,6 @@
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
     "codes": {
-        "HBK-480": {
-            "discord_id": "957774141434495067",
-            "expires": 1773597995943
-        },
         "YGW-802": {
             "discord_id": "982365118149046373",
             "expires": 1773598474804
