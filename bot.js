@@ -5302,20 +5302,39 @@ async function handleAppealsAccept(interaction) {
     // Dar rol Miembro y quitar rol Apelante en el servidor de apelaciones
     try {
         const appealsGuild = client.guilds.cache.get(APPEALS_GUILD_ID);
-        if (appealsGuild) {
+        if (!appealsGuild) {
+            console.warn('[APELACIONES] No se encontró el servidor de apelaciones');
+        } else {
             const appealsMember = await appealsGuild.members.fetch(memberId).catch(() => null);
-            if (appealsMember) {
-                if (APPEALS_ROLE_MIEMBRO) {
-                    await appealsMember.roles.add(APPEALS_ROLE_MIEMBRO);
-                    console.log(`[APELACIONES] Rol Miembro dado a ${memberId}`);
+            if (!appealsMember) {
+                console.warn(`[APELACIONES] No se encontró al miembro ${memberId} en el servidor de apelaciones`);
+            } else {
+                const roleMiembro   = process.env.APPEALS_ROLE_MIEMBRO;
+                const roleApelante  = process.env.APPEALS_ROLE_APELANTE;
+ 
+                if (roleMiembro) {
+                    try {
+                        await appealsMember.roles.add(roleMiembro);
+                        console.log(`[APELACIONES] ✅ Rol Miembro (${roleMiembro}) dado a ${memberId}`);
+                    } catch (e) {
+                        console.error(`[APELACIONES] ❌ No se pudo dar rol Miembro a ${memberId}:`, e.message);
+                    }
+                } else {
+                    console.warn('[APELACIONES] APPEALS_ROLE_MIEMBRO no está definido en .env');
                 }
-                if (APPEALS_ROLE_APELANTE) {
-                    await appealsMember.roles.remove(APPEALS_ROLE_APELANTE);
+ 
+                if (roleApelante) {
+                    try {
+                        await appealsMember.roles.remove(roleApelante);
+                        console.log(`[APELACIONES] ✅ Rol Apelante quitado a ${memberId}`);
+                    } catch (e) {
+                        console.warn(`[APELACIONES] No se pudo quitar rol Apelante a ${memberId}:`, e.message);
+                    }
                 }
             }
         }
     } catch (e) {
-        console.warn('[APELACIONES] No se pudo dar rol Miembro:', e.message);
+        console.error('[APELACIONES] Error al gestionar roles:', e);
     }
  
     // DM al usuario
@@ -5328,7 +5347,7 @@ async function handleAppealsAccept(interaction) {
             `-# Revisado por el staff de ATF`
         );
     } catch (e) {
-        console.warn('[APELACIONES] No se pudo enviar DM de aprobación:', e.message);
+        console.warn('[APELACIONES] No se pudo enviar DM de aprobación (DMs cerrados):', e.message);
     }
  
     console.log(`[APELACIONES] ${interaction.user.tag} aprobó la solicitud de ${memberId}`);
