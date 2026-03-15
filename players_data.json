@@ -1246,13 +1246,6 @@
             "division": "C",
             "role": "Jugador"
         },
-        "1059489095174328350": {
-            "team": "Lightkings FC",
-            "gw": 3,
-            "country": "🇧🇷",
-            "division": "A",
-            "role": "Jugador"
-        },
         "1187545343697621012": {
             "team": "Zinrack FC",
             "gw": 1,
@@ -2964,6 +2957,7 @@
         "901667467053662259": [],
         "723546165521547347": [
             "Club Deportivo Hospital"
-        ]
+        ],
+        "1059489095174328350": []
     }
 }
