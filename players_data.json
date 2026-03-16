@@ -994,13 +994,6 @@
             "division": "C",
             "role": "Jugador"
         },
-        "1418782129999052861": {
-            "team": "Vanguards FC",
-            "gw": 3,
-            "country": "🇧🇷",
-            "division": "B",
-            "role": "Jugador"
-        },
         "1320039453296820234": {
             "team": "Bolivia FC",
             "gw": 0,
@@ -2993,6 +2986,7 @@
         ],
         "1384592048568533106": [
             "Vanguards FC"
-        ]
+        ],
+        "1418782129999052861": []
     }
 }
