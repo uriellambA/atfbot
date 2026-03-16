@@ -1733,6 +1733,16 @@
             "teamHistory": [
                 "Academia Polaris"
             ]
+        },
+        "1384592048568533106": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
         }
     },
     "teams": {},
@@ -2978,6 +2988,9 @@
         ],
         "1397122872878567528": [
             "Academia Polaris"
+        ],
+        "1384592048568533106": [
+            "Vanguards FC"
         ]
     }
 }
