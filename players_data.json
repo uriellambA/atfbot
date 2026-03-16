@@ -1727,6 +1727,16 @@
             "teamHistory": [
                 "Orlando Pirates"
             ]
+        },
+        "1267714433988169809": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇷",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
         }
     },
     "teams": {},
@@ -2996,6 +3006,9 @@
         ],
         "1206828452427071529": [
             "Orlando Pirates"
+        ],
+        "1267714433988169809": [
+            "CF Ineri"
         ]
     }
 }
