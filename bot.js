@@ -826,6 +826,10 @@ client.once('ready', async (c) => {
             .addStringOption(option => option.setName('division').setDescription('División del equipo').setRequired(true).addChoices({ name: 'División A', value: 'División A' }, { name: 'División B', value: 'División B' }, { name: 'División C', value: 'División C' })),
 
         new SlashCommandBuilder()
+            .setName('clear-all-players')
+            .setDescription('[SOLO ADMIN] Elimina todos los jugadores de todos los equipos y vacía las squadsheets'),
+
+        new SlashCommandBuilder()
             .setName('release')
             .setDescription('Liberar un jugador de su equipo')
             .addUserOption(option => option.setName('usuario').setDescription('Jugador a liberar').setRequired(true))
@@ -1307,6 +1311,7 @@ client.on('interactionCreate', async interaction => {
         try {
             if (commandName === 'fichaje') await handleFichaje(interaction);
             else if (commandName === 'setup-verify') await handleSetupVerify(interaction);
+            else if (commandName === 'clear-all-players') await handleClearAllPlayers(interaction);
             else if (commandName === 'release') await handleRelease(interaction);
             else if (commandName === 'forcerelease') await handleForceRelease(interaction);
             else if (commandName === 'playerrole') await handlePlayerRole(interaction);
@@ -1385,6 +1390,98 @@ client.on('interactionCreate', async interaction => {
         }
     }
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /clear-all-players
+// ─────────────────────────────────────────────────────────────────────────────
+
+async function handleClearAllPlayers(interaction) {
+    if (!await isAdminOnly(interaction.guild, interaction.user.id)) {
+        return interaction.reply({ content: ':x: Solo los administradores pueden usar este comando.', ephemeral: true });
+    }
+
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const db = loadDatabase();
+    const allPlayers = Object.entries(db.players || {});
+
+    if (allPlayers.length === 0) {
+        return interaction.editReply(':x: No hay jugadores registrados en ningún equipo.');
+    }
+
+    console.log(`[CLEAR-ALL-PLAYERS] Iniciado por ${interaction.user.tag} (${interaction.user.id}). Total jugadores a eliminar: ${allPlayers.length}`);
+
+    const equiposAfectados = new Set();
+    const errores = [];
+    let eliminados = 0;
+
+    for (const [userId, data] of allPlayers) {
+        const { team: teamName, division, role } = data;
+        equiposAfectados.add(teamName);
+
+        try {
+            // Guardar historial antes de borrar
+            if (!db.teamHistories) db.teamHistories = {};
+            const historialPrevio = db.players[userId]?.teamHistory || [];
+            db.teamHistories[userId] = historialPrevio;
+
+            delete db.players[userId];
+
+            // Quitar roles de Discord
+            const member = await interaction.guild.members.fetch(userId).catch(() => null);
+            if (member) {
+                const rolesToRemove = [
+                    TEAM_ROLES[teamName],
+                    DIVISION_ROLES[`División ${division}`],
+                    MISC_ROLES["Dueño De Club"],
+                    MISC_ROLES["Manager"],
+                    MISC_ROLES["Assistant Manager"]
+                ].filter(r => r && member.roles.cache.has(r));
+
+                if (rolesToRemove.length > 0) await member.roles.remove(rolesToRemove).catch(() => {});
+                if (!member.roles.cache.has(MISC_ROLES["Agente Libre"])) {
+                    await member.roles.add(MISC_ROLES["Agente Libre"]).catch(() => {});
+                }
+            }
+
+            eliminados++;
+            console.log(`[CLEAR-ALL-PLAYERS] ✅ Eliminado: ${userId} (${role} de ${teamName})`);
+        } catch (err) {
+            errores.push({ userId, teamName, role, error: err.message });
+            console.error(`[CLEAR-ALL-PLAYERS] ❌ Error con jugador ${userId} de ${teamName}: ${err.message}`);
+        }
+    }
+
+    saveDatabase(db);
+
+    // Actualizar todas las squadsheets afectadas
+    console.log(`[CLEAR-ALL-PLAYERS] Actualizando ${equiposAfectados.size} squadsheets...`);
+    for (const teamName of equiposAfectados) {
+        try {
+            await updateSquadsheet(interaction.guild, teamName);
+            console.log(`[CLEAR-ALL-PLAYERS] ✅ Squadsheet actualizada: ${teamName}`);
+        } catch (err) {
+            console.error(`[CLEAR-ALL-PLAYERS] ❌ Error actualizando squadsheet de ${teamName}: ${err.message}`);
+        }
+    }
+
+    // Respuesta solo para el admin que ejecutó
+    let respuesta = `🧹 **CLEAR ALL PLAYERS completado**\n\n`;
+    respuesta += `✅ **Jugadores eliminados:** ${eliminados}\n`;
+    respuesta += `🏟️ **Equipos vaciados:** ${equiposAfectados.size}\n`;
+
+    if (errores.length > 0) {
+        respuesta += `\n⚠️ **${errores.length} jugador(es) con error:**\n`;
+        for (const e of errores) {
+            respuesta += `• <@${e.userId}> (${e.role} de **${e.teamName}**) — \`${e.error}\`\n`;
+        }
+        respuesta += `\n-# Los jugadores con error pueden seguir apareciendo en la base de datos. Revisalos manualmente.`;
+    }
+
+    console.log(`[CLEAR-ALL-PLAYERS] Finalizado. Eliminados: ${eliminados}, Errores: ${errores.length}`);
+
+    await interaction.editReply(respuesta);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // COMANDO: /search-username
