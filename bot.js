@@ -826,6 +826,10 @@ client.once('ready', async (c) => {
             .addStringOption(option => option.setName('division').setDescription('División del equipo').setRequired(true).addChoices({ name: 'División A', value: 'División A' }, { name: 'División B', value: 'División B' }, { name: 'División C', value: 'División C' })),
 
         new SlashCommandBuilder()
+            .setName('reset-squadsheets')
+            .setDescription('[SOLO ADMIN] Reenvía todas las squadsheets desde cero con 0 jugadores'),
+
+        new SlashCommandBuilder()
             .setName('clear-all-players')
             .setDescription('[SOLO ADMIN] Elimina todos los jugadores de todos los equipos y vacía las squadsheets'),
 
@@ -1311,6 +1315,7 @@ client.on('interactionCreate', async interaction => {
         try {
             if (commandName === 'fichaje') await handleFichaje(interaction);
             else if (commandName === 'setup-verify') await handleSetupVerify(interaction);
+            else if (commandName === 'reset-squadsheets') await handleResetSquadsheets(interaction);
             else if (commandName === 'clear-all-players') await handleClearAllPlayers(interaction);
             else if (commandName === 'release') await handleRelease(interaction);
             else if (commandName === 'forcerelease') await handleForceRelease(interaction);
@@ -1390,6 +1395,94 @@ client.on('interactionCreate', async interaction => {
         }
     }
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COMANDO: /reset-squadsheets
+// ─────────────────────────────────────────────────────────────────────────────
+async function handleResetSquadsheets(interaction) {
+    if (!await isAdminOnly(interaction.guild, interaction.user.id)) {
+        return interaction.reply({ content: ':x: Solo los administradores pueden usar este comando.', ephemeral: true });
+    }
+
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const db = loadDatabase();
+    const equipos = Object.keys(TEAM_DIVISIONS);
+
+    let ok = 0;
+    let errores = [];
+
+    console.log(`[RESET-SQUADSHEETS] Iniciado por ${interaction.user.tag} (${interaction.user.id}). Total equipos: ${equipos.length}`);
+
+    for (const teamName of equipos) {
+        try {
+            const division = TEAM_DIVISIONS[teamName];
+            const teamEmoji = TEAM_EMOJIS[teamName] || "⚽";
+
+            let channelId;
+            if (division === "A") channelId = CHANNELS.squadsheets_a;
+            else if (division === "B") channelId = CHANNELS.squadsheets_b;
+            else channelId = CHANNELS.squadsheets_c;
+
+            const channel = interaction.guild.channels.cache.get(channelId);
+            if (!channel) {
+                errores.push(`**${teamName}** — canal no encontrado (\`${channelId}\`)`);
+                console.error(`[RESET-SQUADSHEETS] ❌ Canal no encontrado para ${teamName}: ${channelId}`);
+                continue;
+            }
+
+            // Intentar borrar el mensaje viejo
+            const squadsheetData = db.squadsheet_messages?.[teamName];
+            if (squadsheetData?.message_id) {
+                try {
+                    const oldMsg = await channel.messages.fetch(squadsheetData.message_id);
+                    await oldMsg.delete();
+                    console.log(`[RESET-SQUADSHEETS] 🗑️ Mensaje viejo eliminado: ${teamName}`);
+                } catch (e) {
+                    console.log(`[RESET-SQUADSHEETS] ⚠️ No se pudo borrar mensaje viejo de ${teamName} (ya no existe): ${e.message}`);
+                }
+            }
+
+            // Construir mensaje vacío
+            const divisionKey = `División ${division}`;
+            let message = `## ${teamEmoji} **${teamName}** \n`;
+            message += `• **Dueño:** **N/A**\n`;
+            message += `• **Manager:** **N/A**\n`;
+            message += `• **Assistant Manager:** **N/A**\n`;
+            message += `─────────────────────────\n`;
+            message += `─────────────────────────\n`;
+            message += `**0/12**`;
+
+            // Enviar nuevo mensaje
+            const newMsg = await channel.send(message);
+
+            // Actualizar la DB con el nuevo message_id
+            if (!db.squadsheet_messages) db.squadsheet_messages = {};
+            db.squadsheet_messages[teamName] = { message_id: newMsg.id, channel_id: channelId };
+
+            ok++;
+            console.log(`[RESET-SQUADSHEETS] ✅ Squadsheet reseteada: ${teamName} → mensaje ${newMsg.id}`);
+        } catch (err) {
+            errores.push(`**${teamName}** — \`${err.message}\``);
+            console.error(`[RESET-SQUADSHEETS] ❌ Error con ${teamName}: ${err.message}`);
+        }
+    }
+
+    saveDatabase(db);
+
+    let respuesta = `📋 **RESET SQUADSHEETS completado**\n\n`;
+    respuesta += `✅ **Reseteadas correctamente:** ${ok}/${equipos.length}\n`;
+
+    if (errores.length > 0) {
+        respuesta += `\n⚠️ **${errores.length} error(es):**\n`;
+        for (const e of errores) {
+            respuesta += `• ${e}\n`;
+        }
+    }
+
+    console.log(`[RESET-SQUADSHEETS] Finalizado. OK: ${ok}, Errores: ${errores.length}`);
+    await interaction.editReply(respuesta);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // COMANDO: /clear-all-players
