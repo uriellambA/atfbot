@@ -1722,6 +1722,16 @@
             "teamHistory": [
                 "CF Ineri"
             ]
+        },
+        "1241802115324575936": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
         }
     },
     "teams": {},
@@ -3008,6 +3018,9 @@
         "975889182041997324": [
             "CF Ineri"
         ],
-        "1325252504971120691": []
+        "1325252504971120691": [],
+        "1241802115324575936": [
+            "Club Deportivo Hospital"
+        ]
     }
 }
