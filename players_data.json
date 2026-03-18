@@ -779,6 +779,16 @@
             "teamHistory": [
                 "Zinrack FC"
             ]
+        },
+        "808325492347371550": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
         }
     },
     "teams": {},
@@ -2156,7 +2166,9 @@
         "539514489905872920": [
             "Bloxyneta FC"
         ],
-        "808325492347371550": [],
+        "808325492347371550": [
+            "Zinrack FC"
+        ],
         "1324471885165232251": [
             "Bloxyneta FC"
         ],
