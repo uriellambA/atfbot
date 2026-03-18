@@ -439,6 +439,16 @@
             "teamHistory": [
                 "Universidad De Chile"
             ]
+        },
+        "845065998918615053": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
         }
     },
     "teams": {},
@@ -1865,7 +1875,9 @@
         "714240027323793458": [
             "Universidad De Chile"
         ],
-        "845065998918615053": [],
+        "845065998918615053": [
+            "Birdcam CF"
+        ],
         "1248658201130307645": [
             "Universidad De Chile"
         ],
