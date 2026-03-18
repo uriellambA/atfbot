@@ -299,6 +299,16 @@
             "teamHistory": [
                 "Club Deportivo Hospital"
             ]
+        },
+        "1198612534412976172": {
+            "team": "Club Deportivo Hospital",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
         }
     },
     "teams": {},
