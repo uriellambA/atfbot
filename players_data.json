@@ -49,6 +49,16 @@
             "teamHistory": [
                 "Zinrack FC"
             ]
+        },
+        "1163167993606443080": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
         }
     },
     "teams": {},
