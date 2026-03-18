@@ -2003,6 +2003,34 @@
             "estado": "Revoked",
             "messageId": "1483962075561726063",
             "timestamp": 1773874529626
+        },
+        "sanction_1773876962352_1": {
+            "id": "sanction_1773876962352_1",
+            "numero": 1,
+            "userId": "1073716925567344791",
+            "tipo": "Sanción Severa",
+            "razon": "Evadir un PC CHECK",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1483972279166566523",
+            "timestamp": 1773876962352
+        },
+        "sanction_1773876989617_1": {
+            "id": "sanction_1773876989617_1",
+            "numero": 1,
+            "userId": "1260346077190820013",
+            "tipo": "Sanción Severa",
+            "razon": "Evadir un PC CHECK",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1483972393591636179",
+            "timestamp": 1773876989617
         }
     },
     "sanctionCounter": 10,
@@ -2168,9 +2196,18 @@
             "estado": "Activa",
             "messageId": "1483293443563196645",
             "timestamp": 1773715115394
+        },
+        "tsanction_1773877199394_19": {
+            "id": "tsanction_1773877199394_19",
+            "numero": 19,
+            "team": "SiuFC",
+            "razon": "FFT",
+            "estado": "Revoked",
+            "messageId": "1483973273514672239",
+            "timestamp": 1773877199394
         }
     },
-    "teamSanctionCounter": 18,
+    "teamSanctionCounter": 19,
     "boosts": {
         "753428769368440862": 1,
         "1344449311336829008": 1,
