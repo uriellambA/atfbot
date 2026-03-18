@@ -1989,6 +1989,20 @@
             "estado": "Activa",
             "messageId": "1483293449158394007",
             "timestamp": 1773715116672
+        },
+        "sanction_1773874529626_1": {
+            "id": "sanction_1773874529626_1",
+            "numero": 1,
+            "userId": "1163167993606443080",
+            "tipo": "Sanción Media",
+            "razon": "Jugar 2 partidos en una misma fecha",
+            "precio": 450,
+            "duracion": "3 GW",
+            "duracion_restante": 3,
+            "gw": 3,
+            "estado": "Revoked",
+            "messageId": "1483962075561726063",
+            "timestamp": 1773874529626
         }
     },
     "sanctionCounter": 10,
