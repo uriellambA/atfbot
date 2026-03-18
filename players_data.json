@@ -709,6 +709,16 @@
             "teamHistory": [
                 "Bloxyneta FC"
             ]
+        },
+        "936385533742022686": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Bloxyneta FC"
+            ]
         }
     },
     "teams": {},
@@ -2090,7 +2100,9 @@
         "1324471885165232251": [
             "Bloxyneta FC"
         ],
-        "936385533742022686": [],
+        "936385533742022686": [
+            "Bloxyneta FC"
+        ],
         "837137435141603360": [],
         "1272767680465731687": [
             "Bloxyneta FC"
