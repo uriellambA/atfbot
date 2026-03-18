@@ -849,6 +849,16 @@
             "teamHistory": [
                 "Coopsol FC"
             ]
+        },
+        "1317560170641096814": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Coopsol FC"
+            ]
         }
     },
     "teams": {},
@@ -2536,6 +2546,9 @@
             "Zinrack FC"
         ],
         "1075830536397918219": [
+            "Coopsol FC"
+        ],
+        "1317560170641096814": [
             "Coopsol FC"
         ]
     }
