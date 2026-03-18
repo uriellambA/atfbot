@@ -379,6 +379,16 @@
             "teamHistory": [
                 "Universidad De Chile"
             ]
+        },
+        "1243720799559487625": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Universidad De Chile"
+            ]
         }
     },
     "teams": {},
@@ -1793,7 +1803,9 @@
             "Universidad De Chile"
         ],
         "1363435519605866550": [],
-        "1243720799559487625": [],
+        "1243720799559487625": [
+            "Universidad De Chile"
+        ],
         "814125474866528316": [],
         "753428769368440862": [],
         "714240027323793458": [],
