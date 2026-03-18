@@ -829,6 +829,16 @@
             "teamHistory": [
                 "Coopsol FC"
             ]
+        },
+        "1329157011606077556": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇩🇴",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Coopsol FC"
+            ]
         }
     },
     "teams": {},
@@ -2273,7 +2283,9 @@
             "Coopsol FC"
         ],
         "694183690393223289": [],
-        "1329157011606077556": [],
+        "1329157011606077556": [
+            "Coopsol FC"
+        ],
         "1338228275469615187": [
             "Universidad De Chile"
         ],
