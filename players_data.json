@@ -389,6 +389,16 @@
             "teamHistory": [
                 "Universidad De Chile"
             ]
+        },
+        "901667467053662259": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Universidad De Chile"
+            ]
         }
     },
     "teams": {},
@@ -1650,7 +1660,9 @@
         "1214280038682337331": [],
         "1336082482952671232": [],
         "737666784039010404": [],
-        "901667467053662259": [],
+        "901667467053662259": [
+            "Universidad De Chile"
+        ],
         "723546165521547347": [
             "Club Deportivo Hospital"
         ],
