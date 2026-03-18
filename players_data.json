@@ -509,6 +509,16 @@
             "teamHistory": [
                 "Birdcam CF"
             ]
+        },
+        "1073716925567344791": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇭🇳",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
         }
     },
     "teams": {},
