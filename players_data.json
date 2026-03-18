@@ -199,6 +199,16 @@
             "teamHistory": [
                 "Red Bull FC"
             ]
+        },
+        "990720630339031140": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
         }
     },
     "teams": {},
