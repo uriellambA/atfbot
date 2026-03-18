@@ -139,6 +139,16 @@
             "teamHistory": [
                 "Coopsol FC"
             ]
+        },
+        "1283012244237455424": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Kunts FC"
+            ]
         }
     },
     "teams": {},
@@ -1713,6 +1723,9 @@
         ],
         "1324601138225352745": [
             "Bolivia FC"
+        ],
+        "1283012244237455424": [
+            "Kunts FC"
         ]
     }
 }
