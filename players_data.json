@@ -15,9 +15,19 @@
             "gw": 2,
             "country": "🇦🇷",
             "division": "A",
-            "role": "Dueño",
+            "role": "Jugador",
             "teamHistory": [
                 "Club Deportivo Hospital"
+            ]
+        },
+        "1150131404974329987": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
             ]
         }
     },
