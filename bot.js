@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, MessageFlags } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const { scheduleGitHubSync, loadFromGitHub } = require('./github-sync');
+const { scheduleGitHubSync, loadFromGitHub, pushToGitHub } = require('./github-sync');
 require('dotenv').config();
 require('./verify-api.js');
 
@@ -826,6 +826,18 @@ client.once('ready', async (c) => {
             .addStringOption(option => option.setName('division').setDescription('División del equipo').setRequired(true).addChoices({ name: 'División A', value: 'División A' }, { name: 'División B', value: 'División B' }, { name: 'División C', value: 'División C' })),
 
         new SlashCommandBuilder()
+            .setName('check-player')
+            .setDescription('[MOD] Ver el estado exacto de un jugador en la base de datos')
+            .addUserOption(option => option.setName('usuario').setDescription('Usuario a revisar').setRequired(false))
+            .addStringOption(option => option.setName('user_id').setDescription('ID del usuario (si no está en el servidor)').setRequired(false)),
+
+        new SlashCommandBuilder()
+            .setName('force-clear-player')
+            .setDescription('[SOLO ADMIN] Eliminar a un jugador de la DB forzadamente sin ningún chequeo')
+            .addUserOption(option => option.setName('usuario').setDescription('Usuario a limpiar').setRequired(false))
+            .addStringOption(option => option.setName('user_id').setDescription('ID del usuario (si no está en el servidor)').setRequired(false)),
+        
+            new SlashCommandBuilder()
             .setName('reset-squadsheets')
             .setDescription('[SOLO ADMIN] Reenvía todas las squadsheets desde cero con 0 jugadores'),
 
@@ -1316,6 +1328,8 @@ client.on('interactionCreate', async interaction => {
             if (commandName === 'fichaje') await handleFichaje(interaction);
             else if (commandName === 'setup-verify') await handleSetupVerify(interaction);
             else if (commandName === 'reset-squadsheets') await handleResetSquadsheets(interaction);
+            else if (commandName === 'check-player') await handleCheckPlayer(interaction);
+            else if (commandName === 'force-clear-player') await handleForceClearPlayer(interaction);
             else if (commandName === 'clear-all-players') await handleClearAllPlayers(interaction);
             else if (commandName === 'release') await handleRelease(interaction);
             else if (commandName === 'forcerelease') await handleForceRelease(interaction);
@@ -1395,6 +1409,125 @@ client.on('interactionCreate', async interaction => {
         }
     }
 });
+
+async function handleCheckPlayer(interaction) {
+    if (!await isModeratorOrAdmin(interaction.guild, interaction.user.id)) {
+        return interaction.reply({ content: ':x: Solo los moderadores pueden usar este comando.', ephemeral: true });
+    }
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const usuario = interaction.options.getUser('usuario');
+    const rawId = interaction.options.getString('user_id');
+    const targetId = usuario?.id || rawId?.trim();
+
+    if (!targetId) return interaction.editReply(':x: Debes especificar un usuario o un ID.');
+
+    const db = loadDatabase();
+    const raw = db.players?.[targetId];
+
+    let tag = usuario?.tag || `ID: ${targetId}`;
+    // Intentar obtener el tag si solo se pasó ID
+    if (!usuario) {
+        try {
+            const fetched = await interaction.client.users.fetch(targetId);
+            tag = fetched.tag;
+        } catch {}
+    }
+
+    let respuesta = `🔍 **Estado en DB de ${tag} (\`${targetId}\`)**\n\n`;
+
+    if (raw) {
+        respuesta += `📋 **Entrada en \`db.players\`:**\n`;
+        respuesta += `\`\`\`json\n${JSON.stringify(raw, null, 2)}\n\`\`\`\n`;
+    } else {
+        respuesta += `✅ **No está en \`db.players\`** (sin contrato activo)\n\n`;
+    }
+
+    const historial = db.teamHistories?.[targetId];
+    if (historial && historial.length > 0) {
+        respuesta += `📁 **Historial (\`db.teamHistories\`):** ${historial.map((t, i) => `\`${i+1}. ${t}\``).join(' → ')}\n\n`;
+    }
+
+    try {
+        const member = await interaction.guild.members.fetch(targetId);
+        const rolesRelevantes = [];
+        for (const [nombre, roleId] of Object.entries(TEAM_ROLES)) {
+            if (member.roles.cache.has(roleId)) rolesRelevantes.push(`🏟️ ${nombre}`);
+        }
+        for (const [nombre, roleId] of Object.entries(DIVISION_ROLES)) {
+            if (member.roles.cache.has(roleId)) rolesRelevantes.push(`📊 ${nombre}`);
+        }
+        for (const [nombre, roleId] of Object.entries(MISC_ROLES)) {
+            if (member.roles.cache.has(roleId)) rolesRelevantes.push(`🏷️ ${nombre}`);
+        }
+        respuesta += `🎭 **Roles Discord relevantes:**\n`;
+        respuesta += rolesRelevantes.length > 0 ? rolesRelevantes.map(r => `• ${r}`).join('\n') : '• Ninguno relevante';
+    } catch (e) {
+        respuesta += `⚠️ No se pudieron obtener roles de Discord (puede que no esté en el servidor): \`${e.message}\``;
+    }
+
+    await interaction.editReply(respuesta);
+}
+
+async function handleForceClearPlayer(interaction) {
+    if (!await isAdminOnly(interaction.guild, interaction.user.id)) {
+        return interaction.reply({ content: ':x: Solo los administradores pueden usar este comando.', ephemeral: true });
+    }
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const usuario = interaction.options.getUser('usuario');
+    const rawId = interaction.options.getString('user_id');
+    const targetId = usuario?.id || rawId?.trim();
+
+    if (!targetId) return interaction.editReply(':x: Debes especificar un usuario o un ID.');
+
+    let tag = usuario?.tag || `ID: ${targetId}`;
+    if (!usuario) {
+        try {
+            const fetched = await interaction.client.users.fetch(targetId);
+            tag = fetched.tag;
+        } catch {}
+    }
+
+    const db = loadDatabase();
+    const raw = db.players?.[targetId];
+    const teamName = raw?.team || null;
+    const division = raw?.division || null;
+
+    if (db.players?.[targetId]) {
+        const historialPrevio = db.players[targetId].teamHistory || [];
+        if (!db.teamHistories) db.teamHistories = {};
+        db.teamHistories[targetId] = historialPrevio;
+        delete db.players[targetId];
+        saveDatabase(db);
+        console.log(`[FORCE-CLEAR-PLAYER] ${tag} (${targetId}) eliminado de db.players por ${interaction.user.tag}. Equipo era: ${teamName}`);
+    }
+
+    try {
+        const member = await interaction.guild.members.fetch(targetId);
+        const allToRemove = [
+            ...Object.values(TEAM_ROLES),
+            ...Object.values(DIVISION_ROLES),
+            MISC_ROLES["Dueño De Club"],
+            MISC_ROLES["Manager"],
+            MISC_ROLES["Assistant Manager"]
+        ].filter(r => member.roles.cache.has(r));
+
+        if (allToRemove.length > 0) await member.roles.remove(allToRemove);
+        if (!member.roles.cache.has(MISC_ROLES["Agente Libre"])) {
+            await member.roles.add(MISC_ROLES["Agente Libre"]);
+        }
+    } catch (e) {
+        console.warn(`[FORCE-CLEAR-PLAYER] No se pudieron limpiar roles de ${targetId}: ${e.message}`);
+    }
+
+    let respuesta = `:white_check_mark: **${tag}** limpiado forzadamente.\n`;
+    respuesta += raw ? `• Tenía entrada en DB: equipo **${teamName}**, división **${division}**\n` : `• No tenía entrada en DB (solo se limpiaron roles)\n`;
+    respuesta += `• Roles de equipo/división/cargo eliminados\n`;
+    respuesta += `• Rol **Agente Libre** asignado`;
+
+    await interaction.editReply(respuesta);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // COMANDO: /reset-squadsheets
@@ -4910,6 +5043,55 @@ function startPrediccionesAutoScheduler(clientInstance) {
 
     console.log('[PRED-AUTO] Scheduler de predicciones automáticas iniciado.');
 }
+
+// ── Backup periódico cada 30 minutos con aviso en canal ───────────────────
+const BACKUP_CHANNEL_ID = '1437959605417410711';
+const BACKUP_FILES = [
+    DATABASE_FILE,
+    path.join(__dirname, 'verify.json'),
+    path.join(__dirname, 'mensajes.json'),
+    path.join(__dirname, 'sanciones.json'),
+    path.join(__dirname, 'fixtures.json'),
+    path.join(__dirname, 'predicciones.json'),
+    path.join(__dirname, 'resultado.json'),
+    path.join(__dirname, 'lineups.json'),
+    path.join(__dirname, 'status.json'),
+];
+
+const backupGuild = mainGuild || c.guilds.cache.first();
+
+async function runPeriodicBackup() {
+    const backupChannel = backupGuild?.channels.cache.get(BACKUP_CHANNEL_ID);
+
+    if (backupChannel) {
+        await backupChannel.send(`🔄 **Backup automático iniciando...** Subiendo datos a GitHub, por favor esperá unos segundos antes de usar comandos.`).catch(() => {});
+    }
+    console.log('[BACKUP] Iniciando backup periódico...');
+
+    let ok = 0;
+    const errores = [];
+
+    for (const file of BACKUP_FILES) {
+        try {
+            if (!fs.existsSync(file)) { console.log(`[BACKUP] ⚠️ No existe: ${path.basename(file)}`); continue; }
+            await pushToGitHub(file, `[AutoBackup] ${path.basename(file)}`);
+            ok++;
+        } catch (e) {
+            errores.push(path.basename(file));
+            console.error(`[BACKUP] ❌ ${path.basename(file)}: ${e.message}`);
+        }
+    }
+
+    if (backupChannel) {
+        let msg = `✅ **Backup completado.** ${ok}/${BACKUP_FILES.length} archivos subidos. Ya podés usar los comandos con normalidad.`;
+        if (errores.length > 0) msg += `\n⚠️ **Fallidos:** ${errores.map(f => `\`${f}\``).join(', ')}`;
+        await backupChannel.send(msg).catch(() => {});
+    }
+    console.log(`[BACKUP] Finalizado. OK: ${ok}, Errores: ${errores.length}`);
+}
+
+setInterval(runPeriodicBackup, 30 * 60 * 1000);
+console.log('[BACKUP] Intervalo de backup cada 30 minutos iniciado.');
 
 // ── Botón de voto ─────────────────────────────────────────────────────────────
 async function handlePrediccionVote(interaction) {

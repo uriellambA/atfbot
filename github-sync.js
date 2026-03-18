@@ -143,4 +143,4 @@ async function loadFromGitHub(filePath) {
     }
 }
  
-module.exports = { scheduleGitHubSync, loadFromGitHub };
+module.exports = { scheduleGitHubSync, loadFromGitHub, pushToGitHub: _pushToGitHub };

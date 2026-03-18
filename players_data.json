@@ -1,101 +1,1872 @@
 {
-    "players": {},
+    "players": {
+        "1133864612060741754": {
+            "team": "Kunts FC",
+            "gw": 7,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1033701659437715486": {
+            "team": "Kunts FC",
+            "gw": 5,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Manager"
+        },
+        "794445819583529001": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "566629240456609792": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "780098171069136977": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1351330365519822888": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "876543665483423775": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "803105926659047475": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "722444878478442527": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1463486227939328118": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "381896787545423873": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1192887174442528849": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1460668021734375535": {
+            "team": "Galindos",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1397752107850797076": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇦",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1406367888230842571": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "338445513433153545": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "539514489905872920": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "808325492347371550": {
+            "team": "Zinrack FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1324471885165232251": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "936385533742022686": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "837137435141603360": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1272767680465731687": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1137344905400827904": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1144091331178811532": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "505801370528382988": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇷🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "715439534380285992": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1354055352534171679": {
+            "team": "Zinrack FC",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "888603703010025543": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1411176224952160399": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇵🇹",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "830538933703671808": {
+            "team": "Black Mans FC",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "715655100420587611": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1013281447521562626": {
+            "team": "Black Mans FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1391747073732378726": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Manager"
+        },
+        "866830901483667487": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "924345891186425878": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇺🇾",
+            "division": "A",
+            "role": "Manager"
+        },
+        "237282004054441986": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇻🇳",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "517967818680041480": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "703375776267108372": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "815593940606255104": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1429846031624835214": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1373788357930389576": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1339259441001795614": {
+            "team": "SiuFC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1290027203223879743": {
+            "team": "Coopsol FC",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "694183690393223289": {
+            "team": "Coopsol FC",
+            "gw": 3,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1329157011606077556": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1338228275469615187": {
+            "team": "Universidad De Chile",
+            "gw": 7,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1337252397415923804": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1363435519605866550": {
+            "team": "SiuFC",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1243720799559487625": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "814125474866528316": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "753428769368440862": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "714240027323793458": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "845065998918615053": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇲🇽",
+            "division": "A",
+            "role": "Manager"
+        },
+        "1248658201130307645": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1001431506293620766": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇪🇬",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1087189275298238575": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1265111093450117271": {
+            "team": "Universidad De Chile",
+            "gw": 4,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1095162019436580907": {
+            "team": "CF Ineri",
+            "gw": 0,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "811735849179283476": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1413708583723470958": {
+            "team": "CF Ineri",
+            "gw": 0,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1432484567343824938": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1325380057732087851": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "405822942858182658": {
+            "team": "Stroganoff CF",
+            "gw": 4,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Manager"
+        },
+        "728785398930604172": {
+            "team": "Stroganoff CF",
+            "gw": 4,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "865565706753015818": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1405508098629832716": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "900170175133917204": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "958139803315077141": {
+            "team": "Stroganoff CF",
+            "gw": 7,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1185441089470087218": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1327456280423436401": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "745730720185450518": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "811072946163941386": {
+            "team": "Stroganoff CF",
+            "gw": 0,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1086468706399436830": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1174158985620881541": {
+            "team": "Orlando Pirates",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1386858425295568967": {
+            "team": "Red Bull FC",
+            "gw": 7,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1337491358830563398": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1343769930503557162": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1251931077790924884": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1177916322122833933": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇻🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1392659474841341992": {
+            "team": "Red Bull FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1315695249397649449": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "835333978273349632": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1444749539369025667": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇶🇦",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "978878002584752139": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1346116161133215806": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇵🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1308194043108261999": {
+            "team": "Brazukinos Sport Club",
+            "gw": 7,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "1457056957918613740": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1453621707159113883": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1155315886085902397": {
+            "team": "Brazukinos Sport Club",
+            "gw": 0,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "624333194744823808": {
+            "team": "Bolivia FC",
+            "gw": 7,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1056349413867540520": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "797335270512787466": {
+            "team": "SiuFC",
+            "gw": 4,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1357746093521371267": {
+            "team": "Coopsol FC",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Manager"
+        },
+        "907727162562461726": {
+            "team": "Zinrack FC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1124005175670083584": {
+            "team": "Coopsol FC",
+            "gw": 0,
+            "country": "🇫🇰",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1294875847328796763": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "755201840986980475": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇦",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1319382142119055485": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1417038751565348926": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇳🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1393631796180029623": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇦🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1319719143766884415": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1086430777639706627": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "899743723435487282": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1424131877035442317": {
+            "team": "Brazukinos Sport Club",
+            "gw": 1,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "602242677215592449": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇷🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1155096788697612358": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1352714864048607242": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1150841367157821521": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "720498495693520986": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "809377399438704680": {
+            "team": "Zinrack FC",
+            "gw": 0,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1353098474291462187": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1266879445986447496": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1379972188358316072": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇱🇹",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1246272187325747213": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "973272495337652274": {
+            "team": "Bolivia FC",
+            "gw": 5,
+            "country": "🇵🇷",
+            "division": "B",
+            "role": "Manager"
+        },
+        "1474140063599431680": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1327409209691869216": {
+            "team": "Galindos",
+            "gw": 0,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1311019567539163231": {
+            "team": "Academia Polaris",
+            "gw": 7,
+            "country": "🇫🇷",
+            "division": "A",
+            "role": "Dueño"
+        },
+        "1021523637343375391": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1281230197361737760": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇮🇳",
+            "division": "B",
+            "role": "Assistant Manager"
+        },
+        "1400030724652007486": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇮🇳",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1380847866574143521": {
+            "team": "Bolivia FC",
+            "gw": 3,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1309714317821743125": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "730503441151033345": {
+            "team": "Bellay Sporting Club",
+            "gw": 0,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1221642681474748521": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1439601043993395280": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1390312259523182735": {
+            "team": "Bolivia FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1249492979865882666": {
+            "team": "Bolivia FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "752899890979274863": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1320039453296820234": {
+            "team": "Bolivia FC",
+            "gw": 0,
+            "country": "🇳🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "927379544732754000": {
+            "team": "CJA",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1046604850772836472": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "728714746357874799": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1328773615231041536": {
+            "team": "Academia Polaris",
+            "gw": 1,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1179761729907982370": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1336309680561197067": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1253665467353272347": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇸🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "916400995418927225": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1056895578044371015": {
+            "team": "Kunts FC",
+            "gw": 0,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "697126787477405786": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "663352788369276938": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1154188161413550180": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇮🇹",
+            "division": "A",
+            "role": "Assistant Manager"
+        },
+        "1318317368841211964": {
+            "team": "Red Bull FC",
+            "gw": 5,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1403743893425618984": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇧🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "954495271662927923": {
+            "team": "Brazukinos Sport Club",
+            "gw": 2,
+            "country": "🇨🇼",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1213877010347196460": {
+            "team": "Orlando Pirates",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "754421514358489229": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1384144716676731010": {
+            "team": "Red Bull FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1348963017202597888": {
+            "team": "SiuFC",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "775923899043938314": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1406354246428917782": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Manager"
+        },
+        "997272075360284683": {
+            "team": "Stroganoff CF",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1452851797717815309": {
+            "team": "Academia Polaris",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "995929364963270688": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1213262530353434636": {
+            "team": "Red Waffles FC",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Assistant Manager"
+        },
+        "1217569112381718558": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1116805391033045112": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "622865964081348630": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1064626285357318195": {
+            "team": "Red Waffles FC",
+            "gw": 3,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "559136784307716138": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1368007162328256684": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇭🇳",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1346124652388548720": {
+            "team": "Red Waffles FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1187545343697621012": {
+            "team": "Zinrack FC",
+            "gw": 1,
+            "country": "🇳🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1393124301816729692": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1436760432252682350": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇨🇦",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1088261395704975360": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "935856943787048980": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1446708092543832139": {
+            "team": "Red Bull FC",
+            "gw": 6,
+            "country": "🇵🇪/🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1466082259303006444": {
+            "team": "Cojos FC",
+            "gw": 7,
+            "country": "🇸🇦",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1027244057145114674": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇧🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1264012137370488899": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1303026253795950732": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1464908855648718920": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1361714864661201068": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇫🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1034045839728975882": {
+            "team": "Birdcam CF",
+            "gw": 3,
+            "country": "🇨🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1471569502742511699": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "838946438218121216": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1173789167294099582": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1287508501484011586": {
+            "team": "Red Waffles FC",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "858103295208849449": {
+            "team": "Coopsol FC",
+            "gw": 1,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "963085148021211236": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "660133874873139200": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1363783717289459753": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1361721520350691449": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1385750654823436358": {
+            "team": "CF Ineri",
+            "gw": 1,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1175870977884819559": {
+            "team": "Bellay Sporting Club",
+            "gw": 1,
+            "country": "🇩🇴",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1429261746434080901": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇩🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1098263507339845725": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇮🇶",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1405952445950984202": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "746850573558743042": {
+            "team": "Red Bull FC",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "915075762804101161": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1287948381309767733": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇵🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "631808202937335808": {
+            "team": "Galindos",
+            "gw": 1,
+            "country": "🇧🇷",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1302031657292795954": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1221961086417244290": {
+            "team": "Universidad De Chile",
+            "gw": 1,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1287456599560028214": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇳🇱",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1284515784810565766": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1197177918225395807": {
+            "team": "Cojos FC",
+            "gw": 4,
+            "country": "🇸🇦",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "662739547829960765": {
+            "team": "SiuFC",
+            "gw": 1,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "912453855076315156": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "743480639281692712": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1373046883446165515": {
+            "team": "Black Mans FC",
+            "gw": 1,
+            "country": "🇻🇪",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1179483411228930118": {
+            "team": "Black Mans FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño"
+        },
+        "1222381881287508099": {
+            "team": "Deportes Concepcion",
+            "gw": 7,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Dueño"
+        },
+        "420813620696449027": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇧🇬",
+            "division": "B",
+            "role": "Jugador"
+        },
+        "1253471589836783626": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1407004285300117524": {
+            "team": "Birdcam CF",
+            "gw": 0,
+            "country": "🇹🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1438613695923228772": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇬🇹",
+            "division": "C",
+            "role": "Jugador"
+        },
+        "1422335967087296572": {
+            "team": "Kunts FC",
+            "gw": 1,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1061892396054482944": {
+            "team": "Zinrack FC",
+            "gw": 6,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Jugador"
+        },
+        "1482189250349760646": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "CJA"
+            ]
+        },
+        "842404732299771944": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Orlando Pirates"
+            ]
+        },
+        "781929563935735808": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇨🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
+        },
+        "1198612534412976172": {
+            "team": "Club Deportivo Hospital",
+            "gw": 5,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
+        },
+        "1094999560734130237": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
+        },
+        "1319500443709210726": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
+        },
+        "1033751088140132374": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇵🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Academia Polaris"
+            ]
+        },
+        "1397122872878567528": {
+            "team": "Academia Polaris",
+            "gw": 2,
+            "country": "🇦🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Academia Polaris"
+            ]
+        },
+        "1384592048568533106": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
+        },
+        "1260346077190820013": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "755560685207027822": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇨🇦",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "1238890483233722539": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇫🇷",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "1206828452427071529": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Orlando Pirates"
+            ]
+        },
+        "1267714433988169809": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇷",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
+        },
+        "1392560749876088863": {
+            "team": "Vanguards FC",
+            "gw": 3,
+            "country": "🇺🇾",
+            "division": "C",
+            "role": "Assistant Manager",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
+        },
+        "975889182041997324": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
+        },
+        "1339957691753168962": {
+            "team": "Club Deportivo Hospital",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "A",
+            "role": "Dueño",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
+        },
+        "839479880990457907": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Dueño",
+            "teamHistory": [
+                "CJA"
+            ]
+        },
+        "1163167993606443080": {
+            "team": "SiuFC",
+            "gw": 5,
+            "country": "🇵🇪",
+            "division": "A",
+            "role": "Dueño",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "1150131404974329987": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇮🇳",
+            "division": "A",
+            "role": "Dueño",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
+        },
+        "1241802115324575936": {
+            "team": "Club Deportivo Hospital",
+            "gw": 4,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
+        },
+        "733073843962511371": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "1310561901075234836": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇨🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
+        },
+        "626495621938937862": {
+            "team": "Bloxyneta FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "B",
+            "role": "Dueño",
+            "teamHistory": [
+                "Bloxyneta FC"
+            ]
+        },
+        "990720630339031140": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "B",
+            "role": "Dueño",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
+        },
+        "732002305507065867": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Dueño",
+            "teamHistory": [
+                "CF Ineri"
+            ]
+        },
+        "765242170999046195": {
+            "team": "Bellay Sporting Club",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Dueño",
+            "teamHistory": [
+                "Bellay Sporting Club"
+            ]
+        },
+        "1073716925567344791": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇭🇳",
+            "division": "A",
+            "role": "Manager",
+            "teamHistory": [
+                "SiuFC"
+            ]
+        },
+        "1251989595403452432": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Dueño",
+            "teamHistory": [
+                "Orlando Pirates"
+            ]
+        },
+        "1265119087235698773": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Dueño",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
+        }
+    },
     "teams": {},
     "squadsheet_messages": {
         "CF Ineri": {
-            "message_id": "1474983167210553396",
+            "message_id": "1483287627410178249",
             "channel_id": "1471249782147121286"
         },
         "CJA": {
-            "message_id": "1474943172475092993",
+            "message_id": "1483287667377700966",
             "channel_id": "1417998600205500579"
         },
         "Kunts FC": {
-            "message_id": "1474944949878259733",
+            "message_id": "1483287677381120125",
             "channel_id": "1417998600205500579"
         },
         "Galindos": {
-            "message_id": "1474947621729861642",
+            "message_id": "1483287642014744725",
             "channel_id": "1471249740095029309"
         },
         "Lightkings FC": {
-            "message_id": "1474948329761931464",
+            "message_id": "1483287684754575510",
             "channel_id": "1417998600205500579"
         },
         "Academia Polaris": {
-            "message_id": "1474949830575915240",
+            "message_id": "1483287687912751337",
             "channel_id": "1417998600205500579"
         },
         "Vanguards FC": {
-            "message_id": "1474950059711008942",
+            "message_id": "1483287648721309917",
             "channel_id": "1471249740095029309"
         },
         "Bloxyneta FC": {
-            "message_id": "1474951380946129063",
+            "message_id": "1483287635412648037",
             "channel_id": "1471249740095029309"
         },
         "Zinrack FC": {
-            "message_id": "1474951780235219068",
+            "message_id": "1483287681495597177",
             "channel_id": "1417998600205500579"
         },
         "Black Mans FC": {
-            "message_id": "1474952570274320646",
+            "message_id": "1483287652106108979",
             "channel_id": "1471249740095029309"
         },
         "Club Deportivo Hospital": {
-            "message_id": "1474953877315911914",
+            "message_id": "1483287611094204499",
             "channel_id": "1417998600205500579"
         },
         "Cojos FC": {
-            "message_id": "1474953949474717696",
+            "message_id": "1483287639359750339",
             "channel_id": "1471249740095029309"
         },
         "SiuFC": {
-            "message_id": "1474954690004258839",
+            "message_id": "1483287698507698246",
             "channel_id": "1417998600205500579"
         },
         "Coopsol FC": {
-            "message_id": "1474954995567689759",
+            "message_id": "1483287608435151031",
             "channel_id": "1471249740095029309"
         },
         "Universidad De Chile": {
-            "message_id": "1474956324369338641",
+            "message_id": "1483287662092619827",
             "channel_id": "1471249740095029309"
         },
         "Birdcam CF": {
-            "message_id": "1474957070225637396",
+            "message_id": "1483287701963931760",
             "channel_id": "1417998600205500579"
         },
         "Stroganoff CF": {
-            "message_id": "1474989876444139713",
+            "message_id": "1483287645579776010",
             "channel_id": "1471249782147121286"
         },
         "Red Waffles FC": {
-            "message_id": "1474997344217862265",
+            "message_id": "1483287614617288926",
             "channel_id": "1471249782147121286"
         },
         "Orlando Pirates": {
-            "message_id": "1475000103839338648",
+            "message_id": "1483287597257330750",
             "channel_id": "1471249782147121286"
         },
         "Red Bull FC": {
-            "message_id": "1475003002501861386",
+            "message_id": "1483287620254437427",
             "channel_id": "1471249782147121286"
         },
         "Bellay Sporting Club": {
-            "message_id": "1475004632311795925",
+            "message_id": "1483287617599701115",
             "channel_id": "1471249782147121286"
         },
         "Deportes Concepcion": {
-            "message_id": "1475007523542011968",
+            "message_id": "1483287624256061460",
             "channel_id": "1471249782147121286"
         },
         "Brazukinos Sport Club": {
-            "message_id": "1475014761409413171",
+            "message_id": "1483287602265198743",
             "channel_id": "1471249782147121286"
         },
         "Bolivia FC": {
-            "message_id": "1475041824681889873",
+            "message_id": "1483287631478394900",
             "channel_id": "1471249740095029309"
         }
     },
@@ -1014,6 +2785,20 @@
             "estado": "Activa",
             "messageId": "1482828305056010331",
             "timestamp": 1773604217709
+        },
+        "sanction_1773715116672_1": {
+            "id": "sanction_1773715116672_1",
+            "numero": 1,
+            "userId": "1308194043108261999",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1483293449158394007",
+            "timestamp": 1773715116672
         }
     },
     "sanctionCounter": 10,
@@ -1170,9 +2955,18 @@
             "estado": "Activa",
             "messageId": "1482827355784347769",
             "timestamp": 1773603991475
+        },
+        "tsanction_1773715115394_18": {
+            "id": "tsanction_1773715115394_18",
+            "numero": 18,
+            "team": "Brazukinos Sport Club",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1483293443563196645",
+            "timestamp": 1773715115394
         }
     },
-    "teamSanctionCounter": 17,
+    "teamSanctionCounter": 18,
     "boosts": {
         "753428769368440862": 1,
         "1344449311336829008": 1,
@@ -1285,224 +3079,41 @@
             "CF Ineri"
         ],
         "1325252504971120691": [],
-        "1133864612060741754": [],
-        "1033701659437715486": [],
-        "794445819583529001": [],
-        "566629240456609792": [],
-        "780098171069136977": [],
-        "1351330365519822888": [],
-        "876543665483423775": [],
-        "803105926659047475": [],
-        "722444878478442527": [],
-        "1463486227939328118": [],
-        "381896787545423873": [],
-        "1192887174442528849": [],
-        "1460668021734375535": [],
-        "626495621938937862": [],
-        "1397752107850797076": [],
-        "1265119087235698773": [],
-        "1406367888230842571": [],
-        "338445513433153545": [],
-        "539514489905872920": [],
-        "808325492347371550": [],
-        "1324471885165232251": [],
-        "936385533742022686": [],
-        "837137435141603360": [],
-        "1272767680465731687": [],
-        "1137344905400827904": [],
-        "1144091331178811532": [],
-        "505801370528382988": [],
-        "715439534380285992": [],
-        "1354055352534171679": [],
-        "888603703010025543": [],
-        "1411176224952160399": [],
-        "830538933703671808": [],
-        "715655100420587611": [],
-        "1013281447521562626": [],
-        "1391747073732378726": [],
-        "1339957691753168962": [],
-        "866830901483667487": [],
-        "924345891186425878": [],
-        "237282004054441986": [],
-        "517967818680041480": [],
-        "703375776267108372": [],
-        "815593940606255104": [],
-        "1429846031624835214": [],
-        "1373788357930389576": [],
-        "1339259441001795614": [],
-        "1290027203223879743": [],
-        "694183690393223289": [],
-        "1329157011606077556": [],
-        "1338228275469615187": [],
-        "1337252397415923804": [],
-        "1363435519605866550": [],
-        "1243720799559487625": [],
-        "814125474866528316": [],
-        "1150131404974329987": [],
-        "753428769368440862": [],
-        "714240027323793458": [],
-        "845065998918615053": [],
-        "1248658201130307645": [],
-        "1001431506293620766": [],
-        "1087189275298238575": [],
-        "1265111093450117271": [],
-        "1095162019436580907": [],
-        "811735849179283476": [],
-        "1413708583723470958": [],
-        "1432484567343824938": [],
-        "1325380057732087851": [],
-        "405822942858182658": [],
-        "728785398930604172": [],
-        "865565706753015818": [],
-        "1405508098629832716": [],
-        "900170175133917204": [],
-        "958139803315077141": [],
-        "1185441089470087218": [],
-        "1327456280423436401": [],
-        "745730720185450518": [],
-        "811072946163941386": [],
-        "1251989595403452432": [],
-        "1086468706399436830": [],
-        "1174158985620881541": [],
-        "1386858425295568967": [],
-        "1337491358830563398": [],
-        "1343769930503557162": [],
-        "1251931077790924884": [],
-        "1177916322122833933": [],
-        "1392659474841341992": [],
-        "765242170999046195": [],
-        "1315695249397649449": [],
-        "835333978273349632": [],
-        "1444749539369025667": [],
-        "978878002584752139": [],
-        "1346116161133215806": [],
-        "1308194043108261999": [],
-        "1457056957918613740": [],
-        "1453621707159113883": [],
-        "1155315886085902397": [],
-        "624333194744823808": [],
-        "1056349413867540520": [],
-        "797335270512787466": [],
-        "1357746093521371267": [],
-        "907727162562461726": [],
-        "1124005175670083584": [],
-        "1294875847328796763": [],
-        "755201840986980475": [],
-        "1319382142119055485": [],
-        "1417038751565348926": [],
-        "1310561901075234836": [],
-        "1393631796180029623": [],
-        "1319719143766884415": [],
-        "1086430777639706627": [],
-        "899743723435487282": [],
-        "1424131877035442317": [],
-        "839479880990457907": [],
-        "602242677215592449": [],
-        "1155096788697612358": [],
-        "1352714864048607242": [],
-        "1150841367157821521": [],
-        "720498495693520986": [],
-        "809377399438704680": [],
-        "1353098474291462187": [],
-        "1266879445986447496": [],
-        "1379972188358316072": [],
-        "1246272187325747213": [],
-        "973272495337652274": [],
-        "1474140063599431680": [],
-        "1327409209691869216": [],
-        "1311019567539163231": [],
-        "1021523637343375391": [],
-        "1281230197361737760": [],
-        "1400030724652007486": [],
-        "1380847866574143521": [],
-        "1309714317821743125": [],
-        "730503441151033345": [],
-        "1221642681474748521": [],
-        "1163167993606443080": [],
-        "1439601043993395280": [],
-        "1390312259523182735": [],
-        "1249492979865882666": [],
-        "752899890979274863": [],
-        "1320039453296820234": [],
-        "927379544732754000": [],
-        "1046604850772836472": [],
-        "728714746357874799": [],
-        "1328773615231041536": [],
-        "1179761729907982370": [],
-        "1336309680561197067": [],
-        "1253665467353272347": [],
-        "916400995418927225": [],
-        "1056895578044371015": [],
-        "697126787477405786": [],
-        "663352788369276938": [],
-        "1154188161413550180": [],
-        "1318317368841211964": [],
-        "1403743893425618984": [],
-        "954495271662927923": [],
-        "1213877010347196460": [],
-        "754421514358489229": [],
-        "1384144716676731010": [],
-        "1348963017202597888": [],
-        "775923899043938314": [],
-        "1406354246428917782": [],
-        "997272075360284683": [],
-        "1452851797717815309": [],
-        "995929364963270688": [],
-        "1213262530353434636": [],
-        "1217569112381718558": [],
-        "1116805391033045112": [],
-        "622865964081348630": [],
-        "1064626285357318195": [],
-        "559136784307716138": [],
-        "1368007162328256684": [],
-        "1346124652388548720": [],
-        "1187545343697621012": [],
-        "1393124301816729692": [],
-        "1436760432252682350": [],
-        "1088261395704975360": [],
-        "935856943787048980": [],
-        "1446708092543832139": [],
-        "1466082259303006444": [],
-        "1027244057145114674": [],
-        "1264012137370488899": [],
-        "1303026253795950732": [],
-        "1464908855648718920": [],
-        "1361714864661201068": [],
-        "1034045839728975882": [],
-        "1471569502742511699": [],
-        "838946438218121216": [],
-        "1173789167294099582": [],
-        "1287508501484011586": [],
-        "858103295208849449": [],
-        "963085148021211236": [],
-        "660133874873139200": [],
-        "1363783717289459753": [],
-        "1361721520350691449": [],
-        "1385750654823436358": [],
-        "1175870977884819559": [],
-        "1429261746434080901": [],
-        "1098263507339845725": [],
-        "1405952445950984202": [],
-        "746850573558743042": [],
-        "915075762804101161": [],
-        "1287948381309767733": [],
-        "631808202937335808": [],
-        "1302031657292795954": [],
-        "1221961086417244290": [],
-        "1287456599560028214": [],
-        "1284515784810565766": [],
-        "1197177918225395807": [],
-        "662739547829960765": [],
-        "912453855076315156": [],
-        "743480639281692712": [],
-        "1373046883446165515": [],
-        "1179483411228930118": [],
-        "1222381881287508099": [],
-        "420813620696449027": [],
-        "1253471589836783626": [],
-        "1407004285300117524": [],
-        "1438613695923228772": [],
-        "1422335967087296572": [],
-        "1061892396054482944": []
+        "1339957691753168962": [
+            "Club Deportivo Hospital"
+        ],
+        "839479880990457907": [
+            "CJA"
+        ],
+        "1163167993606443080": [
+            "SiuFC"
+        ],
+        "1150131404974329987": [
+            "Birdcam CF"
+        ],
+        "1241802115324575936": [
+            "Club Deportivo Hospital"
+        ],
+        "733073843962511371": [
+            "SiuFC"
+        ],
+        "1310561901075234836": [
+            "Birdcam CF"
+        ],
+        "1073716925567344791": [
+            "SiuFC"
+        ],
+        "626495621938937862": [
+            "Bloxyneta FC"
+        ],
+        "765242170999046195": [
+            "Bellay Sporting Club"
+        ],
+        "1251989595403452432": [
+            "Orlando Pirates"
+        ],
+        "1265119087235698773": [
+            "Zinrack FC"
+        ]
     }
 }
