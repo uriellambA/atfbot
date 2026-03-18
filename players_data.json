@@ -469,6 +469,16 @@
             "teamHistory": [
                 "Birdcam CF"
             ]
+        },
+        "794316505768001546": {
+            "team": "Birdcam CF",
+            "gw": 7,
+            "country": "🇨🇺",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
         }
     },
     "teams": {},
@@ -1713,7 +1723,9 @@
         "781929563935735808": [
             "Club Deportivo Hospital"
         ],
-        "794316505768001546": [],
+        "794316505768001546": [
+            "Birdcam CF"
+        ],
         "1198612534412976172": [
             "Club Deportivo Hospital"
         ],
