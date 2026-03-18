@@ -949,6 +949,16 @@
             "teamHistory": [
                 "SiuFC"
             ]
+        },
+        "1363435519605866550": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
         }
     },
     "teams": {},
@@ -2408,7 +2418,9 @@
         "1337252397415923804": [
             "Universidad De Chile"
         ],
-        "1363435519605866550": [],
+        "1363435519605866550": [
+            "SiuFC"
+        ],
         "1243720799559487625": [
             "Universidad De Chile"
         ],
