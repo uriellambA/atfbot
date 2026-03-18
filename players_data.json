@@ -859,6 +859,16 @@
             "teamHistory": [
                 "Coopsol FC"
             ]
+        },
+        "1007718785370832986": {
+            "team": "Coopsol FC",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Coopsol FC"
+            ]
         }
     },
     "teams": {},
@@ -2549,6 +2559,9 @@
             "Coopsol FC"
         ],
         "1317560170641096814": [
+            "Coopsol FC"
+        ],
+        "1007718785370832986": [
             "Coopsol FC"
         ]
     }
