@@ -359,6 +359,16 @@
             "teamHistory": [
                 "Universidad De Chile"
             ]
+        },
+        "1265111093450117271": {
+            "team": "Universidad De Chile",
+            "gw": 2,
+            "country": "🇺🇾",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Universidad De Chile"
+            ]
         }
     },
     "teams": {},
@@ -1781,7 +1791,9 @@
         "1248658201130307645": [],
         "1001431506293620766": [],
         "1087189275298238575": [],
-        "1265111093450117271": [],
+        "1265111093450117271": [
+            "Universidad De Chile"
+        ],
         "1095162019436580907": [],
         "811735849179283476": [
             "CF Ineri"
