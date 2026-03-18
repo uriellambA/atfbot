@@ -149,6 +149,16 @@
             "teamHistory": [
                 "Kunts FC"
             ]
+        },
+        "732002305507065867": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇦🇷",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
         }
     },
     "teams": {},
