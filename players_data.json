@@ -489,6 +489,16 @@
             "teamHistory": [
                 "Birdcam CF"
             ]
+        },
+        "1433803648499974299": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
         }
     },
     "teams": {},
@@ -2116,6 +2126,9 @@
         ],
         "1283012244237455424": [
             "Kunts FC"
+        ],
+        "1433803648499974299": [
+            "Birdcam CF"
         ]
     }
 }
