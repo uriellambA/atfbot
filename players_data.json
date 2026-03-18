@@ -89,6 +89,16 @@
             "teamHistory": [
                 "Galindos"
             ]
+        },
+        "1324601138225352745": {
+            "team": "Bolivia FC",
+            "gw": 2,
+            "country": "🇳🇬",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Bolivia FC"
+            ]
         }
     },
     "teams": {},
@@ -1652,6 +1662,9 @@
         ],
         "1479502313000538276": [
             "Cojos FC"
+        ],
+        "1324601138225352745": [
+            "Bolivia FC"
         ]
     }
 }
