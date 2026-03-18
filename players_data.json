@@ -909,6 +909,16 @@
             "teamHistory": [
                 "Kunts FC"
             ]
+        },
+        "1405694979103526973": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
         }
     },
     "teams": {},
@@ -2611,6 +2621,9 @@
         ],
         "1007718785370832986": [
             "Coopsol FC"
+        ],
+        "1405694979103526973": [
+            "Zinrack FC"
         ]
     }
 }
