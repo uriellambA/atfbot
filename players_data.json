@@ -719,6 +719,16 @@
             "teamHistory": [
                 "Bloxyneta FC"
             ]
+        },
+        "1158414586635092018": {
+            "team": "Zinrack FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Zinrack FC"
+            ]
         }
     },
     "teams": {},
@@ -2383,6 +2393,9 @@
         ],
         "809959645631348776": [
             "Birdcam CF"
+        ],
+        "1158414586635092018": [
+            "Zinrack FC"
         ]
     }
 }
