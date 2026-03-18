@@ -69,6 +69,16 @@
             "teamHistory": [
                 "Bloxyneta FC"
             ]
+        },
+        "1479502313000538276": {
+            "team": "Cojos FC",
+            "gw": 2,
+            "country": "🇸🇦",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Cojos FC"
+            ]
         }
     },
     "teams": {},
@@ -1627,6 +1637,9 @@
         "1061892396054482944": [],
         "1234283310004572300": [
             "Academia Polaris"
+        ],
+        "1479502313000538276": [
+            "Cojos FC"
         ]
     }
 }
