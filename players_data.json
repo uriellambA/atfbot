@@ -1,5 +1,16 @@
 {
-    "players": {},
+    "players": {
+        "839479880990457907": {
+            "team": "CJA",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "CJA"
+            ]
+        }
+    },
     "teams": {},
     "squadsheet_messages": {
         "CF Ineri": {
