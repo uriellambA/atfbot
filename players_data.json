@@ -589,6 +589,16 @@
             "teamHistory": [
                 "SiuFC"
             ]
+        },
+        "1373788357930389576": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
         }
     },
     "teams": {},
@@ -1993,7 +2003,9 @@
         "1429846031624835214": [
             "Club Deportivo Hospital"
         ],
-        "1373788357930389576": [],
+        "1373788357930389576": [
+            "SiuFC"
+        ],
         "1339259441001795614": [
             "SiuFC"
         ],
