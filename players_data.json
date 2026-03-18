@@ -159,6 +159,16 @@
             "teamHistory": [
                 "CF Ineri"
             ]
+        },
+        "765242170999046195": {
+            "team": "Bellay Sporting Club",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Bellay Sporting Club"
+            ]
         }
     },
     "teams": {},
