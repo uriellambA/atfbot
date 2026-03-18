@@ -326,11 +326,6 @@
             "roblox_id": "3734860835",
             "verified_at": 1772490699788
         },
-        "1440427357490905220": {
-            "roblox_user": "CIRIUSB2LF",
-            "roblox_id": "2702474233",
-            "verified_at": 1772490800361
-        },
         "775923899043938314": {
             "roblox_user": "Pxm3pts",
             "roblox_id": "5028867189",
@@ -595,6 +590,11 @@
             "roblox_user": "losdelbarrioyeah",
             "roblox_id": "4881218356",
             "verified_at": 1773855906216
+        },
+        "1440427357490905220": {
+            "roblox_user": "CIRIUSB2LF",
+            "roblox_id": "2702474233",
+            "verified_at": 1773866986140
         }
     }
 }
