@@ -179,6 +179,16 @@
             "teamHistory": [
                 "Red Waffles FC"
             ]
+        },
+        "1251989595403452432": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇵🇪",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Orlando Pirates"
+            ]
         }
     },
     "teams": {},
