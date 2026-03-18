@@ -815,53 +815,53 @@ client.once('ready', async (c) => {
     startFixtureReminderScheduler(c);
     startPrediccionesAutoScheduler(c);
     // ── Backup periódico cada 30 minutos con aviso en canal ───────────────────
-const BACKUP_CHANNEL_ID = '1437959605417410711';
-const BACKUP_FILES = [
-    DATABASE_FILE,
-    path.join(__dirname, 'verify.json'),
-    path.join(__dirname, 'mensajes.json'),
-    path.join(__dirname, 'sanciones.json'),
-    path.join(__dirname, 'fixtures.json'),
-    path.join(__dirname, 'predicciones.json'),
-    path.join(__dirname, 'resultado.json'),
-    path.join(__dirname, 'lineups.json'),
-    path.join(__dirname, 'status.json'),
-];
+    const BACKUP_CHANNEL_ID = '1437959605417410711';
+    const BACKUP_FILES = [
+        DATABASE_FILE,
+        path.join(__dirname, 'verify.json'),
+        path.join(__dirname, 'mensajes.json'),
+        path.join(__dirname, 'sanciones.json'),
+        path.join(__dirname, 'fixtures.json'),
+        path.join(__dirname, 'predicciones.json'),
+        path.join(__dirname, 'resultado.json'),
+        path.join(__dirname, 'lineups.json'),
+        path.join(__dirname, 'status.json'),
+    ];
 
-const backupGuild = mainGuild || c.guilds.cache.first();
+    const backupGuild = mainGuild || c.guilds.cache.first();
 
-async function runPeriodicBackup() {
-    const backupChannel = backupGuild?.channels.cache.get(BACKUP_CHANNEL_ID);
+    async function runPeriodicBackup() {
+        const backupChannel = backupGuild?.channels.cache.get(BACKUP_CHANNEL_ID);
 
-    if (backupChannel) {
-        await backupChannel.send(`🔄 **Backup automático iniciando...** Subiendo datos a GitHub, por favor esperá unos segundos antes de usar comandos.`).catch(() => {});
-    }
-    console.log('[BACKUP] Iniciando backup periódico...');
-
-    let ok = 0;
-    const errores = [];
-
-    for (const file of BACKUP_FILES) {
-        try {
-            if (!fs.existsSync(file)) { console.log(`[BACKUP] ⚠️ No existe: ${path.basename(file)}`); continue; }
-            await pushToGitHub(file, `[AutoBackup] ${path.basename(file)}`);
-            ok++;
-        } catch (e) {
-            errores.push(path.basename(file));
-            console.error(`[BACKUP] ❌ ${path.basename(file)}: ${e.message}`);
+        if (backupChannel) {
+            await backupChannel.send(`🔄 **Backup automático iniciando...** Subiendo datos a GitHub, por favor esperá unos segundos antes de usar comandos.`).catch(() => {});
         }
+        console.log('[BACKUP] Iniciando backup periódico...');
+
+        let ok = 0;
+        const errores = [];
+
+        for (const file of BACKUP_FILES) {
+            try {
+                if (!fs.existsSync(file)) { console.log(`[BACKUP] ⚠️ No existe: ${path.basename(file)}`); continue; }
+                await pushToGitHub(file, `[AutoBackup] ${path.basename(file)}`);
+                ok++;
+            } catch (e) {
+                errores.push(path.basename(file));
+                console.error(`[BACKUP] ❌ ${path.basename(file)}: ${e.message}`);
+            }
+        }
+
+        if (backupChannel) {
+            let msg = `✅ **Backup completado.** ${ok}/${BACKUP_FILES.length} archivos subidos. Ya podés usar los comandos con normalidad.`;
+            if (errores.length > 0) msg += `\n⚠️ **Fallidos:** ${errores.map(f => `\`${f}\``).join(', ')}`;
+            await backupChannel.send(msg).catch(() => {});
+        }
+        console.log(`[BACKUP] Finalizado. OK: ${ok}, Errores: ${errores.length}`);
     }
 
-    if (backupChannel) {
-        let msg = `✅ **Backup completado.** ${ok}/${BACKUP_FILES.length} archivos subidos. Ya podés usar los comandos con normalidad.`;
-        if (errores.length > 0) msg += `\n⚠️ **Fallidos:** ${errores.map(f => `\`${f}\``).join(', ')}`;
-        await backupChannel.send(msg).catch(() => {});
-    }
-    console.log(`[BACKUP] Finalizado. OK: ${ok}, Errores: ${errores.length}`);
-}
-
-setInterval(runPeriodicBackup, 30 * 60 * 1000);
-console.log('[BACKUP] Intervalo de backup cada 30 minutos iniciado.');
+    setInterval(runPeriodicBackup, 30 * 60 * 1000);
+    console.log('[BACKUP] Intervalo de backup cada 30 minutos iniciado.');
 
     const commands = [
         new SlashCommandBuilder()
