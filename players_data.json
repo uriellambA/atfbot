@@ -959,6 +959,16 @@
             "teamHistory": [
                 "SiuFC"
             ]
+        },
+        "517967818680041480": {
+            "team": "Club Deportivo Hospital",
+            "gw": 5,
+            "country": "🇪🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
         }
     },
     "teams": {},
@@ -2205,9 +2215,18 @@
             "estado": "Revoked",
             "messageId": "1483973273514672239",
             "timestamp": 1773877199394
+        },
+        "tsanction_1773878959797_20": {
+            "id": "tsanction_1773878959797_20",
+            "numero": 20,
+            "team": "SiuFC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1483980657183952896",
+            "timestamp": 1773878959797
         }
     },
-    "teamSanctionCounter": 19,
+    "teamSanctionCounter": 20,
     "boosts": {
         "753428769368440862": 1,
         "1344449311336829008": 1,
@@ -2438,7 +2457,9 @@
         "237282004054441986": [
             "Club Deportivo Hospital"
         ],
-        "517967818680041480": [],
+        "517967818680041480": [
+            "Club Deportivo Hospital"
+        ],
         "703375776267108372": [
             "Club Deportivo Hospital"
         ],
