@@ -1099,6 +1099,16 @@
             "teamHistory": [
                 "Kunts FC"
             ]
+        },
+        "1411339344622522468": {
+            "team": "Kunts FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Kunts FC"
+            ]
         }
     },
     "teams": {},
@@ -2900,6 +2910,9 @@
         ],
         "1405694979103526973": [
             "Zinrack FC"
+        ],
+        "1411339344622522468": [
+            "Kunts FC"
         ]
     }
 }
