@@ -1139,6 +1139,16 @@
             "teamHistory": [
                 "Black Mans FC"
             ]
+        },
+        "964085784485462026": {
+            "team": "Orlando Pirates",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Orlando Pirates"
+            ]
         }
     },
     "teams": {},
@@ -2950,6 +2960,9 @@
         ],
         "1225933343871467571": [
             "Vanguards FC"
+        ],
+        "964085784485462026": [
+            "Orlando Pirates"
         ]
     }
 }
