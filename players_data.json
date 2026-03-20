@@ -1129,6 +1129,16 @@
             "teamHistory": [
                 "Red Waffles FC"
             ]
+        },
+        "1095162019436580907": {
+            "team": "CF Ineri",
+            "gw": 2,
+            "country": "🇪🇨",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "CF Ineri"
+            ]
         }
     },
     "teams": {},
@@ -2678,7 +2688,9 @@
         "1265111093450117271": [
             "Universidad De Chile"
         ],
-        "1095162019436580907": [],
+        "1095162019436580907": [
+            "CF Ineri"
+        ],
         "811735849179283476": [
             "CF Ineri"
         ],
