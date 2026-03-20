@@ -1159,6 +1159,16 @@
             "teamHistory": [
                 "Orlando Pirates"
             ]
+        },
+        "1339259441001795614": {
+            "team": "SiuFC",
+            "gw": 2,
+            "country": "🇧🇷",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "SiuFC"
+            ]
         }
     },
     "teams": {},
