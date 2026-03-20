@@ -1130,14 +1130,14 @@
                 "Red Waffles FC"
             ]
         },
-        "1095162019436580907": {
-            "team": "CF Ineri",
+        "1391747073732378726": {
+            "team": "Black Mans FC",
             "gw": 2,
-            "country": "🇪🇨",
-            "division": "C",
+            "country": "🇺🇸",
+            "division": "B",
             "role": "Jugador",
             "teamHistory": [
-                "CF Ineri"
+                "Black Mans FC"
             ]
         }
     },
@@ -2621,7 +2621,9 @@
             "Zinrack FC"
         ],
         "1013281447521562626": [],
-        "1391747073732378726": [],
+        "1391747073732378726": [
+            "Black Mans FC"
+        ],
         "866830901483667487": [
             "Club Deportivo Hospital"
         ],
@@ -2688,9 +2690,7 @@
         "1265111093450117271": [
             "Universidad De Chile"
         ],
-        "1095162019436580907": [
-            "CF Ineri"
-        ],
+        "1095162019436580907": [],
         "811735849179283476": [
             "CF Ineri"
         ],
