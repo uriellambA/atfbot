@@ -1150,10 +1150,10 @@
                 "Orlando Pirates"
             ]
         },
-        "1206828452427071529": {
+        "1091362759729487872": {
             "team": "Orlando Pirates",
             "gw": 2,
-            "country": "🇺🇸",
+            "country": "🇪🇸",
             "division": "C",
             "role": "Jugador",
             "teamHistory": [
@@ -2447,7 +2447,9 @@
             "Vanguards FC"
         ],
         "618010186099064832": [],
-        "1091362759729487872": [],
+        "1091362759729487872": [
+            "Orlando Pirates"
+        ],
         "842404732299771944": [
             "Orlando Pirates"
         ],
