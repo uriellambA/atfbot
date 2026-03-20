@@ -1109,6 +1109,16 @@
             "teamHistory": [
                 "Kunts FC"
             ]
+        },
+        "1225933343871467571": {
+            "team": "Vanguards FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Vanguards FC"
+            ]
         }
     },
     "teams": {},
@@ -2913,6 +2923,9 @@
         ],
         "1411339344622522468": [
             "Kunts FC"
+        ],
+        "1225933343871467571": [
+            "Vanguards FC"
         ]
     }
 }
