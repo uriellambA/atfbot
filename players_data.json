@@ -1331,6 +1331,17 @@
             "teamHistory": [
                 "Red Bull FC"
             ]
+        },
+        "1251931077790924884": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇪🇸",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Vanguards FC",
+                "Red Bull FC"
+            ]
         }
     },
     "teams": {},
@@ -2926,7 +2937,8 @@
             "Red Bull FC"
         ],
         "1251931077790924884": [
-            "Vanguards FC"
+            "Vanguards FC",
+            "Red Bull FC"
         ],
         "1177916322122833933": [
             "Red Bull FC"
