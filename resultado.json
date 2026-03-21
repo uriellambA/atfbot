@@ -2351,6 +2351,93 @@
             "sanciones": [],
             "mvp": null,
             "menciones": []
+        },
+        {
+            "id": "partido_1774123499363",
+            "timestamp": 1774123499363,
+            "competicion": "División B",
+            "serie": "Fecha 5",
+            "equipoLocal": "Universidad De Chile",
+            "equipoVisitante": "Coopsol FC",
+            "estadio": null,
+            "marcador": {
+                "local": 4,
+                "visitante": 0
+            },
+            "fft": false,
+            "equipoFFT": null,
+            "goles": [
+                {
+                    "jugadorId": "1353098474291462187",
+                    "asistenciaId": null,
+                    "minuto": "1",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "golencontra",
+                    "marcador": "1-0"
+                },
+                {
+                    "jugadorId": "1353098474291462187",
+                    "asistenciaId": null,
+                    "minuto": "21",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "golencontra",
+                    "marcador": "2-0"
+                },
+                {
+                    "jugadorId": "714240027323793458",
+                    "asistenciaId": "1338228275469615187",
+                    "minuto": "68",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "3-0"
+                },
+                {
+                    "jugadorId": "1248658201130307645",
+                    "asistenciaId": "1338228275469615187",
+                    "minuto": "86",
+                    "equipo": "Universidad De Chile",
+                    "tipo": "normal",
+                    "marcador": "4-0"
+                }
+            ],
+            "sanciones": [],
+            "mvp": {
+                "jugadorId": "1338228275469615187",
+                "equipo": "Universidad De Chile"
+            },
+            "menciones": [
+                {
+                    "jugadorId": "714240027323793458",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "1248658201130307645",
+                    "equipo": "Universidad De Chile"
+                },
+                {
+                    "jugadorId": "1243720799559487625",
+                    "equipo": "Universidad De Chile"
+                }
+            ]
+        },
+        {
+            "id": "partido_1774123555034",
+            "timestamp": 1774123555034,
+            "competicion": "División B",
+            "serie": "Fecha 5",
+            "equipoLocal": "Cojos FC",
+            "equipoVisitante": "Black Mans FC",
+            "estadio": null,
+            "marcador": {
+                "local": 0,
+                "visitante": 3
+            },
+            "fft": true,
+            "equipoFFT": "Cojos FC",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
         }
     ]
 }
