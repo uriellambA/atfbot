@@ -2466,6 +2466,20 @@
             "estado": "Revoked",
             "messageId": "1484967288217141371",
             "timestamp": 1774114191146
+        },
+        "sanction_1774123557004_1": {
+            "id": "sanction_1774123557004_1",
+            "numero": 1,
+            "userId": "1479502313000538276",
+            "tipo": "1 Season",
+            "razon": "Mala administración del club",
+            "precio": 2500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1485006570914844922",
+            "timestamp": 1774123557004
         }
     },
     "sanctionCounter": 10,
@@ -2658,9 +2672,18 @@
             "estado": "Activa",
             "messageId": "1484972887743139961",
             "timestamp": 1774115526243
+        },
+        "tsanction_1774123555589_22": {
+            "id": "tsanction_1774123555589_22",
+            "numero": 22,
+            "team": "Cojos FC",
+            "razon": "FFT",
+            "estado": "Activa",
+            "messageId": "1485006565453992096",
+            "timestamp": 1774123555589
         }
     },
-    "teamSanctionCounter": 21,
+    "teamSanctionCounter": 22,
     "boosts": {
         "753428769368440862": 1,
         "1344449311336829008": 1,
