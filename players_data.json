@@ -2424,6 +2424,20 @@
             "estado": "Activa",
             "messageId": "1483972393591636179",
             "timestamp": 1773876989617
+        },
+        "sanction_1774111690002_1": {
+            "id": "sanction_1774111690002_1",
+            "numero": 1,
+            "userId": "781929563935735808",
+            "tipo": "Sanción Severa",
+            "razon": "Alting",
+            "precio": 1500,
+            "duracion": "1 Season",
+            "duracion_restante": "1 Season",
+            "gw": null,
+            "estado": "Activa",
+            "messageId": "1484956798388670694",
+            "timestamp": 1774111690002
         }
     },
     "sanctionCounter": 10,
