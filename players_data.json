@@ -1301,6 +1301,16 @@
             "teamHistory": [
                 "Red Bull FC"
             ]
+        },
+        "697126787477405786": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Red Bull FC"
+            ]
         }
     },
     "teams": {},
@@ -2985,7 +2995,9 @@
         "1056895578044371015": [
             "Kunts FC"
         ],
-        "697126787477405786": [],
+        "697126787477405786": [
+            "Red Bull FC"
+        ],
         "663352788369276938": [
             "Club Deportivo Hospital"
         ],
