@@ -2332,6 +2332,25 @@
                     "equipo": "SiuFC"
                 }
             ]
+        },
+        {
+            "id": "partido_1774115525778",
+            "timestamp": 1774115525778,
+            "competicion": "División A",
+            "serie": "Fecha 3",
+            "equipoLocal": "SiuFC",
+            "equipoVisitante": "Birdcam CF",
+            "estadio": "Deporitivo Piura",
+            "marcador": {
+                "local": 3,
+                "visitante": 0
+            },
+            "fft": true,
+            "equipoFFT": "Birdcam CF",
+            "goles": [],
+            "sanciones": [],
+            "mvp": null,
+            "menciones": []
         }
     ]
 }
