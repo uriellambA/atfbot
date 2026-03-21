@@ -1259,6 +1259,16 @@
             "teamHistory": [
                 "Black Mans FC"
             ]
+        },
+        "1259602298791788574": {
+            "team": "Lightkings FC",
+            "gw": 3,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Lightkings FC"
+            ]
         }
     },
     "teams": {},
@@ -3098,6 +3108,9 @@
         ],
         "1433803648499974299": [
             "Birdcam CF"
+        ],
+        "1259602298791788574": [
+            "Lightkings FC"
         ]
     }
 }
