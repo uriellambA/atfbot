@@ -1279,6 +1279,16 @@
             "teamHistory": [
                 "Lightkings FC"
             ]
+        },
+        "1467156319139004593": {
+            "team": "Deportes Concepcion",
+            "gw": 2,
+            "country": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Deportes Concepcion"
+            ]
         }
     },
     "teams": {},
@@ -3124,6 +3134,9 @@
         ],
         "959977116148047946": [
             "Lightkings FC"
+        ],
+        "1467156319139004593": [
+            "Deportes Concepcion"
         ]
     }
 }
