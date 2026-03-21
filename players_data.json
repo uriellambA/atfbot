@@ -2438,6 +2438,34 @@
             "estado": "Activa",
             "messageId": "1484956798388670694",
             "timestamp": 1774111690002
+        },
+        "sanction_1774113512072_1": {
+            "id": "sanction_1774113512072_1",
+            "numero": 1,
+            "userId": "845065998918615053",
+            "tipo": "Sanción Severa",
+            "razon": "Ser cómplice de actividades sancionables",
+            "precio": 1500,
+            "duracion": "7 GW",
+            "duracion_restante": 7,
+            "gw": 7,
+            "estado": "Activa",
+            "messageId": "1484964439982870808",
+            "timestamp": 1774113512073
+        },
+        "sanction_1774114191146_2": {
+            "id": "sanction_1774114191146_2",
+            "numero": 2,
+            "userId": "845065998918615053",
+            "tipo": "Sanción Severa",
+            "razon": "Ser cómplice de actividades sancionables",
+            "precio": 1500,
+            "duracion": "7 GW",
+            "duracion_restante": 7,
+            "gw": 7,
+            "estado": "Revoked",
+            "messageId": "1484967288217141371",
+            "timestamp": 1774114191146
         }
     },
     "sanctionCounter": 10,
