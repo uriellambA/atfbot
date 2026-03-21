@@ -1219,6 +1219,16 @@
             "teamHistory": [
                 "Red Bull FC"
             ]
+        },
+        "1433803648499974299": {
+            "team": "Birdcam CF",
+            "gw": 2,
+            "country": "🇮🇪",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Birdcam CF"
+            ]
         }
     },
     "teams": {},
@@ -3051,6 +3061,9 @@
         ],
         "1456538982719684684": [
             "Lightkings FC"
+        ],
+        "1433803648499974299": [
+            "Birdcam CF"
         ]
     }
 }
