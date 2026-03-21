@@ -1249,6 +1249,16 @@
             "teamHistory": [
                 "Birdcam CF"
             ]
+        },
+        "1411176224952160399": {
+            "team": "Black Mans FC",
+            "gw": 3,
+            "country": "🇵🇹",
+            "division": "B",
+            "role": "Jugador",
+            "teamHistory": [
+                "Black Mans FC"
+            ]
         }
     },
     "teams": {},
@@ -2729,7 +2739,9 @@
         "888603703010025543": [
             "Vanguards FC"
         ],
-        "1411176224952160399": [],
+        "1411176224952160399": [
+            "Black Mans FC"
+        ],
         "830538933703671808": [],
         "715655100420587611": [
             "Zinrack FC"
