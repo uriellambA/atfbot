@@ -1209,6 +1209,16 @@
             "teamHistory": [
                 "CF Ineri"
             ]
+        },
+        "1456538982719684684": {
+            "team": "Lightkings FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Lightkings FC"
+            ]
         }
     },
     "teams": {},
@@ -3036,6 +3046,9 @@
         ],
         "1458991170926416024": [
             "CF Ineri"
+        ],
+        "1456538982719684684": [
+            "Lightkings FC"
         ]
     }
 }
