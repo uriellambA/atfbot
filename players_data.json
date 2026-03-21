@@ -1269,6 +1269,16 @@
             "teamHistory": [
                 "Lightkings FC"
             ]
+        },
+        "959977116148047946": {
+            "team": "Lightkings FC",
+            "gw": 2,
+            "country": "🇺🇸",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Lightkings FC"
+            ]
         }
     },
     "teams": {},
@@ -3110,6 +3120,9 @@
             "Birdcam CF"
         ],
         "1259602298791788574": [
+            "Lightkings FC"
+        ],
+        "959977116148047946": [
             "Lightkings FC"
         ]
     }
