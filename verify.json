@@ -4,7 +4,12 @@
         "roleId": "1414386378254323795",
         "message": "**Verify yourself to access ATF**//🇪🇸: **Haz Clic en el boton para seguir con la verificación.**/🇺🇸: **Click the button to continue with the verification.**/🇧🇷: **Clique no botão para continuar com a verificação.**"
     },
-    "codes": {},
+    "codes": {
+        "RCR-831": {
+            "discord_id": "1330707037910466605",
+            "expires": 1774131076577
+        }
+    },
     "links": {
         "792539081967927337": {
             "roblox_user": "0iiKosmic",
@@ -670,6 +675,11 @@
             "roblox_user": "Luciano_RobloxChe",
             "roblox_id": "4309515971",
             "verified_at": 1774129862695
+        },
+        "1350468254887579719": {
+            "roblox_user": "Amari02235",
+            "roblox_id": "8298043481",
+            "verified_at": 1774130492289
         }
     }
 }
