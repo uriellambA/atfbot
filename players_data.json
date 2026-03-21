@@ -1219,6 +1219,16 @@
             "teamHistory": [
                 "Lightkings FC"
             ]
+        },
+        "1337491358830563398": {
+            "team": "Red Bull FC",
+            "gw": 7,
+            "country": "🇨🇴",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Red Bull FC"
+            ]
         }
     },
     "teams": {},
@@ -2802,7 +2812,9 @@
         "1386858425295568967": [
             "Red Bull FC"
         ],
-        "1337491358830563398": [],
+        "1337491358830563398": [
+            "Red Bull FC"
+        ],
         "1343769930503557162": [
             "Vanguards FC"
         ],
