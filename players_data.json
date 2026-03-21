@@ -1291,6 +1291,16 @@
                 "Vanguards FC",
                 "Red Bull FC"
             ]
+        },
+        "1483444189382312131": {
+            "team": "Red Bull FC",
+            "gw": 2,
+            "country": "🇲🇽",
+            "division": "C",
+            "role": "Jugador",
+            "teamHistory": [
+                "Red Bull FC"
+            ]
         }
     },
     "teams": {},
@@ -3141,6 +3151,9 @@
         ],
         "1467156319139004593": [
             "Deportes Concepcion"
+        ],
+        "1483444189382312131": [
+            "Red Bull FC"
         ]
     }
 }
