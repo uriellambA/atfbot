@@ -1342,6 +1342,16 @@
             "teamHistory": [
                 "Stroganoff CF"
             ]
+        },
+        "781929563935735808": {
+            "team": "Club Deportivo Hospital",
+            "gw": 5,
+            "country": "🇨🇱",
+            "division": "A",
+            "role": "Jugador",
+            "teamHistory": [
+                "Club Deportivo Hospital"
+            ]
         }
     },
     "teams": {},
